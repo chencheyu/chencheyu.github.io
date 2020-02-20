@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Archives: 2020/2 |  哲佑碎碎念
+    cherrypy_cookie |  哲佑碎碎念
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -45,117 +45,152 @@ ga('send', 'pageview');
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article class="articles">
+  <article id="post-1582188391261" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2020/2</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/20/1582188391261/" class="archive-article-date">
-  <time datetime="2020-02-20T08:46:31.000Z" itemprop="datePublished">02/20</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/02/20/1582188391261/"
-    >cherrypy_cookie</a
-  >
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  cherrypy_cookie
+</h1>
   
 
     </header>
     
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/11/1581427032718/" class="archive-article-date">
-  <time datetime="2020-02-11T13:17:12.000Z" itemprop="datePublished">02/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/02/11/1581427032718/"
-    >openssh key</a
-  >
-</h2>
-  
 
-    </header>
     
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/10/1581350582023/" class="archive-article-date">
-  <time datetime="2020-02-10T15:57:49.000Z" itemprop="datePublished">02/10</time>
+    <div class="article-meta">
+      <a href="/2020/02/20/1582188391261/" class="article-date">
+  <time datetime="2020-02-20T08:46:31.000Z" itemprop="datePublished">2020-02-20</time>
 </a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/02/10/1581350582023/"
-    >numtest</a
-  >
-</h2>
-  
-
-    </header>
-    
-    
-  </div>
-</article>
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/07/1581350582022/" class="archive-article-date">
-  <time datetime="2020-02-07T07:14:42.000Z" itemprop="datePublished">02/07</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/02/07/1581350582022/"
-    >first</a
-  >
-</h2>
-  
-
-    </header>
-    
-    
-  </div>
-</article>
       
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">87字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1分钟</span>
+        </span>
+    </span>
+</div>
+
       
     </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="cherrypy-cookie"><a href="#cherrypy-cookie" class="headerlink" title="cherrypy cookie"></a>cherrypy cookie</h1><p>###概述<br>他是用python的simple cookie，所以Morsel屬性該有的多有(屬性要小寫)，但她不能刪除只能設程過期</p>
+<h3 id="cookie-設定"><a href="#cookie-設定" class="headerlink" title="cookie 設定"></a>cookie 設定</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cherrypy.response.cookie[key] = value <span class="comment">#設質</span></span><br><span class="line">cherrypy.response.cookie[key][<span class="string">"max-age"</span>] = <span class="number">60</span>*<span class="number">60</span>*<span class="number">8</span> <span class="comment">#有效期8小時</span></span><br></pre></td></tr></table></figure>
+<h3 id="cookie-讀取"><a href="#cookie-讀取" class="headerlink" title="cookie 讀取"></a>cookie 讀取</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cie = cherrypy.request.cookie.keys() <span class="comment">#取得所有cookie</span></span><br><span class="line">uid = cherrypy.request.cookie[<span class="string">"uid"</span>].value</span><br></pre></td></tr></table></figure>
+
+<p>在cherrypy 18.5 上測試</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+			<!-- copyright move to footer.ejs-->
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.ericchen.name/2020/02/20/1582188391261/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
   </div>
+
   
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/02/11/1581427032718/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">openssh key</div>
+      </a>
+    
+  </nav>
+
+
   
 
   
+
+  
+  
+  
+
+</article>
 </section>
       <footer class="footer">
   <div class="outer">
@@ -311,6 +346,30 @@ ga('send', 'pageview');
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 <script>
