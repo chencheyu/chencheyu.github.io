@@ -1,0 +1,1857 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)" />
+
+<meta name="generator" content="Hugo 0.143.1">
+<link rel="shortcut icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/imgs/icons/favicon_16x16_next.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/imgs/icons/favicon_32_32_next.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/imgs/icons/apple_touch_icon_next.png">
+<meta itemprop="name" content="Windows PE" />
+<meta itemprop="description" content="保持简单的易用性和强大的功能。" />
+<meta name="description" content="保持简单的易用性和强大的功能。" />
+
+
+<meta itemprop="datePublished" ZgotmplZ />
+
+
+<meta itemprop="dateModified" ZgotmplZ />
+
+
+
+
+
+<meta itemprop="image" content="/imgs/hugo_next_avatar.png" />
+<meta itemprop="keywords" content="CS/Windows" />
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Windows PE" />
+<meta property="og:description" content="保持简单的易用性和强大的功能。" />
+<meta property="og:image" content="/imgs/hugo_next_avatar.png" />
+<meta property="og:image:width" content="312" />
+<meta property="og:image:height" content="312" />
+<meta property="og:image:type" content="image/jpeg/png/svg/jpg" />
+<meta property="og:url" content="/post/aced79f2-f880-4aba-a6c9-96ec8656b635/"/>
+<meta property="og:site_name" content="哲佑碎碎念" />
+<meta property="og:locale" content="zh-TW"/>
+
+<meta property="article:author" content="EricChen" />
+<meta property="article:published_time" content="2024-07-10 00:00:00 &#43;0000 UTC" />
+<meta property="article:modified_time" content="2024-07-10 00:00:00 &#43;0000 UTC" />
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/font-awesome/6.7.2/css/all.min.css" /> 
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/animate.css/3.1.1/animate.min.css" /> 
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/viewerjs/1.11.6/viewer.min.css" /> 
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css?=1741874841">
+
+
+<style type="text/css">
+  .post-footer hr:after {
+    content: "";
+  }
+
+  .flinks-list-footer hr:after {
+    content: "";
+  }
+
+  
+  
+</style>
+
+
+
+
+  
+<script type="text/javascript">
+(function(){
+  localDB = {
+    set: function (key, value, ttl) {
+      if (ttl === 0) return;
+      const now = new Date();
+      const expiryDay = ttl * 86400000;
+      const item = {
+        value: value,
+        expiry: now.getTime() + expiryDay
+      };
+      localStorage.setItem(key, JSON.stringify(item));
+    },
+    get: function (key) {
+      const itemStr = localStorage.getItem(key);
+      if (!itemStr) {
+        return undefined;
+      }
+  
+      const item = JSON.parse(itemStr);
+      const now = new Date();
+  
+      if (now.getTime() > item.expiry) {
+        localStorage.removeItem(key);
+        return undefined;
+      }
+      return item.value;
+    }
+  };
+
+  theme = {
+    active: function() {
+      const localState = localDB.get('theme');
+      if (localState == undefined) return;
+      theme.toggle(localState);
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(function (evt) {
+        theme.toggle(evt.matches ? 'dark' : 'light');
+      });
+    },
+
+    toggle: function (theme) {
+      document.documentElement.setAttribute('data-theme',  theme);
+      localDB.set('theme', theme, 2);
+      
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe) {
+        const config = { setConfig: { theme: theme } };
+        iframe.contentWindow.postMessage({ giscus: config }, 'https://giscus.app');
+      }
+    }
+  };
+
+  theme.active();
+})(window);
+</script>
+
+
+
+
+  <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  var script = document.createElement('script');
+    
+  script.charset = "UTF-8";
+  script.src     = "https:\/\/busuanzi.ibruce.info\/busuanzi\/2.3\/busuanzi.pure.mini.js";
+  script.async   = false
+  script.defer   = true
+  
+  document.head.appendChild(script);
+  script.onload = function() {
+    NexT.utils.fmtBusuanzi();
+  }
+});
+</script>
+  
+
+
+
+  <title>Windows PE - 哲佑碎碎念</title>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"  class="use-motion" >
+  <div class="headband"></div>
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        
+<div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+    
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">哲佑碎碎念</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">哲佑碎碎念</p>
+    
+    
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+      
+      <i class="fa fa-search fa-fw fa-lg"></i>
+      
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">    
+  
+    
+    <li class="menu-item menu-item-home">
+      <a href="/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-home hvr-icon"></i>首頁
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-about">
+      <a href="/about.html" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-user hvr-icon"></i>關於
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-flinks">
+      <a href="/flinks.html" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-thumbs-up hvr-icon"></i>友情
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-archives">
+      <a href="/archives/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-archive hvr-icon"></i>歸檔
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-categories">
+      <a href="/tags/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-tags hvr-icon"></i>標籤
+        
+        
+      </a>
+      
+    </li>
+      
+
+  
+    <li class="menu-item menu-item-search">
+      <a role="button" class="popup-trigger hvr-icon-pulse">
+        <i class="fa fa-search fa-fw hvr-icon"></i>搜索
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+      </div>
+      
+      
+      <div class="toggle sidebar-toggle" role="button">
+  <span class="toggle-line"></span>
+  <span class="toggle-line"></span>
+  <span class="toggle-line"></span>
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-toc">
+        文章目錄
+      </li>
+      <li class="sidebar-nav-overview">
+        站點概覽
+      </li>
+    </ul>
+    <div class="sidebar-panel-container">
+      
+      <div class="post-toc-wrap sidebar-panel">
+        <div class="post-toc animated"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#簡介">簡介</a></li>
+        <li><a href="#pe-formathttpslearnmicrosoftcomen-uswindowswin32debugpe-format"><a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format">PE Format</a></a></li>
+        <li><a href="#dependency-walkerhttpswwwdependencywalkercom"><a href="https://www.dependencywalker.com/">Dependency Walker</a></a></li>
+        <li><a href="#dependencieshttpsgithubcomlucasgdependencies"><a href="https://github.com/lucasg/Dependencies">Dependencies</a></a></li>
+        <li><a href="#file">File</a></li>
+        <li><a href="#dumpbinhttpslearnmicrosoftcomen-usprevious-versionsvisualstudiovisual-studio-2010c1h23y6cvvs100"><a href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/c1h23y6c(v=vs.100)">DUMPBIN</a></a></li>
+        <li><a href="#fuslogvwhttpslearnmicrosoftcomen-usdotnetframeworktoolsfuslogvw-exe-assembly-binding-log-viewer"><a href="https://learn.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer">Fuslogvw</a></a></li>
+        <li><a href="#pe-bearhttpsgithubcomhasherezadepe-bear"><a href="https://github.com/hasherezade/pe-bear">pe-bear</a></a></li>
+        <li><a href="#print_pehttpswwwmikekohnnetfile_formatsprint_pephp"><a href="https://www.mikekohn.net/file_formats/print_pe.php">print_pe</a></a></li>
+        <li><a href="#dynamic-link-libraryhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-libraries"><a href="https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-libraries">Dynamic Link library</a></a></li>
+        <li><a href="#dynamic-link-library-search-orderhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-library-search-order"><a href="https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">Dynamic-link library search order</a></a>
+          <ul>
+            <li><a href="#大概流程">大概流程</a></li>
+            <li><a href="#打包應用程式的標準搜尋順序">打包應用程式的標準搜尋順序</a></li>
+            <li><a href="#未打包應用程式">未打包應用程式</a></li>
+            <li><a href="#關閉安全-dll-搜尋模式">關閉安全 DLL 搜尋模式</a></li>
+          </ul>
+        </li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#已知-dll-清單">已知 DLL 清單</a></li>
+        <li><a href="#load-time-dynamic-linking">Load-time Dynamic Linking</a></li>
+        <li><a href="#run-time-dynamic-linking">Run-time Dynamic Linking</a></li>
+        <li><a href="#delay-loaded-dllhttpslearnmicrosoftcomen-uscppbuildreferencelinker-support-for-delay-loaded-dllsviewmsvc-170redirectedfrommsdn"><a href="https://learn.microsoft.com/en-us/cpp/build/reference/linker-support-for-delay-loaded-dlls?view=msvc-170&amp;redirectedfrom=MSDN">Delay Loaded DLL</a></a></li>
+        <li><a href="#dllimport">DLLImport</a></li>
+        <li><a href="#win32">Win32</a></li>
+        <li><a href="#syswow64httpslearnmicrosoftcomen-uswindowswin32winprog64running-32-bit-applications"><a href="https://learn.microsoft.com/en-us/windows/win32/winprog64/running-32-bit-applications">SysWOW64</a></a></li>
+        <li><a href="#錯誤處理">錯誤處理</a>
+          <ul>
+            <li><a href="#無法載入-dll-xxxxx-找不到指定模塊">無法載入 DLL xxxxx 找不到指定模塊</a></li>
+            <li><a href="#企圖載入格式錯誤的程式">企圖載入格式錯誤的程式</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div>
+      
+      <div class="site-overview-wrap sidebar-panel">
+        
+<div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" alt="EricChen"
+    src="/imgs/img-lazy-loading.gif" data-src="/imgs/hugo_next_avatar.png">
+  
+  <p class="site-author-name" itemprop="name">EricChen</p>
+  <div class="site-description" itemprop="description">保持简单的易用性和强大的功能。</div>
+</div>
+
+
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+    <div class="site-state-item site-state-posts">
+      <a href="/archives/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">日誌</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">
+      <a href="/categories/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">分類</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-tags">
+      <a href="/tags/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">標籤</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+
+<div class="links-of-social site-overview-item animated">
+
+
+
+
+
+
+  <span class="links-of-social-item">
+    <a href="https://gitlab.com/joe1231231218" title="Gitlab → https://gitlab.com/joe1231231218" rel="noopener"  class="hvr-icon-pulse"  target="_blank">
+      
+      <i class="fab fa-gitlab fa-fw  hvr-icon "></i>
+      
+      
+      Gitlab
+      
+    </a>
+  </span>
+
+
+
+
+
+  <span class="links-of-social-item">
+    <a href="mailto:connection@ericchen.name" title="E-Mail → mailto:connection@ericchen.name" rel="noopener"  class="hvr-icon-pulse"  target="_blank">
+      
+      <i class="fa fa-envelope fa-fw  hvr-icon "></i>
+      
+      
+      E-Mail
+      
+    </a>
+  </span>
+
+</div>
+
+
+
+<div class="cc-license animated" itemprop="license">
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank" title="共享知識">
+    <img src="/imgs/img-lazy-loading.gif" data-src="/imgs/cc/big/by_nc_sa.svg" alt="共享知識">
+  </a>
+</div>
+
+
+
+
+<div class="links-of-blogroll site-overview-item animated">
+  <div class="links-of-blogroll-title">
+    
+    <i class="fa fa-globe fa-fw"></i>
+    
+    友情链接
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    
+    
+    
+    <li class="links-of-blogroll-item">
+      <a href="https://gitee.com/hugo-next/hugo-theme-next" title="https://gitee.com/hugo-next/hugo-theme-next" target="_blank">Hugo-NexT</a>
+    </li>
+    
+    
+    
+    
+    <li class="links-of-blogroll-item">
+      <a href="https://lisenhui.cn" title="https://lisenhui.cn" target="_blank">凡梦星尘空间站</a>
+    </li>
+    
+  </ul>
+</div>
+
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  
+    
+<div id="siteinfo-card-widget" class="sidebar-card-widget">
+  <div class="item-headline">
+    <i class="fas fa-chart-line"></i>
+    <span>網站資訊</span>
+  </div>
+  <div class="siteinfo">
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa-solid fa-calendar-check"></i>已運行：</div>
+      <div class="item-count" id="runTimes" data-publishdate="0001-01-01 00:00:00 &#43;0000 UTC"></div>
+    </div>
+    
+    
+    <div class="siteinfo-item">
+      <div class="item-name">
+        <i class="fas fa fa-user"></i>總訪客數：
+      </div>
+      <div class="item-count" id="busuanzi_value_site_uv"><i class="fa fa-sync fa-spin"></i></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name">
+        <i class="fas fa fa-eye"></i>頁面瀏覽：
+      </div>
+      <div class="item-count" id="busuanzi_value_site_pv"><i class="fa fa-sync fa-spin"></i></div>
+    </div> 
+        
+        
+    
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-font"></i>總字數：</div>
+      <div class="item-count" id="wordsCount" data-count="130345"></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-mug-hot"></i>閱讀約：</div>
+      <div class="item-count" id="readTimes" data-times="311"></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-clock-rotate-left"></i>最後更新於：</div>
+      <div class="item-count" id="last-push-date" data-lastpushdate="2025-03-10 00:00:00 &#43;0000 UTC"></div>
+    </div>
+  </div>
+</div>
+  
+
+  
+</aside>
+<div class="sidebar-dimmer"></div>
+
+      
+    </header>
+    
+    <div class="tool-buttons" >
+  
+  
+  <div id="goto-i18n-translate" class="button"  title="多語言翻譯">
+    <i class="fas fa-globe"></i>
+  </div> 
+  
+  <div id="toggle-theme" class="button" title="深淺模式切換">
+    <i class="fas fa-adjust"></i>
+  </div>
+  
+  <div class="back-to-top" role="button" title="返回頂部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+ 
+</div>
+
+
+  <div class="reading-progress-bar"></div>
+
+
+
+
+
+
+<a href="https://gitlab.com/joe1231231218" rel="noopener external nofollow noreferrer" target="_blank" title="Follow me on GitHub" class="exturl github-corner">
+  <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+</a>
+
+
+
+
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+    <div class="main-inner post posts-expand">
+      
+      
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/aced79f2-f880-4aba-a6c9-96ec8656b635/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Windows PE">
+      <meta itemprop="description" content="簡介
+
+Windows Portable Executable (PE) and Common Object File Format (COFF) files 檔案格式
+
+PE32 表示 X86 32bit 機器
+PE32&#43; 表示 X86-64 64bit 機器
+
+
+
+    PE Format
+    
+    
+    
+
+
+官方完整格式說明
+
+一定由 DOS Header 開始，開頭前兩個 byte 為 0x4D4A
+NT Headers
+
+
+
+
+1
+2
+3
+4
+5
+
+
+typedef struct _IMAGE_NT_HEADERS64 {
+    DWORD Signature; // PE 簽名
+    IMAGE_FILE_HEADER FileHeader;
+    IMAGE_OPTIONAL_HEADER64 OptionalHeader;
+} IMAGE_NT_HEADERS64, *PIMAGE_NT_HEADERS64;
+
+
+
+64 和 32 位元的 OptionalHeader 結構不一樣">
+    </span>
+    
+    <header class="post-header">
+      
+ <h1  class="post-title" itemprop="name headline">
+  
+  
+  Windows PE
+  
+  
+  <a href="https://github.com/chencheyu/chencheyu.github.iopost/aced79f2-f880-4aba-a6c9-96ec8656b635.md" rel="noopener external nofollow noreferrer" target="_blank" class="exturl post-edit-link" title="編輯"><i class="fa fa-pen-nib"></i></a>
+  
+  
+   </h1> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-07-10T00:00:00" itemprop="dateCreated datePublished" datetime="2024-07-10 00:00:00 &#43;0000 UTC">
+    2024-07-10
+  </time>
+</span>
+
+    
+
+
+    
+
+
+        
+  </div>
+  
+  <div class="post-meta-items">
+    
+<span class="post-meta-item" title="字數">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-file-word"></i>
+  </span>
+  <span class="post-meta-item-text">字數：</span>
+  <span>3499</span>
+</span>
+
+    
+<span class="post-meta-item" title="閱讀">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-clock"></i>
+  </span>
+  <span class="post-meta-item-text">閱讀：&asymp;</span>
+  <span>7分鐘</span>
+</span>
+
+
+    
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/aced79f2-f880-4aba-a6c9-96ec8656b635/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+    
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 id="簡介">簡介
+<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
+</h3><p>Windows Portable Executable (PE) and Common Object File Format (COFF) files 檔案格式</p>
+<ul>
+<li>PE32 表示 X86 32bit 機器</li>
+<li>PE32+ 表示 X86-64 64bit 機器</li>
+</ul>
+<h3 id="pe-formathttpslearnmicrosoftcomen-uswindowswin32debugpe-format">
+<a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format" title="PE Format" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    PE Format
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#pe-formathttpslearnmicrosoftcomen-uswindowswin32debugpe-format"></a>
+</h3><p>官方完整格式說明</p>
+<ul>
+<li>一定由 DOS Header 開始，開頭前兩個 byte 為 0x4D4A</li>
+<li>NT Headers</li>
+</ul>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_IMAGE_NT_HEADERS64</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">Signature</span><span class="p">;</span> <span class="c1">// PE 簽名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">IMAGE_FILE_HEADER</span> <span class="n">FileHeader</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IMAGE_OPTIONAL_HEADER64</span> <span class="n">OptionalHeader</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">IMAGE_NT_HEADERS64</span><span class="p">,</span> <span class="o">*</span><span class="n">PIMAGE_NT_HEADERS64</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>64 和 32 位元的 OptionalHeader 結構不一樣</p>
+  
+  <a id="more"></a>
+  <ul>
+<li>FileHeade</li>
+</ul>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6">6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7">7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8">8</a>
+</span><span class="lnt" id="hl-1-9"><a class="lnlinks" href="#hl-1-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"> <span class="k">typedef</span> <span class="k">struct</span> <span class="n">_IMAGE_FILE_HEADER</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">WORD</span>    <span class="n">Machine</span><span class="p">;</span>                       <span class="c1">// 平台，intel 386 為 0x014c，intel 64 為 0x0200
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">WORD</span>    <span class="n">NumberOfSections</span><span class="p">;</span>              <span class="c1">// Section 數量，最多 96 個字節
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">DWORD</span>   <span class="n">TimeDateStamp</span><span class="p">;</span>                 <span class="c1">// 編譯日期
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">DWORD</span>   <span class="n">PointerToSymbolTable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">DWORD</span>   <span class="n">NumberOfSymbols</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">WORD</span>    <span class="n">SizeOfOptionalHeader</span><span class="p">;</span>          <span class="c1">// OptionalHeader 大小, 32 位通常為 E0，64 位通常為 F0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">WORD</span>    <span class="n">Characteristics</span><span class="p">;</span>               <span class="c1">// 檔案屬性，EXE 通常為 010f，DLL 通常為 210e
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="n">IMAGE_FILE_HEADER</span><span class="p">,</span> <span class="o">*</span><span class="n">PIMAGE_FILE_HEADER</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>重要的只有 Machine, TimeDateStamp, Characteristics</p>
+<ul>
+<li>Optional Header</li>
+</ul>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1"> 1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2"> 2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3"> 3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4"> 4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5"> 5</a>
+</span><span class="lnt" id="hl-2-6"><a class="lnlinks" href="#hl-2-6"> 6</a>
+</span><span class="lnt" id="hl-2-7"><a class="lnlinks" href="#hl-2-7"> 7</a>
+</span><span class="lnt" id="hl-2-8"><a class="lnlinks" href="#hl-2-8"> 8</a>
+</span><span class="lnt" id="hl-2-9"><a class="lnlinks" href="#hl-2-9"> 9</a>
+</span><span class="lnt" id="hl-2-10"><a class="lnlinks" href="#hl-2-10">10</a>
+</span><span class="lnt" id="hl-2-11"><a class="lnlinks" href="#hl-2-11">11</a>
+</span><span class="lnt" id="hl-2-12"><a class="lnlinks" href="#hl-2-12">12</a>
+</span><span class="lnt" id="hl-2-13"><a class="lnlinks" href="#hl-2-13">13</a>
+</span><span class="lnt" id="hl-2-14"><a class="lnlinks" href="#hl-2-14">14</a>
+</span><span class="lnt" id="hl-2-15"><a class="lnlinks" href="#hl-2-15">15</a>
+</span><span class="lnt" id="hl-2-16"><a class="lnlinks" href="#hl-2-16">16</a>
+</span><span class="lnt" id="hl-2-17"><a class="lnlinks" href="#hl-2-17">17</a>
+</span><span class="lnt" id="hl-2-18"><a class="lnlinks" href="#hl-2-18">18</a>
+</span><span class="lnt" id="hl-2-19"><a class="lnlinks" href="#hl-2-19">19</a>
+</span><span class="lnt" id="hl-2-20"><a class="lnlinks" href="#hl-2-20">20</a>
+</span><span class="lnt" id="hl-2-21"><a class="lnlinks" href="#hl-2-21">21</a>
+</span><span class="lnt" id="hl-2-22"><a class="lnlinks" href="#hl-2-22">22</a>
+</span><span class="lnt" id="hl-2-23"><a class="lnlinks" href="#hl-2-23">23</a>
+</span><span class="lnt" id="hl-2-24"><a class="lnlinks" href="#hl-2-24">24</a>
+</span><span class="lnt" id="hl-2-25"><a class="lnlinks" href="#hl-2-25">25</a>
+</span><span class="lnt" id="hl-2-26"><a class="lnlinks" href="#hl-2-26">26</a>
+</span><span class="lnt" id="hl-2-27"><a class="lnlinks" href="#hl-2-27">27</a>
+</span><span class="lnt" id="hl-2-28"><a class="lnlinks" href="#hl-2-28">28</a>
+</span><span class="lnt" id="hl-2-29"><a class="lnlinks" href="#hl-2-29">29</a>
+</span><span class="lnt" id="hl-2-30"><a class="lnlinks" href="#hl-2-30">30</a>
+</span><span class="lnt" id="hl-2-31"><a class="lnlinks" href="#hl-2-31">31</a>
+</span><span class="lnt" id="hl-2-32"><a class="lnlinks" href="#hl-2-32">32</a>
+</span><span class="lnt" id="hl-2-33"><a class="lnlinks" href="#hl-2-33">33</a>
+</span><span class="lnt" id="hl-2-34"><a class="lnlinks" href="#hl-2-34">34</a>
+</span><span class="lnt" id="hl-2-35"><a class="lnlinks" href="#hl-2-35">35</a>
+</span><span class="lnt" id="hl-2-36"><a class="lnlinks" href="#hl-2-36">36</a>
+</span><span class="lnt" id="hl-2-37"><a class="lnlinks" href="#hl-2-37">37</a>
+</span><span class="lnt" id="hl-2-38"><a class="lnlinks" href="#hl-2-38">38</a>
+</span><span class="lnt" id="hl-2-39"><a class="lnlinks" href="#hl-2-39">39</a>
+</span><span class="lnt" id="hl-2-40"><a class="lnlinks" href="#hl-2-40">40</a>
+</span><span class="lnt" id="hl-2-41"><a class="lnlinks" href="#hl-2-41">41</a>
+</span><span class="lnt" id="hl-2-42"><a class="lnlinks" href="#hl-2-42">42</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_IMAGE_OPTIONAL_HEADER</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Standard fields.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">WORD</span>    <span class="n">Magic</span><span class="p">;</span>                       <span class="c1">// 簽名， 107h = ROM Image， 10Bh = EXE Image，20Bh = PE32+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">BYTE</span>    <span class="n">MajorLinkerVersion</span><span class="p">;</span>          <span class="c1">// Linker 版本號
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">BYTE</span>    <span class="n">MinorLinkerVersion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span>   <span class="n">SizeOfCode</span><span class="p">;</span>                  <span class="c1">// 所有含有程式碼的 Section 大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfInitializedData</span><span class="p">;</span>       <span class="c1">// 所有含有初始化數據的 Section 大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfUninitializedData</span><span class="p">;</span>     <span class="c1">// 所有含位未始化數據的 Section 大小(不佔用檔案空間，載入記憶體後才會分配空間)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">AddressOfEntryPoint</span><span class="p">;</span>         <span class="c1">// Process 執行入口 RVA(距離 PE 載入後地址的距離，病毒和加密程式都會修改其值，從而獲得程式的控制權；對於 DLL，如果沒有入口函式，那麼就是 0；對於驅動其值為初始化的函式地址)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">BaseOfCode</span><span class="p">;</span>                  <span class="c1">// 程式碼的 Section 的起始 RVA(通常跟在 NT Header 後)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">BaseOfData</span><span class="p">;</span>                  <span class="c1">// 數據的 Section 的起始 RVA 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// NT additional fields.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span>   <span class="n">ImageBase</span><span class="p">;</span>                   <span class="c1">// Process 建議的載入地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SectionAlignment</span><span class="p">;</span>            <span class="c1">// 記憶體中的 Section 對齊值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">FileAlignment</span><span class="p">;</span>               <span class="c1">// 檔案中的 Section 對齊值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">MajorOperatingSystemVersion</span><span class="p">;</span> <span class="c1">// OS 版本號
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">MinorOperatingSystemVersion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WORD</span>    <span class="n">MajorImageVersion</span><span class="p">;</span>           <span class="c1">// PE 版本號
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">MinorImageVersion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WORD</span>    <span class="n">MajorSubsystemVersion</span><span class="p">;</span>       <span class="c1">// 需要的 Subsystem 版本號
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">MinorSubsystemVersion</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span>   <span class="n">Win32VersionValue</span><span class="p">;</span>           <span class="c1">// 未使用，必須為 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfImage</span><span class="p">;</span>                 <span class="c1">// 記憶體中整個 PE 檔案的 image 大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfHeaders</span><span class="p">;</span>               <span class="c1">// 所有的 Header 與 Section Header 加起來的大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">CheckSum</span><span class="p">;</span>                    <span class="c1">// 檢驗值，一般文件為 0，DLL 和 SYS 則會有其設定的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">Subsystem</span><span class="p">;</span>                   <span class="c1">// 檔案子系統
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WORD</span>    <span class="n">DllCharacteristics</span><span class="p">;</span>          <span class="c1">// DLL 檔案特性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfStackReserve</span><span class="p">;</span>          <span class="c1">// 初始化時保留的 stack 大小 (預設 1M)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfStackCommit</span><span class="p">;</span>           <span class="c1">// 初始化時實際給予的 stack 大小 (預設 4K)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfHeapReserve</span><span class="p">;</span>           <span class="c1">// 初始化時保留的 Heap 大小 (預設 1M)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">SizeOfHeapCommit</span><span class="p">;</span>            <span class="c1">// 初始化時實際給予的 Heap 大小 (預設 4K)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">LoaderFlags</span><span class="p">;</span>                 <span class="c1">// 加載旗幟，通常是 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">DWORD</span>   <span class="n">NumberOfRvaAndSizes</span><span class="p">;</span>         <span class="c1">// 數據目錄的數量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">IMAGE_DATA_DIRECTORY</span> <span class="n">DataDirectory</span><span class="p">[</span><span class="n">IMAGE_NUMBEROF_DIRECTORY_ENTRIES</span><span class="p">];</span> <span class="c1">// 數據目錄的陣列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="n">IMAGE_OPTIONAL_HEADER32</span><span class="p">,</span> <span class="o">*</span><span class="n">PIMAGE_OPTIONAL_HEADER32</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>
+<a href="https://hackmd.io/@Mes/mes_note/https%3A%2F%2Fhackmd.io%2F%40Mes%2FPE_File_Format" title="PE file format" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    PE file format
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a></p>
+<h3 id="dependency-walkerhttpswwwdependencywalkercom">
+<a href="https://www.dependencywalker.com/" title="Dependency Walker" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Dependency Walker
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#dependency-walkerhttpswwwdependencywalkercom"></a>
+</h3><p>可以掃描任何 32 位元或 64 位元 Windows 模組（exe、dll、ocx、sys 等）並建立所有依賴模組的層次樹形圖</p>
+<h3 id="dependencieshttpsgithubcomlucasgdependencies">
+<a href="https://github.com/lucasg/Dependencies" title="Dependencies" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Dependencies
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#dependencieshttpsgithubcomlucasgdependencies"></a>
+</h3><p>在 2011 用 C# 重寫 Dependency Walker</p>
+<h3 id="file">File
+<a class="header-anchor" href="#file"></a>
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ file PsExec.exe
+</span></span><span class="line"><span class="cl">PsExec.exe: PE32 executable <span class="o">(</span>console<span class="o">)</span> Intel 80386, <span class="k">for</span> MS Windows, <span class="m">5</span> sections</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>在 Mingw 環境下可以使用 Linux file 命令</p>
+<h3 id="dumpbinhttpslearnmicrosoftcomen-usprevious-versionsvisualstudiovisual-studio-2010c1h23y6cvvs100">
+<a href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/c1h23y6c%28v=vs.100%29" title="DUMPBIN" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    DUMPBIN
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#dumpbinhttpslearnmicrosoftcomen-usprevious-versionsvisualstudiovisual-studio-2010c1h23y6cvvs100"></a>
+</h3><p>顯示有關通用物件檔案格式 (COFF) 二進位檔案的資訊。您可以使用 DUMPBIN 檢查 COFF 物件檔案、COFF 物件的標準函式庫、可執行檔和動態連結程式庫 (DLL)
+好用資訊全面但安裝麻煩</p>
+
+
+
+  <div class="post-alert-note">
+    <div class="post-alert-title">
+      <i class="fa-solid fa-bell"></i>
+      <span>
+        
+          注意
+        
+      </span>
+    </div>
+    <div class="post-alert-content">
+      <p>只能從 Visual Studio 命令提示字元啟動此工具。您無法從系統命令提示字元或 Windows 資源管理器啟動它</p>
+    </div>
+  </div>
+<p><code>DUMPBIN /HEADERS PsExec.exe</code> 顯示標頭</p>
+<h3 id="fuslogvwhttpslearnmicrosoftcomen-usdotnetframeworktoolsfuslogvw-exe-assembly-binding-log-viewer">
+<a href="https://learn.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer" title="Fuslogvw" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Fuslogvw
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#fuslogvwhttpslearnmicrosoftcomen-usdotnetframeworktoolsfuslogvw-exe-assembly-binding-log-viewer"></a>
+</h3><p>診斷 .NET Framework 在執行時無法找到組件的原因
+只對 .net 程式有效</p>
+
+
+
+  <div class="post-alert-note">
+    <div class="post-alert-title">
+      <i class="fa-solid fa-bell"></i>
+      <span>
+        
+          注意
+        
+      </span>
+    </div>
+    <div class="post-alert-content">
+      <p>只能從 Visual Studio 命令提示字元啟動此工具。您無法從系統命令提示字元或 Windows 資源管理器啟動它</p>
+    </div>
+  </div>
+<h3 id="pe-bearhttpsgithubcomhasherezadepe-bear">
+<a href="https://github.com/hasherezade/pe-bear" title="pe-bear" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    pe-bear
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#pe-bearhttpsgithubcomhasherezadepe-bear"></a>
+</h3><p>強大完整的跨平台工具，可以完整印出 DOS Header，NT Signature, NT FileHeader , NT Optional Header，導入導出表，Section Header，二進制顯示每個 section 的內容</p>
+
+  <blockquote>
+    <p>Portable Executable reversing tool with a friendly GUI</p>
+  </blockquote>
+<h3 id="print_pehttpswwwmikekohnnetfile_formatsprint_pephp">
+<a href="https://www.mikekohn.net/file_formats/print_pe.php" title="print_pe" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    print_pe
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#print_pehttpswwwmikekohnnetfile_formatsprint_pephp"></a>
+</h3><p>在 167f7c56f82f7f7699fd70489c10ad6740f83db5 測試，Mingw32 On windows 10
+makefile 中呼叫另一個 makefile 會找不到 make，應為 Mingw32 make 預設檔名是 mingw32-make，建議直接改指令
+<code>build/Makefile</code> 中 CC 變數被註解，需要解除</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1"> 1</a>
+</span><span class="lnt" id="hl-4-2"><a class="lnlinks" href="#hl-4-2"> 2</a>
+</span><span class="lnt" id="hl-4-3"><a class="lnlinks" href="#hl-4-3"> 3</a>
+</span><span class="lnt" id="hl-4-4"><a class="lnlinks" href="#hl-4-4"> 4</a>
+</span><span class="lnt" id="hl-4-5"><a class="lnlinks" href="#hl-4-5"> 5</a>
+</span><span class="lnt" id="hl-4-6"><a class="lnlinks" href="#hl-4-6"> 6</a>
+</span><span class="lnt" id="hl-4-7"><a class="lnlinks" href="#hl-4-7"> 7</a>
+</span><span class="lnt" id="hl-4-8"><a class="lnlinks" href="#hl-4-8"> 8</a>
+</span><span class="lnt" id="hl-4-9"><a class="lnlinks" href="#hl-4-9"> 9</a>
+</span><span class="lnt" id="hl-4-10"><a class="lnlinks" href="#hl-4-10">10</a>
+</span><span class="lnt" id="hl-4-11"><a class="lnlinks" href="#hl-4-11">11</a>
+</span><span class="lnt" id="hl-4-12"><a class="lnlinks" href="#hl-4-12">12</a>
+</span><span class="lnt" id="hl-4-13"><a class="lnlinks" href="#hl-4-13">13</a>
+</span><span class="lnt" id="hl-4-14"><a class="lnlinks" href="#hl-4-14">14</a>
+</span><span class="lnt" id="hl-4-15"><a class="lnlinks" href="#hl-4-15">15</a>
+</span><span class="lnt" id="hl-4-16"><a class="lnlinks" href="#hl-4-16">16</a>
+</span><span class="lnt" id="hl-4-17"><a class="lnlinks" href="#hl-4-17">17</a>
+</span><span class="lnt" id="hl-4-18"><a class="lnlinks" href="#hl-4-18">18</a>
+</span><span class="lnt" id="hl-4-19"><a class="lnlinks" href="#hl-4-19">19</a>
+</span><span class="lnt" id="hl-4-20"><a class="lnlinks" href="#hl-4-20">20</a>
+</span><span class="lnt" id="hl-4-21"><a class="lnlinks" href="#hl-4-21">21</a>
+</span><span class="lnt" id="hl-4-22"><a class="lnlinks" href="#hl-4-22">22</a>
+</span><span class="lnt" id="hl-4-23"><a class="lnlinks" href="#hl-4-23">23</a>
+</span><span class="lnt" id="hl-4-24"><a class="lnlinks" href="#hl-4-24">24</a>
+</span><span class="lnt" id="hl-4-25"><a class="lnlinks" href="#hl-4-25">25</a>
+</span><span class="lnt" id="hl-4-26"><a class="lnlinks" href="#hl-4-26">26</a>
+</span><span class="lnt" id="hl-4-27"><a class="lnlinks" href="#hl-4-27">27</a>
+</span><span class="lnt" id="hl-4-28"><a class="lnlinks" href="#hl-4-28">28</a>
+</span><span class="lnt" id="hl-4-29"><a class="lnlinks" href="#hl-4-29">29</a>
+</span><span class="lnt" id="hl-4-30"><a class="lnlinks" href="#hl-4-30">30</a>
+</span><span class="lnt" id="hl-4-31"><a class="lnlinks" href="#hl-4-31">31</a>
+</span><span class="lnt" id="hl-4-32"><a class="lnlinks" href="#hl-4-32">32</a>
+</span><span class="lnt" id="hl-4-33"><a class="lnlinks" href="#hl-4-33">33</a>
+</span><span class="lnt" id="hl-4-34"><a class="lnlinks" href="#hl-4-34">34</a>
+</span><span class="lnt" id="hl-4-35"><a class="lnlinks" href="#hl-4-35">35</a>
+</span><span class="lnt" id="hl-4-36"><a class="lnlinks" href="#hl-4-36">36</a>
+</span><span class="lnt" id="hl-4-37"><a class="lnlinks" href="#hl-4-37">37</a>
+</span><span class="lnt" id="hl-4-38"><a class="lnlinks" href="#hl-4-38">38</a>
+</span><span class="lnt" id="hl-4-39"><a class="lnlinks" href="#hl-4-39">39</a>
+</span><span class="lnt" id="hl-4-40"><a class="lnlinks" href="#hl-4-40">40</a>
+</span><span class="lnt" id="hl-4-41"><a class="lnlinks" href="#hl-4-41">41</a>
+</span><span class="lnt" id="hl-4-42"><a class="lnlinks" href="#hl-4-42">42</a>
+</span><span class="lnt" id="hl-4-43"><a class="lnlinks" href="#hl-4-43">43</a>
+</span><span class="lnt" id="hl-4-44"><a class="lnlinks" href="#hl-4-44">44</a>
+</span><span class="lnt" id="hl-4-45"><a class="lnlinks" href="#hl-4-45">45</a>
+</span><span class="lnt" id="hl-4-46"><a class="lnlinks" href="#hl-4-46">46</a>
+</span><span class="lnt" id="hl-4-47"><a class="lnlinks" href="#hl-4-47">47</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ./print_pe print_lib.exe
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print_pe (January 15, 2023) - The DLL, EXE, OCX Analyzer
+</span></span><span class="line"><span class="cl">Copyright 2005-2022 - Michael Kohn  http://www.mikekohn.net/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">MS DOS Header
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">      Magic Number: MZ
+</span></span><span class="line"><span class="cl">Bytes On Last Page: 144
+</span></span><span class="line"><span class="cl">     Pages In File: 3
+</span></span><span class="line"><span class="cl">       Relocations: 0
+</span></span><span class="line"><span class="cl">    Size Of Header: 4
+</span></span><span class="line"><span class="cl">    Min Extra Para: 0
+</span></span><span class="line"><span class="cl">    Max Extra Para: 65535
+</span></span><span class="line"><span class="cl">  Initial SS Value: 0
+</span></span><span class="line"><span class="cl">  Initial SP Value: 184
+</span></span><span class="line"><span class="cl">          Checksum: 0
+</span></span><span class="line"><span class="cl">  Initial IP Value: 0
+</span></span><span class="line"><span class="cl">  Initial CS Value: 0
+</span></span><span class="line"><span class="cl">  Addr Reloc Table: 64
+</span></span><span class="line"><span class="cl">    Overlay Number: 0
+</span></span><span class="line"><span class="cl">            OEM ID: 0
+</span></span><span class="line"><span class="cl">          OEM Info: 0
+</span></span><span class="line"><span class="cl">Addr Of New Header: 128
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Signature: PE00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">Image File Header
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">           Machine: 0x014c (i386)
+</span></span><span class="line"><span class="cl">  NumberOfSections: 16
+</span></span><span class="line"><span class="cl">     TimeDateStamp: Thu Jul 11 22:05:29 2024
+</span></span><span class="line"><span class="cl">PointerToSymbolTbl: 149504
+</span></span><span class="line"><span class="cl">   NumberOfSymbols: 951
+</span></span><span class="line"><span class="cl"> SizeOfOptionalHdr: 224
+</span></span><span class="line"><span class="cl">   Characteristics: 0x0107 (Relocations Stripped) (Executable Image) (Line Numbers Stripped) (32 Bit Machine)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">Image Optional Header
+</span></span><span class="line"><span class="cl">---------------------------------------------
+</span></span><span class="line"><span class="cl">             Magic: 0x010b (PE32 32 Bit Exe)
+</span></span><span class="line"><span class="cl">MajorLinkerVersion: 2
+</span></span><span class="line"><span class="cl">MinorLinkerVersion: 32
+</span></span><span class="line"><span class="cl">        SizeOfCode: 56832
+</span></span><span class="line"><span class="cl">...</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>部分輸出範例，資訊量還可以</p>
+<h3 id="dynamic-link-libraryhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-libraries">
+<a href="https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-libraries" title="Dynamic Link library" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Dynamic Link library
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#dynamic-link-libraryhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-libraries"></a>
+</h3><p>動態連結函式庫( DLL) 是一個包含可由另一個模組（應用程式或 DLL）使用的函數和資料的模組
+Windows 應用程式介面 (API) 是作為一組 DLL 實現的，因此任何使用 Windows API 的進程都使用動態連結</p>
+<p>calling a function in a DLL</p>
+<ul>
+<li>load-time dynamic linking</li>
+<li>run-time dynamic linking</li>
+</ul>
+<h3 id="dynamic-link-library-search-orderhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-library-search-order">
+<a href="https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order" title="Dynamic-link library search order" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Dynamic-link library search order
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#dynamic-link-library-search-orderhttpslearnmicrosoftcomen-uswindowswin32dllsdynamic-link-library-search-order"></a>
+</h3><p>Dll Search Process 大致分為以下兩類行為</p>
+<ul>
+<li>打包應用程式</li>
+<li>未打包應用程式</li>
+</ul>
+<h4 id="大概流程">大概流程
+<a class="header-anchor" href="#%e5%a4%a7%e6%a6%82%e6%b5%81%e7%a8%8b"></a>
+</h4><ol>
+<li>應用程式載入的目錄</li>
+<li>由 lpPathName 參數指定的目錄</li>
+<li>系統目錄。使用 
+<a href="https://learn.microsoft.com/en-us/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya" title="GetSystemDirectory" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    GetSystemDirectory
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>函數取得該目錄的路徑。該目錄的名稱是System32</li>
+<li>16位元系統目錄。沒有函數取得這個目錄的路徑，但是會搜尋。該目錄的名稱是System</li>
+<li>Windows 目錄。使用 
+<a href="https://learn.microsoft.com/en-us/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getwindowsdirectorya" title="GetWindowsDirectory" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    GetWindowsDirectory
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>函數取得該目錄的路徑</li>
+<li>PATH 環境變數中所列的目錄</li>
+</ol>
+<h4 id="打包應用程式的標準搜尋順序">打包應用程式的標準搜尋順序
+<a class="header-anchor" href="#%e6%89%93%e5%8c%85%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f%e7%9a%84%e6%a8%99%e6%ba%96%e6%90%9c%e5%b0%8b%e9%a0%86%e5%ba%8f"></a>
+</h4><p>系統按以下順序搜尋：</p>
+<ol>
+<li>DLL 重定向。</li>
+<li>API 集。</li>
+<li>僅限桌面應用程式（非 UWP 應用程式）。 SxS 清單重新導向。</li>
+<li>載入的模組列表。</li>
+<li>已知的 DLL。</li>
+<li>進程的套件依賴關係圖。這是應用程式的套件加上應用程式包清單部分<code>&lt;PackageDependency&gt;</code>中指定的任何依賴項。<code>&lt;Dependencies&gt;</code>依賴項會依照它們在清單中出現的順序進行搜尋。</li>
+<li>從中載入調用進程的資料夾（可執行檔的資料夾）。</li>
+<li>系統資料夾 ( <code>%SystemRoot%\system32</code>)。</li>
+</ol>
+<p>如果 DLL 具有依賴性，則系統會搜尋依賴的 DLL，就好像它們只使用其模組名稱載入一樣（即使第一個 DLL 是透過指定完整路徑載入的）。</p>
+<h4 id="未打包應用程式">未打包應用程式
+<a class="header-anchor" href="#%e6%9c%aa%e6%89%93%e5%8c%85%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f"></a>
+</h4><p>如果啟用安全 DLL 搜尋模式，則搜尋順序如下：</p>
+<ol>
+<li>DLL 重定向。</li>
+<li>API 集。</li>
+<li>SxS 清單重新導向。</li>
+<li>載入的模組列表。</li>
+<li>已知的 DLL。</li>
+<li>Windows 11 版本 21H2（10.0；Build 22000）及更高版本。進程的套件依賴關係圖。這是應用程式的套件加上應用程式包清單部分<code>&lt;PackageDependency&gt;</code>中指定的任何依賴項。<code>&lt;Dependencies&gt;</code>依賴項會依照它們在清單中出現的順序進行搜尋。</li>
+<li>從中載入應用程式的資料夾。</li>
+<li>系統資料夾。使用
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya" title="GetSystemDirectory" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    GetSystemDirectory
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>函數檢索該資料夾的路徑。</li>
+<li>16位元系統資料夾。沒有函數取得該資料夾的路徑，但會搜尋它。</li>
+<li>Windows 資料夾。使用
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getwindowsdirectorya" title="GetWindowsDirectory" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    GetWindowsDirectory
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>函數取得該資料夾的路徑。</li>
+<li>目前資料夾。</li>
+<li>環境變數中列出的目錄<code>PATH</code>。這不包括應用程式路徑註冊表項指定的每個應用程式路徑。計算 DLL 搜尋路徑時不使用App Paths鍵</li>
+</ol>
+<p>如果停用_安全 DLL 搜尋模式，則搜尋順序相同，只是目前資料夾從序列中的位置 11 移動到位置 8（緊接在步驟7 之後。從中載入應用程式的資料夾）</p>
+<h4 id="關閉安全-dll-搜尋模式">關閉安全 DLL 搜尋模式
+<a class="header-anchor" href="#%e9%97%9c%e9%96%89%e5%ae%89%e5%85%a8-dll-%e6%90%9c%e5%b0%8b%e6%a8%a1%e5%bc%8f"></a>
+</h4><p><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode</code></p>
+<h3 id="register">Register
+<a class="header-anchor" href="#register"></a>
+</h3><p>dll 可以在在註冊當中註冊，方便 COM 程式找到它
+通常註冊在 <code>HKLM\SOFTWARE\Classes</code></p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span><span class="lnt" id="hl-5-2"><a class="lnlinks" href="#hl-5-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">reg query HKLM<span class="se">\S</span>OFTWARE<span class="se">\C</span>lasses /s /f whatever.dll
+</span></span><span class="line"><span class="cl"><span class="k">if</span> errorlevel <span class="m">1</span> goto DLL_MISSING</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>尋找 dll 是否註冊</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">regsvr32 your.dll</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>註冊 dll</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">regsvr32 /u your.dll</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>取消註冊 dll</p>
+<h3 id="已知-dll-清單">已知 DLL 清單
+<a class="header-anchor" href="#%e5%b7%b2%e7%9f%a5-dll-%e6%b8%85%e5%96%ae"></a>
+</h3><p>在註冊表
+<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</code></p>
+<h3 id="load-time-dynamic-linking">Load-time Dynamic Linking
+<a class="header-anchor" href="#load-time-dynamic-linking"></a>
+</h3><p>
+<a href="https://stackoverflow.com/questions/552248/difference-between-load-time-and-run-time-dynamic-linking" title="Difference between load-time and run-time dynamic linking" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Difference between load-time and run-time dynamic linking
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+當一個可執行檔在建置時連結到 DLL 時，連結器不會插入目標程式碼，而是插入一個存根，該存根基本上表示該名稱的函數位於該DLL中</p>
+<p>現在，當可執行檔案執行時，可執行檔案的位元將會遺失（即函數存根），因此在允許程式運行之前，程式載入器會透過將它們替換為 DLL 檔案的入口點來修復這些遺失的函數</p>
+<p>只有在所有存根都被替換（即解析）之後，才允許可執行檔運行</p>
+<p>這就是載入時動態連結</p>
+<h3 id="run-time-dynamic-linking">Run-time Dynamic Linking
+<a class="header-anchor" href="#run-time-dynamic-linking"></a>
+</h3><p>在這種情況下，可執行檔未連結到任何 DLL 庫文件，因此它不會包含 DLL 中的任何存根，因此程式載入器在執行可執行檔時不會出現問題</p>
+<p>但是從 DLL 內部存取該函數的任務留給了可執行文件，並且可以使用 GetProcAddress Windows API 來完成</p>
+<p>這就是運行時動態連結</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-8-1"><a class="lnlinks" href="#hl-8-1"> 1</a>
+</span><span class="lnt" id="hl-8-2"><a class="lnlinks" href="#hl-8-2"> 2</a>
+</span><span class="lnt" id="hl-8-3"><a class="lnlinks" href="#hl-8-3"> 3</a>
+</span><span class="lnt" id="hl-8-4"><a class="lnlinks" href="#hl-8-4"> 4</a>
+</span><span class="lnt" id="hl-8-5"><a class="lnlinks" href="#hl-8-5"> 5</a>
+</span><span class="lnt" id="hl-8-6"><a class="lnlinks" href="#hl-8-6"> 6</a>
+</span><span class="lnt" id="hl-8-7"><a class="lnlinks" href="#hl-8-7"> 7</a>
+</span><span class="lnt" id="hl-8-8"><a class="lnlinks" href="#hl-8-8"> 8</a>
+</span><span class="lnt" id="hl-8-9"><a class="lnlinks" href="#hl-8-9"> 9</a>
+</span><span class="lnt" id="hl-8-10"><a class="lnlinks" href="#hl-8-10">10</a>
+</span><span class="lnt" id="hl-8-11"><a class="lnlinks" href="#hl-8-11">11</a>
+</span><span class="lnt" id="hl-8-12"><a class="lnlinks" href="#hl-8-12">12</a>
+</span><span class="lnt" id="hl-8-13"><a class="lnlinks" href="#hl-8-13">13</a>
+</span><span class="lnt" id="hl-8-14"><a class="lnlinks" href="#hl-8-14">14</a>
+</span><span class="lnt" id="hl-8-15"><a class="lnlinks" href="#hl-8-15">15</a>
+</span><span class="lnt" id="hl-8-16"><a class="lnlinks" href="#hl-8-16">16</a>
+</span><span class="lnt" id="hl-8-17"><a class="lnlinks" href="#hl-8-17">17</a>
+</span><span class="lnt" id="hl-8-18"><a class="lnlinks" href="#hl-8-18">18</a>
+</span><span class="lnt" id="hl-8-19"><a class="lnlinks" href="#hl-8-19">19</a>
+</span><span class="lnt" id="hl-8-20"><a class="lnlinks" href="#hl-8-20">20</a>
+</span><span class="lnt" id="hl-8-21"><a class="lnlinks" href="#hl-8-21">21</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp"> 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"> 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="nf">int</span> <span class="p">(</span><span class="kr">__cdecl</span> <span class="o">*</span><span class="n">MYPROC</span><span class="p">)(</span><span class="n">LPCWSTR</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">HINSTANCE</span> <span class="n">hinstLib</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">MYPROC</span> <span class="n">ProcAdd</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">BOOL</span> <span class="n">fFreeResult</span><span class="p">,</span> <span class="n">fRunTimeLinkSuccess</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get a handle to the DLL module.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hinstLib</span> <span class="o">=</span> <span class="n">LoadLibrary</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&#34;MyPuts.dll&#34;</span><span class="p">));</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1">// If the handle is valid, try to get the function address.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">hinstLib</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">ProcAdd</span> <span class="o">=</span> <span class="p">(</span><span class="n">MYPROC</span><span class="p">)</span> <span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hinstLib</span><span class="p">,</span> <span class="s">&#34;myPuts&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="c1">// If the function address is valid, call the function.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">!=</span> <span class="n">ProcAdd</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fRunTimeLinkSuccess</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="n">ProcAdd</span><span class="p">)</span> <span class="p">(</span><span class="sa">L</span><span class="s">&#34;Message sent to the DLL function</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Free the DLL module.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">fFreeResult</span> <span class="o">=</span> <span class="n">FreeLibrary</span><span class="p">(</span><span class="n">hinstLib</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>範例</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-9-1"><a class="lnlinks" href="#hl-9-1">1</a>
+</span><span class="lnt" id="hl-9-2"><a class="lnlinks" href="#hl-9-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="p">[</span><span class="nf">DllImport</span><span class="p">(</span><span class="s">&#34;plugin.dll&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="k">static</span> <span class="k">extern</span> <span class="kt">void</span> <span class="nf">SomeFunction</span><span class="p">();</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>載入 plugin.dll 中的 SomeFunction 函式</p>
+<h3 id="delay-loaded-dllhttpslearnmicrosoftcomen-uscppbuildreferencelinker-support-for-delay-loaded-dllsviewmsvc-170redirectedfrommsdn">
+<a href="https://learn.microsoft.com/en-us/cpp/build/reference/linker-support-for-delay-loaded-dlls?view=msvc-170&amp;redirectedfrom=MSDN" title="Delay Loaded DLL" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Delay Loaded DLL
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#delay-loaded-dllhttpslearnmicrosoftcomen-uscppbuildreferencelinker-support-for-delay-loaded-dllsviewmsvc-170redirectedfrommsdn"></a>
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-10-1"><a class="lnlinks" href="#hl-10-1"> 1</a>
+</span><span class="lnt" id="hl-10-2"><a class="lnlinks" href="#hl-10-2"> 2</a>
+</span><span class="lnt" id="hl-10-3"><a class="lnlinks" href="#hl-10-3"> 3</a>
+</span><span class="lnt" id="hl-10-4"><a class="lnlinks" href="#hl-10-4"> 4</a>
+</span><span class="lnt" id="hl-10-5"><a class="lnlinks" href="#hl-10-5"> 5</a>
+</span><span class="lnt" id="hl-10-6"><a class="lnlinks" href="#hl-10-6"> 6</a>
+</span><span class="lnt" id="hl-10-7"><a class="lnlinks" href="#hl-10-7"> 7</a>
+</span><span class="lnt" id="hl-10-8"><a class="lnlinks" href="#hl-10-8"> 8</a>
+</span><span class="lnt" id="hl-10-9"><a class="lnlinks" href="#hl-10-9"> 9</a>
+</span><span class="lnt" id="hl-10-10"><a class="lnlinks" href="#hl-10-10">10</a>
+</span><span class="lnt" id="hl-10-11"><a class="lnlinks" href="#hl-10-11">11</a>
+</span><span class="lnt" id="hl-10-12"><a class="lnlinks" href="#hl-10-12">12</a>
+</span><span class="lnt" id="hl-10-13"><a class="lnlinks" href="#hl-10-13">13</a>
+</span><span class="lnt" id="hl-10-14"><a class="lnlinks" href="#hl-10-14">14</a>
+</span><span class="lnt" id="hl-10-15"><a class="lnlinks" href="#hl-10-15">15</a>
+</span><span class="lnt" id="hl-10-16"><a class="lnlinks" href="#hl-10-16">16</a>
+</span><span class="lnt" id="hl-10-17"><a class="lnlinks" href="#hl-10-17">17</a>
+</span><span class="lnt" id="hl-10-18"><a class="lnlinks" href="#hl-10-18">18</a>
+</span><span class="lnt" id="hl-10-19"><a class="lnlinks" href="#hl-10-19">19</a>
+</span><span class="lnt" id="hl-10-20"><a class="lnlinks" href="#hl-10-20">20</a>
+</span><span class="lnt" id="hl-10-21"><a class="lnlinks" href="#hl-10-21">21</a>
+</span><span class="lnt" id="hl-10-22"><a class="lnlinks" href="#hl-10-22">22</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;delayimp.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;MyDll.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#pragma comment(lib, &#34;delayimp&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="cp">#pragma comment(lib, &#34;MyDll&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">BOOL</span> <span class="n">TestReturn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// MyDLL.DLL will load at this point
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">fnMyDll</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//MyDLL.dll will unload at this point
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">TestReturn</span> <span class="o">=</span> <span class="n">__FUnloadDelayLoadedDLL2</span><span class="p">(</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">TestReturn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf_s</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">DLL was unloaded&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf_s</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">DLL was not unloaded&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="dllimport">DLLImport
+<a class="header-anchor" href="#dllimport"></a>
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-11-1"><a class="lnlinks" href="#hl-11-1">1</a>
+</span><span class="lnt" id="hl-11-2"><a class="lnlinks" href="#hl-11-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="na">[DLLImport(&#34;dllName&#34;, CallingConvention = CallingConvention.StdCall)]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="kd">extern</span> <span class="kt">int</span> <span class="n">funcName</span><span class="p">(</span><span class="k">ref</span> <span class="n">Int32</span> <span class="n">retVal</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>在 <code>C#</code> 中引用 dll 的方法</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-12-1"><a class="lnlinks" href="#hl-12-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">extern</span> <span class="s">&#34;C&#34;</span> <span class="kt">int</span> <span class="kr">__stdcall</span> <span class="nf">funcName</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">arg</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>c / cpp 檔案中的宣告</p>
+<p>函式參數有指標時</p>
+<ul>
+<li>ref Int32 匹配 <code>int*</code></li>
+<li>ref IntPtr 匹配 <code>int**</code></li>
+</ul>
+<h3 id="win32">Win32
+<a class="header-anchor" href="#win32"></a>
+</h3><ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya" title="LoadLibraryA function libloaderapi.h" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    LoadLibraryA function libloaderapi.h
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+將指定的模組載入到呼叫程序的位址空間。指定的模組可能會導致其他模組被載入</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setdlldirectorya?redirectedfrom=MSDN" title="SetDllDirectoryA function winbase.h" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    SetDllDirectoryA function winbase.h
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+目錄新增至用於尋找應用程式的 DLL 的搜尋路徑</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea?redirectedfrom=MSDN" title="GetModuleFileNameA function libloaderapi.h" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    GetModuleFileNameA function libloaderapi.h
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+檢索包含指定模組的檔案的完全限定路徑。該模組必須已由目前進程載入</li>
+</ul>
+
+
+
+  <div class="post-alert-note">
+    <div class="post-alert-title">
+      <i class="fa-solid fa-bell"></i>
+      <span>
+        
+          注意
+        
+      </span>
+    </div>
+    <div class="post-alert-content">
+      <p>如果一個 DLL 在兩個進程中加載，則一個進程中的檔案名稱可能與另一個進程中的檔案名稱大小寫不同</p>
+    </div>
+  </div>
+<ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/win32/api/LibLoaderAPI/nf-libloaderapi-adddlldirectory" title="AddDllDirectory function libloaderapi.h" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    AddDllDirectory function libloaderapi.h
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+Adds a directory to the process DLL search path</li>
+</ul>
+<h3 id="syswow64httpslearnmicrosoftcomen-uswindowswin32winprog64running-32-bit-applications">
+<a href="https://learn.microsoft.com/en-us/windows/win32/winprog64/running-32-bit-applications" title="SysWOW64" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    SysWOW64
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+<a class="header-anchor" href="#syswow64httpslearnmicrosoftcomen-uswindowswin32winprog64running-32-bit-applications"></a>
+</h3><p>WOW64 是 x86 模擬器，允許基於 32 位元 Windows 的應用程式在 64 位元 Windows 上無縫運行</p>
+<ul>
+<li><code>C:\Windows\SysWOW64</code>
+32 bit dll</li>
+<li><code>C:\Windows\System32</code>
+64 bit dll</li>
+<li><code>C:\Windows\WinSxS</code>
+dot net 組件</li>
+</ul>
+<p>The WOW64 emulator runs in user mode. It provides an interface between the 32-bit version of Ntdll.dll and the kernel of the processor, and it intercepts kernel calls. The WOW64 emulator consists of the following DLLs:</p>
+<ul>
+<li>Wow64.dll provides the core emulation infrastructure and the thunks for the Ntoskrnl.exe entry-point functions.</li>
+<li>Wow64Win.dll provides thunks for the Win32k.sys entry-point functions.</li>
+<li>(x64 only) Wow64Cpu.dll provides support for running x86 programs on x64.</li>
+</ul>
+<h3 id="錯誤處理">錯誤處理
+<a class="header-anchor" href="#%e9%8c%af%e8%aa%a4%e8%99%95%e7%90%86"></a>
+</h3><h4 id="無法載入-dll-xxxxx-找不到指定模塊">無法載入 DLL xxxxx 找不到指定模塊
+<a class="header-anchor" href="#%e7%84%a1%e6%b3%95%e8%bc%89%e5%85%a5-dll-xxxxx-%e6%89%be%e4%b8%8d%e5%88%b0%e6%8c%87%e5%ae%9a%e6%a8%a1%e5%a1%8a"></a>
+</h4><p>dll 不存在或 <strong>dll 的 Load-time Dynamic Link dll 不存在</strong></p>
+<ul>
+<li>dll 需要放在引用他的程式的同資料夾或系統目錄中</li>
+<li>dll 已經放在放在引用他的程式的同資料夾
+<img src="/imgs/img-lazy-loading.gif" data-src="CS/Windows/2024-07-11%20112321.png" alt=""  /></li>
+<li>檢查 dll 是否被安全性封鎖</li>
+<li>檢查所有 dll 跟應用程式的體系結構，PE32, PE32+ 不可以互相載入</li>
+<li>安裝 Visual C++ Redistributable for Visual Studio，如果應用程式使用它，它有 X86 跟 X64 版，不相容</li>
+<li>移動 dll 到系統 dll 資料夾</li>
+<li>Register dll</li>
+<li>使用 sysinternals-suite 包中的 Procmon.exe 監聽所有 Process 的事件檢查開檔失敗或模塊載入失敗(可以使用過濾器只看失敗的 Process Name)</li>
+</ul>
+<h4 id="企圖載入格式錯誤的程式">企圖載入格式錯誤的程式
+<a class="header-anchor" href="#%e4%bc%81%e5%9c%96%e8%bc%89%e5%85%a5%e6%a0%bc%e5%bc%8f%e9%8c%af%e8%aa%a4%e7%9a%84%e7%a8%8b%e5%bc%8f"></a>
+</h4><p>注意你的可執行檔跟 DLL 是不是同一個體系結構，X86 跟 x64 是不一樣的</p>
+
+
+    </div>
+    <footer class="post-footer">
+      
+
+
+<div class="post-tags">
+  
+    <a href="/tags/cs/windows/">
+    CS/Windows
+  </a>
+  
+</div>
+
+
+
+  
+
+<hr/>
+
+
+
+
+
+
+<div class="post-copyright">
+  <img src="/imgs/cc/cc.svg" width="75" height="75" align="right" alt="共享知識"/>
+  <ul>
+    <li class="post-copyright-title">
+      <strong>文章標題：</strong>
+      Windows PE
+    </li>
+    <li class="post-copyright-author">
+      
+        <strong>本文作者： </strong>
+        EricChen
+      
+    </li>
+    <li class="post-copyright-link">
+       
+        <strong>本文鏈接：</strong>
+        <a id="post-cr-link" href="/post/aced79f2-f880-4aba-a6c9-96ec8656b635/" title="Windows PE">/post/aced79f2-f880-4aba-a6c9-96ec8656b635/</a>
+      
+    </li>
+    <li class="post-copyright-license">
+      <strong>版權聲明： </strong>
+      
+      
+      本博客所有文章除特別聲明外，均採用 <i class="fab fa-fw fa-creative-commons"></i><a target='_blank' href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>BY-NC-SA</a> 許可協議。轉載請註明出處！
+    </li>
+  </ul>
+</div>
+
+
+
+
+  <div class="followme">
+  <span>歡迎關注我的其它發布渠道</span>
+  <div class="social-list">
+    
+    
+    
+    
+    
+    <div class="social-item">
+        <a target="_blank" class="social-link" href="/rss.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+          <span class="label">RSS</span>
+        </a>
+      </div>
+    
+  </div>
+</div>
+
+
+
+<div class="post-nav">
+  <div class="post-nav-next post-nav-item">
+    
+    <a href="/post/15f9338a-1f8e-4195-adf9-ea6d9e258a98/" rel="next" title="Windows PE">
+      <i class="fa fa-chevron-left"></i> Windows PE
+    </a>
+    
+  </div>
+  <div class="post-nav-prev post-nav-item">
+    
+    <a href="/post/a7694bb4-65f2-4762-9808-d1b1d1897006/" rel="prev" title="Bash">
+      Bash
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    
+  </div>
+</div>
+
+
+
+    </footer>
+  </article>
+</div>
+
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      
+<div id="i18n-translate" class="i18n-translate">
+  <i class="fa fa-language"></i>
+  <div id="lang-select" class="lang-select">
+    <div id="lang-selected" class="selected-option">
+      <span class="flag-icon flag-icon-zh-tw"></span>
+      <span class="selected-language">繁體中文</span>
+      <i class="fa fa-chevron-down"></i>
+    </div>
+    <div id="lang-options" class="lang-options">
+      
+      
+      
+        <div class="lang-option" lang-code="zh-tw" lang-name="繁體中文" lang-url="/post/aced79f2-f880-4aba-a6c9-96ec8656b635/">
+          <span class="flag-icon flag-icon-zh-tw"></span>
+          <span class="lang-name">繁體中文</span>
+        </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+      
+<div class="copyright">
+  &copy;
+  <span itemprop="copyrightYear">
+    
+    
+    
+    2021 - 2025
+    
+    
+  </span>
+  <span class="with-love">
+    <i class="fa fa-copyright"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EricChen</span>
+</div>
+
+<div class="powered-by">
+  
+  %!(EXTRA string=<a href='https://gohugo.io' title='0.143.1' target='_blank'>Hugo</a> &amp; <a href='https://github.com/hugo-next/hugo-theme-next' title='4.7.2' target='_blank'>Hugo NexT.Muse</a>)
+</div>
+
+
+
+
+
+ 
+
+
+
+
+
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"clipboard":{"js":{"file":"dist/clipboard.min.js","name":"clipboard","version":"2.0.11"}},"comments":false,"expired":false,"isHome":false,"isPage":true,"path":"aced79f2-f880-4aba-a6c9-96ec8656b635","permalink":"/post/aced79f2-f880-4aba-a6c9-96ec8656b635/","title":"Windows PE","toc":true,"waline3":{"pagecnt":{"alias":"@waline/client","alias_name":"waline","file":"dist/pageview.js","name":"pageview","version":"3.3.0"}}}</script>
+  
+
+
+
+ 
+  
+  <script type="text/javascript" src="/js/3rd/animejs/3.2.2/anime.min.js" crossorigin="anonymous" defer></script>
+ 
+  
+  <script type="text/javascript" src="/js/3rd/viewerjs/1.11.6/viewer.min.js" crossorigin="anonymous" defer></script>
+
+
+<script class="next-config" data-name="main" type="application/json">{"bookmark":{"color":"#222","enable":false,"save":"manual"},"copybtn":true,"darkmode":false,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小時前","ds_hours":" 小時 ","ds_just":"剛剛","ds_min":" 分鐘前","ds_mins":" 分鐘","ds_month":" 個月前","ds_years":" 年 ","empty":"沒有找到任何搜索結果：${query}","hits":"找到 ${hits} 個搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","placeholder":"搜索..."},"isMultiLang":true,"lang":"zh-TW","lazyload":false,"localSearch":{"enable":true,"limit":1000,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":false,"plugin":"waline3"},"views":{"enable":true,"plugin":"waline3"}},"root":"/","scheme":"Muse","share":{"addtoany":{"js":"https://static.addtoany.com/menu/page.js","locale":"zh-TW","num":8},"enable":false},"sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"vendor":{"plugins":"local","router":{"name":"local","type":"modern","url":"/js/3rd"}},"version":"4.7.2","waline3":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o 可用快捷键选取表情符号：😀😄😁🥳👻👽👀🚄 (Window系统：Win+.，Mac系统：Control+Command+Space)","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"search":true,"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"@waline/client","file":"dist/waline.min.css","name":"waline","version":"3.3.0"},"js":{"alias":"@waline/client","file":"dist/waline.js","name":"waline","version":"3.3.0"}}}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/main.min.js?=1741874841" defer></script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/clipboard.min.js?=1741874841" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
