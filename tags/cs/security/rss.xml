@@ -10,72 +10,30 @@
     <atom:link href="/tags/cs/security/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CVE 2019</title>
-      <link>/post/dbe3ecb6-2964-4d12-b30a-3eb51cee75bf/</link>
+      <link>/post/8af0ed21-cb07-4611-8a8c-441f9b3831a8/</link>
       <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/post/dbe3ecb6-2964-4d12-b30a-3eb51cee75bf/</guid>
-      <description>&lt;h2 id=&#34;中華電信數據機遠端代碼執行漏洞--orange-tsaihttpsblogorangetwposts2019-11-hinet-gpon-modem-rce&#34;&gt;&#xA;&lt;a href=&#34;https://blog.orange.tw/posts/2019-11-HiNet-GPON-Modem-RCE/&#34; title=&#34;中華電信數據機遠端代碼執行漏洞 | Orange Tsai&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    中華電信數據機遠端代碼執行漏洞 | Orange Tsai&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e4%b8%ad%e8%8f%af%e9%9b%bb%e4%bf%a1%e6%95%b8%e6%93%9a%e6%a9%9f%e9%81%a0%e7%ab%af%e4%bb%a3%e7%a2%bc%e5%9f%b7%e8%a1%8c%e6%bc%8f%e6%b4%9e--orange-tsaihttpsblogorangetwposts2019-11-hinet-gpon-modem-rce&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;HiNet GPON 韌體中託管在連接埠 3097 上的服務允許攻擊者隨機命令執行&#xA;一系列中華電信數據機的配置異常漏洞，引響約 25 萬台機器&#xA;相關的 CVE 漏洞編號:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2019</title>
-      <link>/post/337a2cce-23bf-4eb5-b303-2f7853fc2251/</link>
-      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/post/337a2cce-23bf-4eb5-b303-2f7853fc2251/</guid>
+      <guid>/post/8af0ed21-cb07-4611-8a8c-441f9b3831a8/</guid>
       <description>&lt;h2 id=&#34;中華電信數據機遠端代碼執行漏洞--orange-tsaihttpsblogorangetwposts2019-11-hinet-gpon-modem-rce&#34;&gt;&#xA;&lt;a href=&#34;https://blog.orange.tw/posts/2019-11-HiNet-GPON-Modem-RCE/&#34; title=&#34;中華電信數據機遠端代碼執行漏洞 | Orange Tsai&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    中華電信數據機遠端代碼執行漏洞 | Orange Tsai&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e4%b8%ad%e8%8f%af%e9%9b%bb%e4%bf%a1%e6%95%b8%e6%93%9a%e6%a9%9f%e9%81%a0%e7%ab%af%e4%bb%a3%e7%a2%bc%e5%9f%b7%e8%a1%8c%e6%bc%8f%e6%b4%9e--orange-tsaihttpsblogorangetwposts2019-11-hinet-gpon-modem-rce&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;HiNet GPON 韌體中託管在連接埠 3097 上的服務允許攻擊者隨機命令執行&#xA;一系列中華電信數據機的配置異常漏洞，引響約 25 萬台機器&#xA;相關的 CVE 漏洞編號:&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE 2025</title>
-      <link>/post/39d812bc-a700-4370-ab1b-0097c9dc8efa/</link>
+      <link>/post/78efaf22-27f7-4cbc-9532-a3b47545542b/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/post/39d812bc-a700-4370-ab1b-0097c9dc8efa/</guid>
-      <description>&lt;h2 id=&#34;todesktop-的-firebase-服務管理員帳戶權限洩漏導致可以任意更新-todesktop-部屬的程式httpskibtytownblogtodesktop&#34;&gt;&#xA;&lt;a href=&#34;https://kibty.town/blog/todesktop/&#34; title=&#34;ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#todesktop-%e7%9a%84-firebase-%e6%9c%8d%e5%8b%99%e7%ae%a1%e7%90%86%e5%93%a1%e5%b8%b3%e6%88%b6%e6%ac%8a%e9%99%90%e6%b4%a9%e6%bc%8f%e5%b0%8e%e8%87%b4%e5%8f%af%e4%bb%a5%e4%bb%bb%e6%84%8f%e6%9b%b4%e6%96%b0-todesktop-%e9%83%a8%e5%b1%ac%e7%9a%84%e7%a8%8b%e5%bc%8fhttpskibtytownblogtodesktop&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;建立容器具有比必要更廣泛的權限，允許 &lt;code&gt;postinstall&lt;/code&gt; 應用程式中的腳本 &lt;code&gt;package.json&lt;/code&gt; 檢索 Firebase 憑證，從而導致憑證洩漏，這將允許攻擊者存取 ToDesktop 資料庫、使用者帳戶並對任意應用程式部署未經授權的更新&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2025</title>
-      <link>/post/638234cb-cfcf-4fcd-b607-3ef37a679ed7/</link>
-      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/post/638234cb-cfcf-4fcd-b607-3ef37a679ed7/</guid>
-      <description>&lt;h2 id=&#34;todesktop-的-firebase-服務管理員帳戶權限洩漏導致可以任意更新-todesktop-部屬的程式httpskibtytownblogtodesktop&#34;&gt;&#xA;&lt;a href=&#34;https://kibty.town/blog/todesktop/&#34; title=&#34;ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#todesktop-%e7%9a%84-firebase-%e6%9c%8d%e5%8b%99%e7%ae%a1%e7%90%86%e5%93%a1%e5%b8%b3%e6%88%b6%e6%ac%8a%e9%99%90%e6%b4%a9%e6%bc%8f%e5%b0%8e%e8%87%b4%e5%8f%af%e4%bb%a5%e4%bb%bb%e6%84%8f%e6%9b%b4%e6%96%b0-todesktop-%e9%83%a8%e5%b1%ac%e7%9a%84%e7%a8%8b%e5%bc%8fhttpskibtytownblogtodesktop&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;建立容器具有比必要更廣泛的權限，允許 &lt;code&gt;postinstall&lt;/code&gt; 應用程式中的腳本 &lt;code&gt;package.json&lt;/code&gt; 檢索 Firebase 憑證，從而導致憑證洩漏，這將允許攻擊者存取 ToDesktop 資料庫、使用者帳戶並對任意應用程式部署未經授權的更新&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2025</title>
-      <link>/post/77ddc3bd-6bd4-43c5-b81b-6aaf6ffddf06/</link>
-      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/post/77ddc3bd-6bd4-43c5-b81b-6aaf6ffddf06/</guid>
+      <guid>/post/78efaf22-27f7-4cbc-9532-a3b47545542b/</guid>
       <description>&lt;h2 id=&#34;todesktop-的-firebase-服務管理員帳戶權限洩漏導致可以任意更新-todesktop-部屬的程式httpskibtytownblogtodesktop&#34;&gt;&#xA;&lt;a href=&#34;https://kibty.town/blog/todesktop/&#34; title=&#34;ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#todesktop-%e7%9a%84-firebase-%e6%9c%8d%e5%8b%99%e7%ae%a1%e7%90%86%e5%93%a1%e5%b8%b3%e6%88%b6%e6%ac%8a%e9%99%90%e6%b4%a9%e6%bc%8f%e5%b0%8e%e8%87%b4%e5%8f%af%e4%bb%a5%e4%bb%bb%e6%84%8f%e6%9b%b4%e6%96%b0-todesktop-%e9%83%a8%e5%b1%ac%e7%9a%84%e7%a8%8b%e5%bc%8fhttpskibtytownblogtodesktop&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;建立容器具有比必要更廣泛的權限，允許 &lt;code&gt;postinstall&lt;/code&gt; 應用程式中的腳本 &lt;code&gt;package.json&lt;/code&gt; 檢索 Firebase 憑證，從而導致憑證洩漏，這將允許攻擊者存取 ToDesktop 資料庫、使用者帳戶並對任意應用程式部署未經授權的更新&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE 2024</title>
-      <link>/post/eb63c0ba-fa51-42b2-ba8f-e9773c9779d0/</link>
+      <link>/post/002cb438-55aa-4ac2-864b-59380f86f2f3/</link>
       <pubDate>Fri, 12 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/post/eb63c0ba-fa51-42b2-ba8f-e9773c9779d0/</guid>
-      <description>&lt;h2 id=&#34;簡介&#34;&gt;簡介&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e7%b0%a1%e4%bb%8b&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;紀錄知道的漏洞&lt;/p&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#linux&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;cve-2024-1086httpsnvdnistgovvulndetailcve-2024-1086&#34;&gt;&#xA;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-1086&#34; title=&#34;CVE-2024-1086&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    CVE-2024-1086&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#cve-2024-1086httpsnvdnistgovvulndetailcve-2024-1086&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;p&gt;Linux netfilter nf_tables元件中存在釋放後使用漏洞，可被利用來實現本機權限提升。nf_hook_slow() 被二次釋放&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2024</title>
-      <link>/post/5a86cbd9-b1cf-4481-8f6f-0647305e0497/</link>
-      <pubDate>Fri, 12 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/post/5a86cbd9-b1cf-4481-8f6f-0647305e0497/</guid>
+      <guid>/post/002cb438-55aa-4ac2-864b-59380f86f2f3/</guid>
       <description>&lt;h2 id=&#34;簡介&#34;&gt;簡介&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e7%b0%a1%e4%bb%8b&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;紀錄知道的漏洞&lt;/p&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#linux&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;cve-2024-1086httpsnvdnistgovvulndetailcve-2024-1086&#34;&gt;&#xA;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-1086&#34; title=&#34;CVE-2024-1086&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    CVE-2024-1086&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#cve-2024-1086httpsnvdnistgovvulndetailcve-2024-1086&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;p&gt;Linux netfilter nf_tables元件中存在釋放後使用漏洞，可被利用來實現本機權限提升。nf_hook_slow() 被二次釋放&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE 2023</title>
-      <link>/post/5f167e1f-0e61-484e-8c34-21f3501a35d8/</link>
+      <link>/post/69563c01-b71c-40a4-a97b-85924bd0d2bf/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>/post/5f167e1f-0e61-484e-8c34-21f3501a35d8/</guid>
-      <description>&lt;h2 id=&#34;windows&#34;&gt;Windows&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#windows&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&#xA;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-38831&#34; title=&#34;CVE-2023-38831&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    CVE-2023-38831&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;  &lt;blockquote&gt;&#xA;    &lt;p&gt;6.23 之前的 RARLabs WinRAR 版本中已發現可利用的漏洞。該漏洞使攻擊者能夠透過特製的 ZIP 檔案執行任意程式碼。此漏洞是由於對包含良性文件（例如普通 .PDF 文件）以及共享相同名稱的資料夾的 ZIP 存檔處理不當而產生的。當使用者嘗試存取良性檔案時，存檔可能包括包含可執行內容的類似命名的資料夾。在嘗試存取良性文件期間會處理資料夾中的惡意內容，從而促進任意程式碼的執行。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2023</title>
-      <link>/post/8b5df7b1-756b-449b-8e6a-5ffd7f241de5/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>/post/8b5df7b1-756b-449b-8e6a-5ffd7f241de5/</guid>
-      <description>&lt;h2 id=&#34;windows&#34;&gt;Windows&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#windows&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&#xA;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-38831&#34; title=&#34;CVE-2023-38831&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    CVE-2023-38831&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;  &lt;blockquote&gt;&#xA;    &lt;p&gt;6.23 之前的 RARLabs WinRAR 版本中已發現可利用的漏洞。該漏洞使攻擊者能夠透過特製的 ZIP 檔案執行任意程式碼。此漏洞是由於對包含良性文件（例如普通 .PDF 文件）以及共享相同名稱的資料夾的 ZIP 存檔處理不當而產生的。當使用者嘗試存取良性檔案時，存檔可能包括包含可執行內容的類似命名的資料夾。在嘗試存取良性文件期間會處理資料夾中的惡意內容，從而促進任意程式碼的執行。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CVE 2023</title>
-      <link>/post/3ee99909-c1aa-44e9-98c1-2d4ee754caa2/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>/post/3ee99909-c1aa-44e9-98c1-2d4ee754caa2/</guid>
+      <guid>/post/69563c01-b71c-40a4-a97b-85924bd0d2bf/</guid>
       <description>&lt;h2 id=&#34;windows&#34;&gt;Windows&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#windows&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3 id=&#34;cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&#xA;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-38831&#34; title=&#34;CVE-2023-38831&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    CVE-2023-38831&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#cve-2023-38831httpsnvdnistgovvulndetailcve-2023-38831&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;  &lt;blockquote&gt;&#xA;    &lt;p&gt;6.23 之前的 RARLabs WinRAR 版本中已發現可利用的漏洞。該漏洞使攻擊者能夠透過特製的 ZIP 檔案執行任意程式碼。此漏洞是由於對包含良性文件（例如普通 .PDF 文件）以及共享相同名稱的資料夾的 ZIP 存檔處理不當而產生的。當使用者嘗試存取良性檔案時，存檔可能包括包含可執行內容的類似命名的資料夾。在嘗試存取良性文件期間會處理資料夾中的惡意內容，從而促進任意程式碼的執行。&lt;/p&gt;</description>
     </item>
   </channel>
