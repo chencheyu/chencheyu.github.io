@@ -6,13 +6,48 @@
     <description>Recent content in Tags on 哲佑碎碎念</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS</title>
       <link>/tags/cs/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
       <guid>/tags/cs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS/Linux</title>
+      <link>/tags/cs/linux/</link>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS/Software</title>
+      <link>/tags/cs/software/</link>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pier</title>
+      <link>/tags/pier/</link>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/pier/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS/ComputerSystemOrganization</title>
+      <link>/tags/cs/computersystemorganization/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/computersystemorganization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS/ComputerSystemOrganization/AMD</title>
+      <link>/tags/cs/computersystemorganization/amd/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/computersystemorganization/amd/</guid>
       <description></description>
     </item>
     <item>
@@ -23,6 +58,13 @@
       <description></description>
     </item>
     <item>
+      <title>CS/Uefi</title>
+      <link>/tags/cs/uefi/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/uefi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>CS/Sitcon2025</title>
       <link>/tags/cs/sitcon2025/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
@@ -30,16 +72,9 @@
       <description></description>
     </item>
     <item>
-      <title>CS/Linux</title>
-      <link>/tags/cs/linux/</link>
-      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/cs/linux/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>CS/Security</title>
       <link>/tags/cs/security/</link>
-      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       <guid>/tags/cs/security/</guid>
       <description></description>
     </item>
@@ -48,13 +83,6 @@
       <link>/tags/cs/backend/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
       <guid>/tags/cs/backend/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CS/Software</title>
-      <link>/tags/cs/software/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/cs/software/</guid>
       <description></description>
     </item>
     <item>
@@ -72,6 +100,13 @@
       <description></description>
     </item>
     <item>
+      <title>CS/CAndCpp</title>
+      <link>/tags/cs/candcpp/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/cs/candcpp/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>CS/Embedded</title>
       <link>/tags/cs/embedded/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
@@ -83,13 +118,6 @@
       <link>/tags/cs/embedded/arterytek/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
       <guid>/tags/cs/embedded/arterytek/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CS/ComputerSystemOrganization</title>
-      <link>/tags/cs/computersystemorganization/</link>
-      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/cs/computersystemorganization/</guid>
       <description></description>
     </item>
     <item>
@@ -125,13 +153,6 @@
       <link>/tags/%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
       <guid>/tags/%E7%94%9F%E6%B4%BB/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CS/CAndCpp</title>
-      <link>/tags/cs/candcpp/</link>
-      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/cs/candcpp/</guid>
       <description></description>
     </item>
     <item>

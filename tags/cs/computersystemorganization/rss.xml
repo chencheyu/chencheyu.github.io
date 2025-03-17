@@ -6,8 +6,22 @@
     <description>Recent content in CS/ComputerSystemOrganization on 哲佑碎碎念</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 06 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/cs/computersystemorganization/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AMD Microcode</title>
+      <link>/post/18ca6adc-2fd1-4a87-ac2e-b78f72ab6fcc/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/post/18ca6adc-2fd1-4a87-ac2e-b78f72ab6fcc/</guid>
+      <description>&lt;h2 id=&#34;microcode-update&#34;&gt;Microcode Update&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#microcode-update&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;AMD 產生了一個新的微碼補丁，補丁以二進位形式交付給 BIOS、OS 和其他合作夥伴；這個 blob 內部包含以下元件：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;描述補丁頭格式、其設計的 CPU 的元資料、日期和版本資訊的標題。&lt;/li&gt;&#xA;&lt;li&gt;2048 位元RSA PKCS &lt;code&gt;#1&lt;/code&gt;簽章。&lt;/li&gt;&#xA;&lt;li&gt;2048 位元 RSA 公鑰模數（0x10001 作為指數）。&lt;/li&gt;&#xA;&lt;li&gt;公鑰的2048 位元 蒙哥馬利逆（用於簡化 RSA 模運算）。&lt;/li&gt;&#xA;&lt;li&gt;指示補丁的其餘部分是否已加密的位元。&lt;/li&gt;&#xA;&lt;li&gt;符合暫存器和遮罩值的數組，用於選擇要修補的微碼和指令。&lt;/li&gt;&#xA;&lt;li&gt;一組捆綁在四個「四元組」中的微操作，每個微操作都與一個序列字配對，指示下一步執行的位置&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;一旦收到新的補丁，微碼將在運行時或下次重啟時加載。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SMBus</title>
+      <link>/post/bdf8e2db-f4d3-43da-a2f2-b7277ee9d2c9/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>/post/bdf8e2db-f4d3-43da-a2f2-b7277ee9d2c9/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://smbus.org/specs/&#34; title=&#34;SMBus Specifications&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    SMBus Specifications&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;跟 &#xA;&lt;a href=&#34;../2cf2e1fd-1529-4609-921e-7466d23e4b66.md&#34; title=&#34;I2C&#34; &gt;&#xA;    I2C&#xA;    &#xA;&lt;/a&gt; 很像的協議&lt;/p&gt;&#xA;&lt;h2 id=&#34;smbus-vs-i2c&#34;&gt;SMBus vs I2C&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#smbus-vs-i2c&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;I²C 匯流排可在任何時刻停滯（時鐘靜止），而不影響數據傳輸。主設備或從設備皆可將時鐘線保持在低電位，直到完成數據處理。&lt;/li&gt;&#xA;&lt;li&gt;SMBus 匯流排要求時鐘線不低於 10kHz，且不高於 100kHz，並設有 35ms 超時機制，若時鐘線維持低電位超過 35ms，則從設備將自動重置其介面。&lt;/li&gt;&#xA;&lt;li&gt;由於 SMBus 要求時鐘不能靜止，因此 SMBus 需要一個最小時鐘速率，而 I²C 則沒有此限制&lt;/li&gt;&#xA;&lt;li&gt;資料持留時間(Data Hold Time)的要求,SMBus 規定 SMBCLK 線路的準位下降後,SMBDAT 上的資料必須持續保留 300nS,但 I2C 卻沒有對此有相同的強制要求。&lt;/li&gt;&#xA;&lt;li&gt;I²C 允許從設備 (Slave) 在地址階段回應 NACK，當設備無法接收數據時 (例如正在執行即時任務)，可以拒絕通信。此時，主設備 (Master) 可以發送 STOP 信號 或 重啟 START 信號 以重新傳輸;SMBus 要求設備始終應答 (ACK) 自己的地址，以確保能夠偵測到 可移除設備 是否仍然連接至匯流排。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;address&#34;&gt;Address&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#address&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;0000 1xxx = I2C HS-mode master code; SMBus reserved for future use.&lt;/li&gt;&#xA;&lt;li&gt;0101 000x = SMBus reserved for ACCESS.bus host.&lt;/li&gt;&#xA;&lt;li&gt;0110 111x = SMBus reserved for ACCESS.bus default address.&lt;/li&gt;&#xA;&lt;li&gt;001 100x = SMBus Alert Response address.&lt;/li&gt;&#xA;&lt;li&gt;1100 001x = SMBus Device Default address.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>SMBus</title>
       <link>/post/84953244-9cf1-4de4-b541-2d0b8aa0ed46/</link>
@@ -23,11 +37,32 @@
       <description>&lt;h3 id=&#34;frequencies&#34;&gt;Frequencies&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#frequencies&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;Standard mode: 100 kilobits per second.&lt;/li&gt;&#xA;&lt;li&gt;Fast mode: 400 kilobits per second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;時序&#34;&gt;時序&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e6%99%82%e5%ba%8f&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱&#xA;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;CS/ComputerSystemOrganization/I2C/2024_12_17_154719.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;t&lt;sup&gt;r&lt;/sup&gt;&#xA;SCL, SDA 上升或下降從 70% 到 30% 的時間&#xA;Max Standard 300 ns, Fast 300 ns&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;LOW&lt;/sup&gt;&#xA;SCL 維持低電平&#xA;Min Standard 4.7 μs, Fast1.2 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HIGH&lt;/sup&gt;&#xA;SCL 維持高電平&#xA;Min Standard 4.0 μs, Fast0.6 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HD;DAT&lt;/sup&gt;&#xA;SCL 下降到SDA 狀態改變完成的時間&#xA;沒有最小時間規範&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;SU;DAT&lt;/sup&gt;&#xA;SDA 狀態改變完成到 SCL 重新拉高的時間&#xA;Min Standard 250 ns, Fast 100 ns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;data-transfer&#34;&gt;Data Transfer&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#data-transfer&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;CS/ComputerSystemOrganization/I2C/2024_12_06_170600.png&#34; alt=&#34;&#34;  /&gt;&#xA;所有位元組均以 MSB 位元先移位的方式傳送&#xA;除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化&lt;/p&gt;</description>
     </item>
     <item>
+      <title></title>
+      <link>/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/</guid>
+      <description>&lt;h3 id=&#34;frequencies&#34;&gt;Frequencies&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#frequencies&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;Standard mode: 100 kilobits per second.&lt;/li&gt;&#xA;&lt;li&gt;Fast mode: 400 kilobits per second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;時序&#34;&gt;時序&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e6%99%82%e5%ba%8f&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱&#xA;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;CS/ComputerSystemOrganization/I2C/2024_12_17_154719.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;t&lt;sup&gt;r&lt;/sup&gt;&#xA;SCL, SDA 上升或下降從 70% 到 30% 的時間&#xA;Max Standard 300 ns, Fast 300 ns&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;LOW&lt;/sup&gt;&#xA;SCL 維持低電平&#xA;Min Standard 4.7 μs, Fast1.2 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HIGH&lt;/sup&gt;&#xA;SCL 維持高電平&#xA;Min Standard 4.0 μs, Fast0.6 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HD;DAT&lt;/sup&gt;&#xA;SCL 下降到SDA 狀態改變完成的時間&#xA;沒有最小時間規範&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;SU;DAT&lt;/sup&gt;&#xA;SDA 狀態改變完成到 SCL 重新拉高的時間&#xA;Min Standard 250 ns, Fast 100 ns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;data-transfer&#34;&gt;Data Transfer&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#data-transfer&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;CS/ComputerSystemOrganization/I2C/2024_12_06_170600.png&#34; alt=&#34;&#34;  /&gt;&#xA;所有位元組均以 MSB 位元先移位的方式傳送&#xA;除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>I2C.md</title>
       <link>/post/eb1707ef-96ef-464c-9d29-986539a917d8/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
       <guid>/post/eb1707ef-96ef-464c-9d29-986539a917d8/</guid>
       <description>&lt;h3 id=&#34;frequencies&#34;&gt;Frequencies&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#frequencies&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;Standard mode: 100 kilobits per second.&lt;/li&gt;&#xA;&lt;li&gt;Fast mode: 400 kilobits per second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;時序&#34;&gt;時序&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e6%99%82%e5%ba%8f&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱&#xA;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;../52efcd4d-b8de-4817-a160-85a7b57fc13f.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;t&lt;sup&gt;r&lt;/sup&gt;&#xA;SCL, SDA 上升或下降從 70% 到 30% 的時間&#xA;Max Standard 300 ns, Fast 300 ns&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;LOW&lt;/sup&gt;&#xA;SCL 維持低電平&#xA;Min Standard 4.7 μs, Fast1.2 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HIGH&lt;/sup&gt;&#xA;SCL 維持高電平&#xA;Min Standard 4.0 μs, Fast0.6 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HD;DAT&lt;/sup&gt;&#xA;SCL 下降到SDA 狀態改變完成的時間&#xA;沒有最小時間規範&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;SU;DAT&lt;/sup&gt;&#xA;SDA 狀態改變完成到 SCL 重新拉高的時間&#xA;Min Standard 250 ns, Fast 100 ns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;data-transfer&#34;&gt;Data Transfer&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#data-transfer&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;../e2f9530b-a6b4-44e7-a787-7991a05231d3.png&#34; alt=&#34;&#34;  /&gt;&#xA;所有位元組均以 MSB 位元先移位的方式傳送&#xA;除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I2C.md</title>
+      <link>/post/851489a9-e517-41c3-9a56-0352775c299c/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/post/851489a9-e517-41c3-9a56-0352775c299c/</guid>
+      <description>&lt;h3 id=&#34;frequencies&#34;&gt;Frequencies&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#frequencies&#34;&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;ul&gt;&#xA;&lt;li&gt;Standard mode: 100 kilobits per second.&lt;/li&gt;&#xA;&lt;li&gt;Fast mode: 400 kilobits per second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;時序&#34;&gt;時序&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#%e6%99%82%e5%ba%8f&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱&#xA;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;../f6780ca9-386e-474d-9369-92322ba64a93.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;t&lt;sup&gt;r&lt;/sup&gt;&#xA;SCL, SDA 上升或下降從 70% 到 30% 的時間&#xA;Max Standard 300 ns, Fast 300 ns&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;LOW&lt;/sup&gt;&#xA;SCL 維持低電平&#xA;Min Standard 4.7 μs, Fast1.2 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HIGH&lt;/sup&gt;&#xA;SCL 維持高電平&#xA;Min Standard 4.0 μs, Fast0.6 μs&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;HD;DAT&lt;/sup&gt;&#xA;SCL 下降到SDA 狀態改變完成的時間&#xA;沒有最小時間規範&lt;/li&gt;&#xA;&lt;li&gt;t&lt;sup&gt;SU;DAT&lt;/sup&gt;&#xA;SDA 狀態改變完成到 SCL 重新拉高的時間&#xA;Min Standard 250 ns, Fast 100 ns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;data-transfer&#34;&gt;Data Transfer&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#data-transfer&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/imgs/img-lazy-loading.gif&#34; data-src=&#34;../ada8f680-060f-4f92-b529-13e21081c7f9.png&#34; alt=&#34;&#34;  /&gt;&#xA;所有位元組均以 MSB 位元先移位的方式傳送&#xA;除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ampere</title>
+      <link>/post/03b47c75-4fac-4831-a6b8-9f28c0f77777/</link>
+      <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>/post/03b47c75-4fac-4831-a6b8-9f28c0f77777/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://amperecomputing.com/products/processors&#34; title=&#34;Ampere&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    Ampere&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;Arm server CPU 設計製造商，核心數在 32 - 196 Core，128 PCIE lane，已有資料中心使用&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ampere</title>
@@ -41,6 +76,13 @@
       <link>/post/849c7d8d-acce-43fc-9048-4e50087721a7/</link>
       <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
       <guid>/post/849c7d8d-acce-43fc-9048-4e50087721a7/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://amperecomputing.com/products/processors&#34; title=&#34;Ampere&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    Ampere&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;Arm server CPU 設計製造商，核心數在 32 - 196 Core，128 PCIE lane，已有資料中心使用&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ampere</title>
+      <link>/post/bb4de561-3a7d-4bf5-a9b9-7262c540e9c4/</link>
+      <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>/post/bb4de561-3a7d-4bf5-a9b9-7262c540e9c4/</guid>
       <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://amperecomputing.com/products/processors&#34; title=&#34;Ampere&#34; rel=&#34;noopener external nofollow noreferrer&#34; target=&#34;_blank&#34; class=&#34; exturl&#34;&gt;&#xA;    Ampere&#xA;    &#xA;    &lt;i class=&#34;fa fa-external-link-alt&#34;&gt;&lt;/i&gt;&#xA;    &#xA;&lt;/a&gt;&#xA;Arm server CPU 設計製造商，核心數在 32 - 196 Core，128 PCIE lane，已有資料中心使用&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,1904 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)" />
+
+<meta name="generator" content="Hugo 0.143.1">
+<link rel="shortcut icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/imgs/icons/favicon_16x16_next.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/imgs/icons/favicon_32_32_next.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/imgs/icons/apple_touch_icon_next.png">
+<meta itemprop="name" content="Posts" />
+<meta itemprop="description" content="保持简单的易用性和强大的功能。" />
+<meta name="description" content="保持简单的易用性和强大的功能。" />
+
+
+
+
+<meta itemprop="image" content="/imgs/hugo_next_avatar.png" />
+<meta itemprop="keywords" content="EricChen,Embed,CS" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="保持简单的易用性和强大的功能。" />
+<meta property="og:image" content="/imgs/hugo_next_avatar.png" />
+<meta property="og:image:width" content="312" />
+<meta property="og:image:height" content="312" />
+<meta property="og:image:type" content="image/jpeg/png/svg/jpg" />
+<meta property="og:url" content="/post/"/>
+<meta property="og:site_name" content="哲佑碎碎念" />
+<meta property="og:locale" content="zh-TW"/>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/font-awesome/6.7.2/css/all.min.css" /> 
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/animate.css/3.1.1/animate.min.css" /> 
+
+  
+  <link type="text/css" rel="stylesheet" href="/js/3rd/viewerjs/1.11.6/viewer.min.css" /> 
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.css?=1742222802">
+
+
+<style type="text/css">
+  .post-footer hr:after {
+    content: "";
+  }
+
+  .flinks-list-footer hr:after {
+    content: "";
+  }
+
+  
+  
+</style>
+
+
+
+
+  
+<script type="text/javascript">
+(function(){
+  localDB = {
+    set: function (key, value, ttl) {
+      if (ttl === 0) return;
+      const now = new Date();
+      const expiryDay = ttl * 86400000;
+      const item = {
+        value: value,
+        expiry: now.getTime() + expiryDay
+      };
+      localStorage.setItem(key, JSON.stringify(item));
+    },
+    get: function (key) {
+      const itemStr = localStorage.getItem(key);
+      if (!itemStr) {
+        return undefined;
+      }
+  
+      const item = JSON.parse(itemStr);
+      const now = new Date();
+  
+      if (now.getTime() > item.expiry) {
+        localStorage.removeItem(key);
+        return undefined;
+      }
+      return item.value;
+    }
+  };
+
+  theme = {
+    active: function() {
+      const localState = localDB.get('theme');
+      if (localState == undefined) return;
+      theme.toggle(localState);
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(function (evt) {
+        theme.toggle(evt.matches ? 'dark' : 'light');
+      });
+    },
+
+    toggle: function (theme) {
+      document.documentElement.setAttribute('data-theme',  theme);
+      localDB.set('theme', theme, 2);
+      
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe) {
+        const config = { setConfig: { theme: theme } };
+        iframe.contentWindow.postMessage({ giscus: config }, 'https://giscus.app');
+      }
+    }
+  };
+
+  theme.active();
+})(window);
+</script>
+
+
+
+
+  <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  var script = document.createElement('script');
+    
+  script.charset = "UTF-8";
+  script.src     = "https:\/\/busuanzi.ibruce.info\/busuanzi\/2.3\/busuanzi.pure.mini.js";
+  script.async   = false
+  script.defer   = true
+  
+  document.head.appendChild(script);
+  script.onload = function() {
+    NexT.utils.fmtBusuanzi();
+  }
+});
+</script>
+  
+
+
+
+  <title>
+post - 哲佑碎碎念
+</title>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"  class="use-motion" >
+  <div class="headband"></div>
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        
+<div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+    
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">哲佑碎碎念</h1>
+      <i class="logo-line"></i>
+    </a>
+    
+      <p class="site-subtitle" itemprop="description">哲佑碎碎念</p>
+    
+    
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+      
+      <i class="fa fa-search fa-fw fa-lg"></i>
+      
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">    
+  
+    
+    <li class="menu-item menu-item-home">
+      <a href="/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-home hvr-icon"></i>首頁
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-about">
+      <a href="/about.html" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-user hvr-icon"></i>關於
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-flinks">
+      <a href="/flinks.html" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-thumbs-up hvr-icon"></i>友情
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-archives">
+      <a href="/archives/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-archive hvr-icon"></i>歸檔
+        
+        
+      </a>
+      
+    </li>
+  
+    
+    <li class="menu-item menu-item-categories">
+      <a href="/tags/" class=" hvr-icon-pulse " rel="section">
+        <i class="fa fa-tags hvr-icon"></i>標籤
+        
+        
+      </a>
+      
+    </li>
+      
+
+  
+    <li class="menu-item menu-item-search">
+      <a role="button" class="popup-trigger hvr-icon-pulse">
+        <i class="fa fa-search fa-fw hvr-icon"></i>搜索
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+      </div>
+      
+      
+      <div class="toggle sidebar-toggle" role="button">
+  <span class="toggle-line"></span>
+  <span class="toggle-line"></span>
+  <span class="toggle-line"></span>
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-inner sidebar-overview-active">
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-toc">
+        文章目錄
+      </li>
+      <li class="sidebar-nav-overview">
+        站點概覽
+      </li>
+    </ul>
+    <div class="sidebar-panel-container">
+      
+      <div class="post-toc-wrap sidebar-panel">
+        <div class="post-toc animated"><nav id="TableOfContents"></nav></div>
+      </div>
+      
+      <div class="site-overview-wrap sidebar-panel">
+        
+<div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" alt="EricChen"
+    src="/imgs/img-lazy-loading.gif" data-src="/imgs/hugo_next_avatar.png">
+  
+  <p class="site-author-name" itemprop="name">EricChen</p>
+  <div class="site-description" itemprop="description">保持简单的易用性和强大的功能。</div>
+</div>
+
+
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+    <div class="site-state-item site-state-posts">
+      <a href="/archives/">
+        <span class="site-state-item-count">173</span>
+        <span class="site-state-item-name">日誌</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">
+      <a href="/categories/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">分類</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-tags">
+      <a href="/tags/">
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">標籤</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+
+<div class="links-of-social site-overview-item animated">
+
+
+
+
+
+
+  <span class="links-of-social-item">
+    <a href="https://gitlab.com/joe1231231218" title="Gitlab → https://gitlab.com/joe1231231218" rel="noopener"  class="hvr-icon-pulse"  target="_blank">
+      
+      <i class="fab fa-gitlab fa-fw  hvr-icon "></i>
+      
+      
+      Gitlab
+      
+    </a>
+  </span>
+
+
+
+
+
+  <span class="links-of-social-item">
+    <a href="mailto:connection@ericchen.name" title="E-Mail → mailto:connection@ericchen.name" rel="noopener"  class="hvr-icon-pulse"  target="_blank">
+      
+      <i class="fa fa-envelope fa-fw  hvr-icon "></i>
+      
+      
+      E-Mail
+      
+    </a>
+  </span>
+
+</div>
+
+
+
+<div class="cc-license animated" itemprop="license">
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank" title="共享知識">
+    <img src="/imgs/img-lazy-loading.gif" data-src="/imgs/cc/big/by_nc_sa.svg" alt="共享知識">
+  </a>
+</div>
+
+
+
+
+<div class="links-of-blogroll site-overview-item animated">
+  <div class="links-of-blogroll-title">
+    
+    <i class="fa fa-globe fa-fw"></i>
+    
+    友情链接
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    
+    
+    
+    <li class="links-of-blogroll-item">
+      <a href="https://gitee.com/hugo-next/hugo-theme-next" title="https://gitee.com/hugo-next/hugo-theme-next" target="_blank">Hugo-NexT</a>
+    </li>
+    
+    
+    
+    
+    <li class="links-of-blogroll-item">
+      <a href="https://lisenhui.cn" title="https://lisenhui.cn" target="_blank">凡梦星尘空间站</a>
+    </li>
+    
+  </ul>
+</div>
+
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  
+    
+<div id="siteinfo-card-widget" class="sidebar-card-widget">
+  <div class="item-headline">
+    <i class="fas fa-chart-line"></i>
+    <span>網站資訊</span>
+  </div>
+  <div class="siteinfo">
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa-solid fa-calendar-check"></i>已運行：</div>
+      <div class="item-count" id="runTimes" data-publishdate="0001-01-01 00:00:00 &#43;0000 UTC"></div>
+    </div>
+    
+    
+    <div class="siteinfo-item">
+      <div class="item-name">
+        <i class="fas fa fa-user"></i>總訪客數：
+      </div>
+      <div class="item-count" id="busuanzi_value_site_uv"><i class="fa fa-sync fa-spin"></i></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name">
+        <i class="fas fa fa-eye"></i>頁面瀏覽：
+      </div>
+      <div class="item-count" id="busuanzi_value_site_pv"><i class="fa fa-sync fa-spin"></i></div>
+    </div> 
+        
+        
+    
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-font"></i>總字數：</div>
+      <div class="item-count" id="wordsCount" data-count="172306"></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-mug-hot"></i>閱讀約：</div>
+      <div class="item-count" id="readTimes" data-times="450"></div>
+    </div>
+    <div class="siteinfo-item">
+      <div class="item-name"><i class="fa fa-clock-rotate-left"></i>最後更新於：</div>
+      <div class="item-count" id="last-push-date" data-lastpushdate="2025-03-14 00:00:00 &#43;0000 UTC"></div>
+    </div>
+  </div>
+</div>
+  
+
+  
+</aside>
+<div class="sidebar-dimmer"></div>
+
+      
+    </header>
+    
+    <div class="tool-buttons" >
+  
+  
+  <div id="goto-i18n-translate" class="button"  title="多語言翻譯">
+    <i class="fas fa-globe"></i>
+  </div> 
+  
+  <div id="toggle-theme" class="button" title="深淺模式切換">
+    <i class="fas fa-adjust"></i>
+  </div>
+  
+  <div class="back-to-top" role="button" title="返回頂部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+ 
+</div>
+
+
+  <div class="reading-progress-bar"></div>
+
+
+
+
+
+
+<a href="https://gitlab.com/joe1231231218" rel="noopener external nofollow noreferrer" target="_blank" title="Follow me on GitHub" class="exturl github-corner">
+  <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+</a>
+
+
+
+
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+    <div class="main-inner index posts-expand">
+      
+      
+
+
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/57bc0c6d-e9cd-4e7f-9641-c95151153a6c/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CScope.md">
+      <meta itemprop="description" content="c的變數可見域
+
+半夜隔壁房再吵，睡不著寫第一篇教學幹話。其實是自己金魚腦，要筆記。
+區域變數
+
+區域變數(幹在函數第一層)，你寫在函數裡的那一種(main也算)，只有宣告下面的看的見，如果再”{}”裡，就裡面看的到。">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/57bc0c6d-e9cd-4e7f-9641-c95151153a6c/" itemprop="url" class="post-title-link">CScope.md</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2018-04-26T00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-26 00:00:00 &#43;0000 UTC">
+    2018-04-26
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/57bc0c6d-e9cd-4e7f-9641-c95151153a6c/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h1 id="c的變數可見域">c的變數可見域
+<a class="header-anchor" href="#c%e7%9a%84%e8%ae%8a%e6%95%b8%e5%8f%af%e8%a6%8b%e5%9f%9f"></a>
+</h1><p>半夜隔壁房再吵，睡不著寫第一篇教學幹話。其實是自己金魚腦，要筆記。</p>
+<h3 id="區域變數">區域變數
+<a class="header-anchor" href="#%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8"></a>
+</h3><p>區域變數(幹在函數第一層)，你寫在函數裡的那一種(main也算)，只有宣告下面的看的見，如果再”{}”裡，就裡面看的到。</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/57bc0c6d-e9cd-4e7f-9641-c95151153a6c/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/15212007-bae0-4b8e-aff7-0517d0f4c790/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CScope.md">
+      <meta itemprop="description" content="c的變數可見域
+
+半夜隔壁房再吵，睡不著寫第一篇教學幹話。其實是自己金魚腦，要筆記。
+區域變數
+
+區域變數(幹在函數第一層)，你寫在函數裡的那一種(main也算)，只有宣告下面的看的見，如果再”{}”裡，就裡面看的到。">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/15212007-bae0-4b8e-aff7-0517d0f4c790/" itemprop="url" class="post-title-link">CScope.md</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2018-04-26T00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-26 00:00:00 &#43;0000 UTC">
+    2018-04-26
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/15212007-bae0-4b8e-aff7-0517d0f4c790/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h1 id="c的變數可見域">c的變數可見域
+<a class="header-anchor" href="#c%e7%9a%84%e8%ae%8a%e6%95%b8%e5%8f%af%e8%a6%8b%e5%9f%9f"></a>
+</h1><p>半夜隔壁房再吵，睡不著寫第一篇教學幹話。其實是自己金魚腦，要筆記。</p>
+<h3 id="區域變數">區域變數
+<a class="header-anchor" href="#%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8"></a>
+</h3><p>區域變數(幹在函數第一層)，你寫在函數裡的那一種(main也算)，只有宣告下面的看的見，如果再”{}”裡，就裡面看的到。</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/15212007-bae0-4b8e-aff7-0517d0f4c790/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/4ad37e09-1480-4313-beb2-2cc6fe6c717c/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="程式語言">
+      <meta itemprop="description" content="簡介
+
+大學時程式語言課程的上課筆記
+記憶體管理議題
+
+ada
+
+動態的他會收回去
+c/c&#43;&#43;
+
+自己管，指標可以指向任何地方(通常拿來做記憶體管理)
+指標可移動
+須明確取參
+參照像const pointer
+c#
+
+僅參照">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/4ad37e09-1480-4313-beb2-2cc6fe6c717c/" itemprop="url" class="post-title-link">程式語言</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2018-04-10T00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-10 00:00:00 &#43;0000 UTC">
+    2018-04-10
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/4ad37e09-1480-4313-beb2-2cc6fe6c717c/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="簡介">簡介
+<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
+</h3><p>大學時程式語言課程的上課筆記</p>
+<h3 id="記憶體管理議題">記憶體管理議題
+<a class="header-anchor" href="#%e8%a8%98%e6%86%b6%e9%ab%94%e7%ae%a1%e7%90%86%e8%ad%b0%e9%a1%8c"></a>
+</h3><h4 id="ada">ada
+<a class="header-anchor" href="#ada"></a>
+</h4><p>動態的他會收回去</p>
+<h4 id="cc">c/c++
+<a class="header-anchor" href="#cc"></a>
+</h4><p>自己管，指標可以指向任何地方(通常拿來做記憶體管理)
+指標可移動
+須明確取參
+參照像const pointer</p>
+<h4 id="c">c#
+<a class="header-anchor" href="#c"></a>
+</h4><p>僅參照</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/4ad37e09-1480-4313-beb2-2cc6fe6c717c/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/d05cac72-7f07-44c8-9375-2f37eb07968f/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C&#43;&#43; Vector Internal">
+      <meta itemprop="description" content="基本概念
+
+動態請求的array
+就是太小重要更大的，然後搬過去
+看code
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+tem* resize(unsigned long vsize){
+        tem *pay=new tem[vsize],*ppa,*endp=pay&#43;vsize,*par;
+        for(par=arr,ppa=pay;ppa&lt;=endp&amp;&amp;par&lt;=endc;&#43;&#43;ppa,&#43;&#43;par){
+            *ppa=*par;
+        }
+        delete [] arr;
+        arr=pay;crr=par;endc=endp;
+        return arr;
+    }
+
+
+
+他有規範要寫的函式">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/d05cac72-7f07-44c8-9375-2f37eb07968f/" itemprop="url" class="post-title-link">C&#43;&#43; Vector Internal</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2018-03-05T00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-05 00:00:00 &#43;0000 UTC">
+    2018-03-05
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/d05cac72-7f07-44c8-9375-2f37eb07968f/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="基本概念">基本概念
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+</h3><p>動態請求的array
+就是太小重要更大的，然後搬過去
+看code</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tem* resize(unsigned long vsize){
+</span></span><span class="line"><span class="cl">        tem *pay=new tem[vsize],*ppa,*endp=pay+vsize,*par;
+</span></span><span class="line"><span class="cl">        for(par=arr,ppa=pay;ppa&lt;=endp&amp;&amp;par&lt;=endc;++ppa,++par){
+</span></span><span class="line"><span class="cl">            *ppa=*par;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        delete [] arr;
+</span></span><span class="line"><span class="cl">        arr=pay;crr=par;endc=endp;
+</span></span><span class="line"><span class="cl">        return arr;
+</span></span><span class="line"><span class="cl">    }</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>他有規範要寫的函式</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/d05cac72-7f07-44c8-9375-2f37eb07968f/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/c5475c95-579e-463f-93f1-921ad7fcffd6/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CppVectorInternal.md">
+      <meta itemprop="description" content="基本概念
+
+動態請求的array
+就是太小重要更大的，然後搬過去
+看code
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+tem* resize(unsigned long vsize){
+        tem *pay=new tem[vsize],*ppa,*endp=pay&#43;vsize,*par;
+        for(par=arr,ppa=pay;ppa&lt;=endp&amp;&amp;par&lt;=endc;&#43;&#43;ppa,&#43;&#43;par){
+            *ppa=*par;
+        }
+        delete [] arr;
+        arr=pay;crr=par;endc=endp;
+        return arr;
+    }
+
+
+
+他有規範要寫的函式">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/c5475c95-579e-463f-93f1-921ad7fcffd6/" itemprop="url" class="post-title-link">CppVectorInternal.md</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2018-03-05T00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-05 00:00:00 &#43;0000 UTC">
+    2018-03-05
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/c5475c95-579e-463f-93f1-921ad7fcffd6/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="基本概念">基本概念
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+</h3><p>動態請求的array
+就是太小重要更大的，然後搬過去
+看code</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tem* resize(unsigned long vsize){
+</span></span><span class="line"><span class="cl">        tem *pay=new tem[vsize],*ppa,*endp=pay+vsize,*par;
+</span></span><span class="line"><span class="cl">        for(par=arr,ppa=pay;ppa&lt;=endp&amp;&amp;par&lt;=endc;++ppa,++par){
+</span></span><span class="line"><span class="cl">            *ppa=*par;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        delete [] arr;
+</span></span><span class="line"><span class="cl">        arr=pay;crr=par;endc=endp;
+</span></span><span class="line"><span class="cl">        return arr;
+</span></span><span class="line"><span class="cl">    }</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>他有規範要寫的函式</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/c5475c95-579e-463f-93f1-921ad7fcffd6/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/report/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="BeforeRun
+
+ConfigStruct(VaultPath=PosixPath(&rsquo;/opt/note&rsquo;), ExportPath=PosixPath(&rsquo;/home/eric/Downloads/ericblog/content/post&rsquo;), MdTo=&lt;EnumMdTo.HugoBundle: &lsquo;hugobundle&rsquo;&gt;, MdName=&lt;EnumMdName.Uuidv4: &lsquo;uuid&rsquo;&gt;, UrlPrefix=&rsquo;.&rsquo;, ResourceTo=&lt;EnumResourceTo.Root: &lsquo;root&rsquo;&gt;, UrlRewrite=&lt;EnumUrlRewrite.RelativeMd: &lsquo;relativemd&rsquo;&gt;, ResourceName=&lt;EnumResourceName.Uuidv4: &lsquo;uuid&rsquo;&gt;, ResourceAnoint=PosixPath(&rsquo;.&rsquo;), SlugPropertie=&lt;EnumSlugPropertie.Uuidv4: &lsquo;uuid&rsquo;&gt;, DateFormat=&rsquo;%Y-%m-%d&rsquo;, ReportDetail=True)
+VaultPath :  /opt/note
+ExportPath :  /home/eric/Downloads/ericblog/content/post
+Test /opt/note/DataView.md
+
+Fail PropertieParsar  &mdash; Not at first of file {}
+Test /opt/note/ExcludeFile.txt
+
+Fail PropertieParsar  Not suffix with .md {}
+Test /opt/note/obsibian.md
+
+Fail PropertieParsar  &mdash; Not at first of file {}
+Test /opt/note/sync.bash
+
+Fail PropertieParsar  Not suffix with .md {}
+Test /opt/note/sync.md
+
+Fail PropertieParsar  &mdash; Not at first of file {}">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/report/" itemprop="url" class="post-title-link"></a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：0001-01-01T00:00:00" itemprop="dateCreated datePublished" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+    0001-01-01
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/report/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="beforerun">BeforeRun
+<a class="header-anchor" href="#beforerun"></a>
+</h3><p>ConfigStruct(VaultPath=PosixPath(&rsquo;/opt/note&rsquo;), ExportPath=PosixPath(&rsquo;/home/eric/Downloads/ericblog/content/post&rsquo;), MdTo=&lt;EnumMdTo.HugoBundle: &lsquo;hugobundle&rsquo;&gt;, MdName=&lt;EnumMdName.Uuidv4: &lsquo;uuid&rsquo;&gt;, UrlPrefix=&rsquo;.&rsquo;, ResourceTo=&lt;EnumResourceTo.Root: &lsquo;root&rsquo;&gt;, UrlRewrite=&lt;EnumUrlRewrite.RelativeMd: &lsquo;relativemd&rsquo;&gt;, ResourceName=&lt;EnumResourceName.Uuidv4: &lsquo;uuid&rsquo;&gt;, ResourceAnoint=PosixPath(&rsquo;.&rsquo;), SlugPropertie=&lt;EnumSlugPropertie.Uuidv4: &lsquo;uuid&rsquo;&gt;, DateFormat=&rsquo;%Y-%m-%d&rsquo;, ReportDetail=True)
+VaultPath :  /opt/note
+ExportPath :  /home/eric/Downloads/ericblog/content/post</p>
+<h3 id="test-optnotedataviewmd">Test /opt/note/DataView.md
+<a class="header-anchor" href="#test-optnotedataviewmd"></a>
+</h3><p>Fail PropertieParsar  &mdash; Not at first of file <code>{}</code></p>
+<h3 id="test-optnoteexcludefiletxt">Test /opt/note/ExcludeFile.txt
+<a class="header-anchor" href="#test-optnoteexcludefiletxt"></a>
+</h3><p>Fail PropertieParsar  Not suffix with .md <code>{}</code></p>
+<h3 id="test-optnoteobsibianmd">Test /opt/note/obsibian.md
+<a class="header-anchor" href="#test-optnoteobsibianmd"></a>
+</h3><p>Fail PropertieParsar  &mdash; Not at first of file <code>{}</code></p>
+<h3 id="test-optnotesyncbash">Test /opt/note/sync.bash
+<a class="header-anchor" href="#test-optnotesyncbash"></a>
+</h3><p>Fail PropertieParsar  Not suffix with .md <code>{}</code></p>
+<h3 id="test-optnotesyncmd">Test /opt/note/sync.md
+<a class="header-anchor" href="#test-optnotesyncmd"></a>
+</h3><p>Fail PropertieParsar  &mdash; Not at first of file <code>{}</code></p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/report/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/6dea1f0e-987d-42d9-ba0f-86e9835a4e9f/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="GnuEfi">
+      <meta itemprop="description" content="
+
+    https://wiki.osdev.org/GNU-EFI
+    
+    
+    
+
+
+
+    https://sourceforge.net/projects/gnu-efi/
+    
+    
+    
+
+官網找不到剩sourceforge可以下載，把EDK2的header檔打包成可以用GCC工具鏈編譯專案。
+在Ubuntu 22.04LTS上測試確定Hello World可用。">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/6dea1f0e-987d-42d9-ba0f-86e9835a4e9f/" itemprop="url" class="post-title-link">GnuEfi</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：0001-01-01T00:00:00" itemprop="dateCreated datePublished" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+    0001-01-01
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/6dea1f0e-987d-42d9-ba0f-86e9835a4e9f/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <p>
+<a href="https://wiki.osdev.org/GNU-EFI" title="https://wiki.osdev.org/GNU-EFI" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    https://wiki.osdev.org/GNU-EFI
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+
+<a href="https://sourceforge.net/projects/gnu-efi/" title="https://sourceforge.net/projects/gnu-efi/" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    https://sourceforge.net/projects/gnu-efi/
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+官網找不到剩sourceforge可以下載，把EDK2的header檔打包成可以用GCC工具鏈編譯專案。
+在Ubuntu 22.04LTS上測試確定Hello World可用。</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/6dea1f0e-987d-42d9-ba0f-86e9835a4e9f/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/1d6b188d-f52f-4795-a730-a5e7d78c7dcc/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="SymbolicLink">
+      <meta itemprop="description" content="Windows 無法在未使用uac提權的前提下建立軟連結(即使有資料夾完全控制權限也不行)，但可以以以下方式繞過:
+
+開啟開發者模式
+mklink 應該也可以繞過(待確認)
+">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/1d6b188d-f52f-4795-a730-a5e7d78c7dcc/" itemprop="url" class="post-title-link">SymbolicLink</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：0001-01-01T00:00:00" itemprop="dateCreated datePublished" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+    0001-01-01
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/1d6b188d-f52f-4795-a730-a5e7d78c7dcc/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <p>Windows 無法在未使用uac提權的前提下建立軟連結(即使有資料夾完全控制權限也不行)，但可以以以下方式繞過:</p>
+<ul>
+<li>開啟開發者模式</li>
+<li>mklink 應該也可以繞過(待確認)</li>
+</ul>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/1d6b188d-f52f-4795-a730-a5e7d78c7dcc/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<nav class="pagination">
+  
+  <a class="extend prev" rel="prev" href="/post/page/11/">
+    <i class="fa fa-angle-left"></i>
+  </a>
+  
+  
+      
+  
+      
+  
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/4/">4</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/5/">5</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/6/">6</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/7/">7</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/8/">8</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/9/">9</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/10/">10</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/post/page/11/">11</a>
+      
+      
+  
+      
+      
+        <span class="page-number current">12</span>
+      
+      
+  
+  
+</nav> 
+ 
+
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      
+<div id="i18n-translate" class="i18n-translate">
+  <i class="fa fa-language"></i>
+  <div id="lang-select" class="lang-select">
+    <div id="lang-selected" class="selected-option">
+      <span class="flag-icon flag-icon-zh-tw"></span>
+      <span class="selected-language">繁體中文</span>
+      <i class="fa fa-chevron-down"></i>
+    </div>
+    <div id="lang-options" class="lang-options">
+      
+      
+      
+        <div class="lang-option" lang-code="zh-tw" lang-name="繁體中文" lang-url="/post/">
+          <span class="flag-icon flag-icon-zh-tw"></span>
+          <span class="lang-name">繁體中文</span>
+        </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+      
+<div class="copyright">
+  &copy;
+  <span itemprop="copyrightYear">
+    
+    
+    
+    2021 - 2025
+    
+    
+  </span>
+  <span class="with-love">
+    <i class="fa fa-copyright"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EricChen</span>
+</div>
+
+<div class="powered-by">
+  
+  %!(EXTRA string=<a href='https://gohugo.io' title='0.143.1' target='_blank'>Hugo</a> &amp; <a href='https://github.com/hugo-next/hugo-theme-next' title='4.7.2' target='_blank'>Hugo NexT.Muse</a>)
+</div>
+
+
+
+
+
+ 
+
+
+
+
+
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"comments":false,"expired":false,"isHome":false,"isPage":false,"path":"post","permalink":"/post/","title":"Posts","toc":true,"waline3":{"pagecnt":{"alias":"@waline/client","alias_name":"waline","file":"dist/pageview.js","name":"pageview","version":"3.3.0"}}}</script>
+  
+
+
+
+ 
+  
+  <script type="text/javascript" src="/js/3rd/animejs/3.2.2/anime.min.js" crossorigin="anonymous" defer></script>
+ 
+  
+  <script type="text/javascript" src="/js/3rd/viewerjs/1.11.6/viewer.min.js" crossorigin="anonymous" defer></script>
+
+
+<script class="next-config" data-name="main" type="application/json">{"bookmark":{"color":"#222","enable":false,"save":"manual"},"copybtn":true,"darkmode":false,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小時前","ds_hours":" 小時 ","ds_just":"剛剛","ds_min":" 分鐘前","ds_mins":" 分鐘","ds_month":" 個月前","ds_years":" 年 ","empty":"沒有找到任何搜索結果：${query}","hits":"找到 ${hits} 個搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","placeholder":"搜索..."},"isMultiLang":true,"lang":"zh-TW","lazyload":false,"localSearch":{"enable":true,"limit":1000,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":false,"plugin":"waline3"},"views":{"enable":true,"plugin":"waline3"}},"root":"/","scheme":"Muse","share":{"addtoany":{"js":"https://static.addtoany.com/menu/page.js","locale":"zh-TW","num":8},"enable":false},"sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"vendor":{"plugins":"local","router":{"name":"local","type":"modern","url":"/js/3rd"}},"version":"4.7.2","waline3":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o 可用快捷键选取表情符号：😀😄😁🥳👻👽👀🚄 (Window系统：Win+.，Mac系统：Control+Command+Space)","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"search":true,"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"@waline/client","file":"dist/waline.min.css","name":"waline","version":"3.3.0"},"js":{"alias":"@waline/client","file":"dist/waline.js","name":"waline","version":"3.3.0"}}}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/main.min.js?=1742222802" defer></script>
+
+
+</body>
+
+</html>

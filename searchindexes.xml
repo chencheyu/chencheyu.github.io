@@ -3,6 +3,101 @@
 <search>
   
   <entry>
+    <title>Desktop</title>
+    <url>/post/b629d472-963f-41a0-b87b-16531a5ce8b2/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+      <tag>CS/Software</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Software Linux Only
+Flameshot Linux 上的截圖工具，有任意矩形範圍，截圖後編輯（功能豐富），存檔檔名控制
+Unable to capture screen xdg-desktop-por[3487]: Failed to show access dialog: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied Failed to associate portal window with parent window 懷疑是 wayland 跟 Flameshot 配合不良導致 Flameshot doesn&rsquo;t work if launched from gui but works if launched from terminal
+Open Configuration open the flameshot click the flameshot icon on top right bar of ubuntu. do NOT click &ldquo;Take Screenshot&rdquo; yet, but click &ldquo;Configuration&rdquo; instead with the flameshot configuration window opened, click the flameshot icon again on top right bar, this time click the &ldquo;Take Screenshot&rdquo; 實測有效
+QtWayland QT_QPA_PLATFORM=wayland 啟動 Flameshot 時傳遞 QT 環境變數 Wayland Help | Flameshot install xdg-desktop-portal-gnome and xdg-desktop-portal   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>F.md</title>
+    <url>/post/589be71f-ffb5-430a-ac6b-44661ecdddcf/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>Pier</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://pages.mtu.edu/~shene/FORUM/Taiwan-Forum/ComputerScience/001-Accuracy/Accuracy.html   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Np.md</title>
+    <url>/post/574a1e2b-22da-4291-bf6c-e05ffed49881/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>Pier</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://blog.darkthread.net/blog/np-problem/?fbclid=IwY2xjawJAaC5leHRuA2FlbQIxMQABHSieRU3MsFNk9rKD-wyiXfvZ4KiJ9nqJ1Hu4ja_jUdPlEZBWVC-FReejlw_aem_VTsAkYUGIrDskMAZqDzRbg https://hk.news.yahoo.com/google-%E6%BE%84%E6%B8%85-chromecast-%E6%8A%95%E6%94%BE%E5%95%8F%E9%A1%8C%E6%98%AF%E8%BB%9F%E9%AB%94%E9%8C%AF%E8%AA%A4%EF%BC%8C%E4%B8%A6%E4%B8%94%E6%AD%A3%E5%9C%A8%E3%80%8C%E7%9B%A1%E5%BF%AB%E8%A7%A3%E6%B1%BA%E6%AD%A4%E5%95%8F%E9%A1%8C%E3%80%8D-070755209.html?guccounter=1&guce_referrer=aHR0cDovL20uZmFjZWJvb2suY29tLw&guce_referrer_sig=AQAAANSMlz5F-369v-GAPZcigbPUi-S_7eH8P7jiuNcUDP-ajv5VO_hllkLOcXlEoinmj0RdXcoW3Ycp1UnxUU76Nh1TkLOTgmJ-fGTJvBYf8taKS5u2l54kXVUO_D-0r1PZtkCC6c2UtItywa69LCvrzqep442XqwZy9e4Y4SXkqL5L   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Cl.md</title>
+    <url>/post/dbe04ab4-7556-4bc1-9a02-d4b7ed18d24f/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>Pier</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://status.openai.com/incidents/ctrsv3lwd797 https://people.cs.umass.edu/~elm/Teaching/Docs/mutInf.pdf   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>AMD Microcode</title>
+    <url>/post/18ca6adc-2fd1-4a87-ac2e-b78f72ab6fcc/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization/AMD</tag>
+      
+      <tag>CS/Uefi</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Microcode Update AMD 產生了一個新的微碼補丁，補丁以二進位形式交付給 BIOS、OS 和其他合作夥伴；這個 blob 內部包含以下元件：
+描述補丁頭格式、其設計的 CPU 的元資料、日期和版本資訊的標題。 2048 位元RSA PKCS #1簽章。 2048 位元 RSA 公鑰模數（0x10001 作為指數）。 公鑰的2048 位元 蒙哥馬利逆（用於簡化 RSA 模運算）。 指示補丁的其餘部分是否已加密的位元。 符合暫存器和遮罩值的數組，用於選擇要修補的微碼和指令。 一組捆綁在四個「四元組」中的微操作，每個微操作都與一個序列字配對，指示下一步執行的位置 一旦收到新的補丁，微碼將在運行時或下次重啟時加載。
+BIOS 或 OS 將識別正確的微碼補丁檔案（基於標頭中的 CPU 識別碼）並開始更新例程。 軟體將把微碼補丁 blob 的虛擬位址寫入 MSR 0xc0010020，這指示 CPU 微碼開始執行微碼更新程式。 微碼將補丁複製到內部記憶體，並驗證補丁的 CPU 識別碼是否與實際硬體的識別碼相符。 微碼檢查補丁的版本是否比目前安裝的補丁版本舊。如果是這樣，補丁就會被拒絕——這可以防止回滾攻擊。 該補丁使用 AES-CMAC 對 RSA 公鑰進行雜湊處理，並確認雜湊值與 AMD 在製造晶片時融合的值相符。 此補丁對補丁內容（匹配暫存器、指令遮罩和補丁指令）進行雜湊。 使用 RSA 公鑰和提供的 Montgomery 模數逆解密 RSA PKCS #1 簽章。結果是補丁內容的填充 AES CMAC 哈希。 如果簽署的雜湊值與計算的雜湊值匹配，則補丁內容將複製到內部 CPU 補丁 RAM 中。否則，補丁將被拒絕。 CPU 微碼修補程式版本（MSR 0x8b）已更新以反映新安裝的修補程式。 AMD Zen CPU 使用幾乎標準的 RSASSA-PKCS1-v1_5演算法；但是，AMD並沒有使用建議的雜湊函數，而是選擇了容易發生衝突的 CMAC 函數 - Zen and the Art of Microcode Hacking Reverse Engineering x86 Processor Microcode   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Simple Object Access Protocol</title>
+    <url>/post/8ab97f36-5880-49c7-aa5b-23df3019f581/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  通常只有微軟在用，用於帳號權限管理及 WinRm SOAP使用網際網路應用層協定作為其傳輸協定。SMTP以及HTTP協定都可以用來傳輸SOAP訊息
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Simple Object Access Protocol</title>
     <url>/post/4107812e-c049-481c-8108-fec3b7c7f568/</url>
     <categories>
@@ -14,6 +109,31 @@
       
     </tags>
     <content type="html"><![CDATA[  通常只有微軟在用，用於帳號權限管理及 WinRm SOAP使用網際網路應用層協定作為其傳輸協定。SMTP以及HTTP協定都可以用來傳輸SOAP訊息
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Heap.md</title>
+    <url>/post/7d1fcbb8-96de-400e-a681-f6e35a3d1a2c/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Sitcon2025</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://docs.google.com/presentation/d/1sHGLOxjZtccfWvdpzXdfbMnH8qeix-fh/mobilepresent?slide=id.p1 Heap 是處理極值的資料結構 完全二元樹所有的父節點都比子節點要小，就屬於 min heap 只交換左右子節點，確定交換子樹
+複雜度 操作 描述 時間複雜度 build 採用羅伯特·弗洛伊德提出的較快方式建立堆積 O(n) insert 向堆積中插入一個新元素 O(log⁡n) update 將新元素提升使其符合堆積的性質 O(log⁡n) get 取得當前堆積頂元素的值 O(1) delete 刪除堆積頂元素，有時稱 Peek O(log⁡n) heapify 使刪除堆積頂元素的堆積再次成為堆積 O(log⁡n) l 通常實做會將完全二元樹放置在 Array 中 節點的索引為 i（假設根節點的索引為0）則在它左子節點的索引會是 $2 * index + 1$，以及右子節點會是 $2 * index + 2$；而它的父節點（如果有）索引則為 $(index - 1) // 2$
+Insert Insert 為把新節點插在樹的最後一格，在跟 Parent 確定是否需要交換，直到根節點
+Peek Peek (刪除極值) 用樹的最後一格覆蓋樹根，在移除最後一格，在跟左右子節點確定是否需要交換，直到樹葉節點
+Heapify Heapify 是將部分無序的堆調整為合法堆的操作。
+Heapify 操作步驟 從根節點開始，與左右子節點比較。 與較小的子節點交換。 遞迴向下調整，直到滿足堆性質。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 template &lt;class T&gt; class MinHeap{ std::deque&lt;T&gt; Arr; inline bool HeapEmpty(void){ return Arr.size() == 0; } inline void Swap(size_t i, size_t j){ T tmp = Arr.at(i); Arr[i] = Arr.at(j); Arr[j] = tmp; } inline size_t Parent(size_t i){ return (i - 1) / 2; } inline size_t LeftChild(size_t i){ return (i * 2) + 1; } inline size_t RightChild(size_t i){ return (i * 2) + 2; } public: long Find(T t){ for(size_t i = 0; i &lt; Arr.size(); ++i){ if(t == Arr[i]){ return (long)i; } } return -1; } void Insert(T t){ size_t newNode, parent; newNode = Arr.size(); Arr.push_back(t); while(newNode != 0){ parent = Parent(newNode); if(Arr.at(parent) &gt; t){ Swap(parent, newNode); newNode = parent; }else{ break; } } } T Peek(void){ T min = Arr.at(0); size_t curNode = 0, ChildNode; Swap(0, Arr.size() - 1); Arr.pop_back(); while(true){ ChildNode = LeftChild(curNode); if(ChildNode &gt;= Arr.size()){ break; } if(Arr.at(curNode) &gt; Arr.at(ChildNode)){ Swap(curNode, ChildNode); curNode = ChildNode; continue; } ChildNode = RightChild(curNode); if(ChildNode &gt;= Arr.size()){ break; } if(Arr.at(curNode) &gt; Arr.at(ChildNode)){ Swap(curNode, ChildNode); curNode = ChildNode; continue; } break; } return min; } }; 優化目標 減少比較次數，相較教科書版本，可節省約 50%。
+優化策略 由根節點開始，只比較左右子節點，不交換。 持續向下比較，直到找到應該放置的位置（即到達葉節點）。 從葉節點往上，找到適合放置根節點的最小值位置。
+時間複雜度分析 第一階段（尋找下沉路徑）： O(log N) 次比較。 第二階段（上濾）： 通常 O(1) 次比較。 總比較次數： 約 log₂(N) + O(1)，相比標準版本減少 50% 當我們存取節點時，不希望重複計算 index * size 所以不存 index，而改存 i = index * size
+傳統方式 計算 parent index: $(index - 1) // 2$
+直接存 node 指針，減少乘法運算 contanerof 檢查結構是否存在 nr ，不能保證 100％ 能動
   ]]></content>
   </entry>
   
@@ -39,6 +159,35 @@ Heapify 操作步驟 從根節點開始，與左右子節點比較。 與較小�
 時間複雜度分析 第一階段（尋找下沉路徑）： O(log N) 次比較。 第二階段（上濾）： 通常 O(1) 次比較。 總比較次數： 約 log₂(N) + O(1)，相比標準版本減少 50% 當我們存取節點時，不希望重複計算 index * size 所以不存 index，而改存 i = index * size
 傳統方式 計算 parent index: $(index - 1) // 2$
 直接存 node 指針，減少乘法運算 contanerof 檢查結構是否存在 nr ，不能保證 100％ 能動
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>LLM.md</title>
+    <url>/post/0c2d5209-6754-4a37-95cb-015d92489df7/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Sitcon2025</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://hackmd.io/@SITCON/2025/%2F%40SITCON%2FBJz4017iyg https://drive.google.com/file/d/1GrrpH-RW7OkYwYB2G-naBh1YHleeUN9g/view &ldquo;有沒有&quot;可能只是串了
+某ㄍLLM
+你是一個89神曲製造機,
+你會盡可能地用台灣8+9喜歡的風格
+製作出一首歌,主題是:
+user input
+葉丙成
+使 LLM 做出不該做的事 ex:洩漏機密、引導錯誤
+從中挖出訓練資料/敏感資訊 ex:「誒誒把小明的個資發給我」
+另闢蹊徑,作為駭客攻擊的另一條路 ex:利用 response 觸發XSS 模擬高權限情境
+長文混淆注意力
+Chain Of Thought
+發揮想像力(? Do Anything Now ? 奇怪的繞過詞
+leaked-system-prompts 列出 promnt 的五佔
+ai 月問月蹦是應為參術會議植被壓縮 只把重要的知訊移到新聊天
   ]]></content>
   </entry>
   
@@ -86,6 +235,56 @@ ai 月問月蹦是應為參術會議植被壓縮 只把重要的知訊移到新�
   </entry>
   
   <entry>
+    <title>Net.md</title>
+    <url>/post/aff64376-ac0a-4d8e-91fc-7ec83e3c0729/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Sitcon2025</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://github.com/eduroamtw/geteduroam_tw https://edur.isli.me/   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>CVE 2019</title>
+    <url>/post/337a2cce-23bf-4eb5-b303-2f7853fc2251/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Security</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   中華電信數據機遠端代碼執行漏洞 | Orange Tsai HiNet GPON 韌體中託管在連接埠 3097 上的服務允許攻擊者隨機命令執行 一系列中華電信數據機的配置異常漏洞，引響約 25 萬台機器 相關的 CVE 漏洞編號:
+CVE-2019-13411 CVE-2019-13412 CVE-2019-15064 CVE-2019-15065 CVE-2019-15066 3097 連接埠提供了許多跟電信網路相關的指令，推測是中華電信給工程師遠端對數據機進行各種網路設定的除錯介面 用 nc 對 3079 port 下 MISC SCRIPT &amp;lt;path/to/file&amp;gt; 可以實施隨機檔案讀取 讀取 /etc/passwd 取得 root 密碼後用 ssh 登入機器
+1 2 3 4 5 6 7 8 9 10 11 12 $ uname -a Linux I-040GW.cht.com.tw 2.6.30.9-5VT #1 PREEMPT Wed Jul 31 15:40:34 CST 2019 [luna SDK V1.8.0] rlx GNU/Linux $ netstat -anp | grep 3097 tcp 0 0 127.0.0.1:3097 0.0.0.0:* LISTEN $ ls -lh /usr/bin/omcimain -rwxr-xr-x 1 root root 4.6M Aug 1 13:40 /usr/bin/omcimain $ file /usr/bin/omcimain ELF 32-bit MSB executable, MIPS, MIPS-I version 1 (SYSV), dynamically linked omcimain 是聽在 3079 port 的程式
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 char *input = util_trim(s1); if (input[0] == &#39;\0&#39; || input[0] == &#39;#&#39;) return 0; while (SUB_COMMAND_LIST[i] != 0) { sub_cmd = SUB_COMMAND_LIST[i++]; if (strncmp(input, sub_cmd, strlen(sub_cmd)) == 0) break; } if (SUB_COMMAND_LIST[i] == 0 &amp;&amp; strchr(input, &#39;?&#39;) == 0) return -10; // ... char *BLACKLISTS = &#34;|&lt;&gt;(){}`;&#34;; while (BLACKLISTS[i] != 0) { if (strchr(input, BLACKLISTS[i]) != 0) { util_fdprintf(fd, &#34;invalid char &#39;%c&#39; in command\n&#34;, BLACKLISTS[i]); return -1; } i++; } snprintf(file_buf, 64, &#34;/tmp/tmpfile.%d.%06ld&#34;, getpid(), random() % 1000000); snprintf(cmd_buf, 1024, &#34;/usr/bin/diag %s &gt; %s 2&gt;/dev/null&#34;, input, file_buf); system(cmd_buf); 經由逆向 omcimain 發現如過指令都沒有配對成功會執行上方程式碼
+notexisten? &amp;amp;&amp;amp; cat /etc/passwd 可以繞過 BLACKLISTS 執行 cat /etc/passwd
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>System Cell</title>
+    <url>/post/d30e91fe-f7f6-440a-9ae9-26cf7c425a1a/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   sched_yield Uinx 下的system cell，把線程重新放進排成器後端，通常為了讓其他線程取得鎖使用
+mseal syscall 1 int mseal(unsigned long start, size_t len, unsigned long flags) mseal 新 System call 不可撤銷的設定記憶體的 NX (不可執行)或 RX權限 原本在 Chrome OS 上的 system call 移植到 Linux 6.10
+once the mapping is sealed, it will stay in the process’s memory until the process terminates. Blocked mm syscall:
+munmap mmap mremap mprotect and pkey_mprotect some destructive madvise behaviors: MADV_DONTNEED, MADV_FREE, MADV_DONTNEED_LOCKED, MADV_FREE, MADV_DONTFORK, MADV_WIPEONFORK   ]]></content>
+  </entry>
+  
+  <entry>
     <title>System Cell</title>
     <url>/post/512cbf9b-c640-447f-a155-27f9ec82b1c9/</url>
     <categories>
@@ -121,6 +320,24 @@ USBIP - ArchWiki   ]]></content>
   </entry>
   
   <entry>
+    <title>USB</title>
+    <url>/post/4c361394-a3b9-4fbc-9fa9-7ffe3b50cf80/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Intel 為 eUSB2V2 準備 Linux 驅動 eUSB2V2 更新旨在為整合/嵌入式網路攝影機等裝置提供更多頻寬，以實現更高的分辨率，同時保持嵌入式 USB 的 1.2V 低功耗要求，在 Linux 6.15 引入
+USB Everywhere | Hackaday USB/IP 專案的目標是在 IP 網路上開發通用的 USB 設備共享系統。為了在計算機之間共享 USB 設備並保留其完整功能，USB/IP 將「USB I/O 訊息」封裝到 TCP/IP 負載中，並在計算機之間傳輸這些訊息 伺服器核心模組: usbip_core，usbip_host。您還需要usbipd（守護程式） 客戶端核心模組: vhci_hcd
+伺服器 1 2 3 modprobe -a usbip_core usbip_host usbip list -l # -l for local usbpip bind -b 4-3.1 Loading the modules find a device to share You’ll bind that device to the server
+客戶端 1 2 3 modprobe -a vhci_hcd usbip list -r myserver.local # use your server name or IP usbip attach -r myserver.local -b 4-3.1 Port number is somewhat dynamic across reboots 一旦設備連接，它看起來就像系統上的任何其他 USB 連接埠一樣
+USBIP - ArchWiki   ]]></content>
+  </entry>
+  
+  <entry>
     <title>CVE 2025</title>
     <url>/post/39d812bc-a700-4370-ab1b-0097c9dc8efa/</url>
     <categories>
@@ -136,8 +353,59 @@ USBIP - ArchWiki   ]]></content>
   </entry>
   
   <entry>
+    <title>CVE 2025</title>
+    <url>/post/77ddc3bd-6bd4-43c5-b81b-6aaf6ffddf06/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Security</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   ToDesktop 的 Firebase 服務管理員帳戶權限洩漏導致可以任意更新 ToDesktop 部屬的程式 建立容器具有比必要更廣泛的權限，允許 postinstall 應用程式中的腳本 package.json 檢索 Firebase 憑證，從而導致憑證洩漏，這將允許攻擊者存取 ToDesktop 資料庫、使用者帳戶並對任意應用程式部署未經授權的更新
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>iSO 8601</title>
     <url>/post/4fe78d11-f057-4b24-bd19-74d765fde998/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  標準日期字串 有兩套準 RFC 3339 ，iSO 8601 iSO 8601 一般比 RFC 3339 寬鬆
+2020-12-09T16:09:53+00:00 是 RFC 3339，iSO 8601 都可以接受的字串
+ISO 8601 有 4 版目前最新是 2019 年版
+時間單位的位數固定，不足時於左補0 日期依照年月日時分秒方式排序，如果需要降低精度要從最小的時間開始移除 格式分為只有數字的基礎格式；二為添加分隔符的擴展格式，從而更易讀。標準原文建議應避免在純文字中使用基礎格式。擴展格式使用連字元-來分隔日期，使用冒號:來分隔時間 ISO 8601:2004 規定了一個參考日期，即1875年5月20日但在 ISO 8601-1:2019刪除 對字元大小寫敏感
+Format %Y - Year, 4 digits, 0000 到 9999，但0000至1582的年份僅應在雙方有共識時用於通訊 %M - Month, 2 digits, 01 到 12 %D - Day, 2 digits, 01 到 31 %V - Week Year, 4 digits %W - Week, 2 digits, 一年中的第幾周，週數在 01 到 53, 注意 XXXX 年 1 月 1 號不一定是 XXXX-W01 %w - Week Day, 1 digits, 星期幾 1 到 7 %O - Ordinal Day ,3 digits, 表示一年中的第幾天，001 到 366 %h - Hour, 2 digits, (一天中的) 00 到 24，24小時制 %m - Minute, 2 digits, 00 到 59 %s - Second, 2 digits, 00 到 60，60 只表示潤秒 %u - Second-Fraction, n digits, 拿來表達比秒還小的時間單位，位數由通訊雙方定義，表示 %u * $1 / 10^n$ 秒 %Z - Zone Hour, 3 digits, 00 到 23, including +/-，First digit must be + or - %z - Zone Minute, 2 digits, 00 到 59 T00:00:00 指涉日曆日開始時刻 T24:00:00 指涉日曆日結束時刻，ISO 8601-1:2019 刪除儘管在早期版本的標準中已經允許這樣做
+Date %Y-%M-%D %Y%M%D
+Time T%h:%m:%s T%h%m%s
+Date + Time %Y-%M-%DT%h:%m:%s %Y-%M-%DT%h:%m:%s.%u %Y%M%DT%h%m%s %Y%M%DT%h%m%s.%u
+Sample 20250203T163855+0800 2025-02-03T16:38:55+0800
+20040503T173008+08:00 2004-05-03T17:30:08+08:00
+Time Zone %Z:%z %Z%z %Z Z
+時區，可選，接在時間後面，如果時區沒有標示表示本地時間，Z 表示 UTC + 00，-00 不被允許
+Ordinal Date %Y-%O %Y%O
+可以將一年內的天的序數用3位數字表示
+如 2004 年 5 月 3 日可以表示為 2004-124 或 2004124
+Week Date %V-W%W-%w %VW%W%w 很麻煩，別用
+2007-W03 2007 年的第 3 周 2007-W03-1 2007 年的第 3 周的星期一
+RFC 3339 只接受 %Y-%M-%DT%h:%m:%s%Z:%z, %Y-%M-%D%Z:%z, %h:%m:%s%Z:%z 不接受由小時間開始省略的規則 不接受 Ordinal Date，Week Date，只有數字的基礎格式 對字元大小寫不敏感 一定要寫時區，只接受 %Z:%z 或 Z 作為時區格式，-00 是允許的
+4.3 Unknown Local Offset Convention If the time in UTC is known, but the offset to local time is unknown, this can be represented with an offset of &ldquo;-00:00&rdquo;
+5.6. Internet Date/Time Format NOTE: ISO 8601 defines date and time separated by &ldquo;T&rdquo;. Applications using this syntax may choose, for the sake of readability, to specify a full-date and full-time separated by(say) a space character.
+如果應用程式有約定可以不用 T 分隔 Date 和 Time
+2024 年 4 月，RFC 3339 由 RFC 9557 更新
+RFC 3339 vs. ISO 8601 Reference IJMacD/rfc3339-iso8601 列出 iSO 8601 與 RFC 3339 許可的時間格式   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>iSO 8601</title>
+    <url>/post/ceabb601-d31a-4269-8d8b-413108d7624a/</url>
     <categories>
       
     </categories>
@@ -188,6 +456,22 @@ RFC 3339 vs. ISO 8601 Reference IJMacD/rfc3339-iso8601 列出 iSO 8601 與 RFC 3
   </entry>
   
   <entry>
+    <title>VsCode.md</title>
+    <url>/post/283a63bb-363b-4660-8080-9832f120f7c1/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Software</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  C/Cpp format 注意 C/Cpp 格式不會套用全域設定
+先安裝 C/C++ for Visual Studio Code 插件 File &gt; Perference &gt; Sitting C_Cpp.clang_format_fallbackStyle = { BasedOnStyle: Google,UesTab:Never, IndentWidth: 4, TabWidth: 4,ColumnLimit: 180}
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Route.md</title>
     <url>/post/a4849ceb-3c51-4926-9821-158f24a2a2eb/</url>
     <categories>
@@ -201,6 +485,37 @@ RFC 3339 vs. ISO 8601 Reference IJMacD/rfc3339-iso8601 列出 iSO 8601 與 RFC 3
     <content type="html"><![CDATA[  練習路由交換的網路系統 stuin STUIX TWNIC 台灣網際網路連線頻寬圖 Submarine Cable Map 全球海纜地圖
 cjdns Cjdns 利用加密的IPv6及公鑰加密來分配網路地址並利用 Distributed Hash Table 逕行路由。它能提供近似零配置網路（Zero-Configuration Networking），並且能防範在現有網路中存在的很多和安全、可擴展性相關的問題 重新設計的 IP 層
   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Route.md</title>
+    <url>/post/d14fe186-b46a-4f36-96f1-4291050d12ef/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Route</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  練習路由交換的網路系統 stuin STUIX TWNIC 台灣網際網路連線頻寬圖 Submarine Cable Map 全球海纜地圖
+cjdns Cjdns 利用加密的IPv6及公鑰加密來分配網路地址並利用 Distributed Hash Table 逕行路由。它能提供近似零配置網路（Zero-Configuration Networking），並且能防範在現有網路中存在的很多和安全、可擴展性相關的問題 重新設計的 IP 層
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Relay</title>
+    <url>/post/6d19b1ea-4bd6-4739-a2b7-6818e89e74bb/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Hardware</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  繼電器 由 Coil 的電壓決定 COM 跟 NO 或 NC 導通
+Pin 線圈（Coil） COM（Common）表示共接點 NO（Normally Open）表示常開接點（俗稱A接點）。平常處於開路（斷路），線圈通電後才成為閉路（與共接點COM接通） NC（Normally Closed）表示常閉接點（俗稱B接點）。平常處於閉路（與共接點COM接通），線圈通電後才成為開路（斷路） I, Wasami007, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=2431299 Vendor OJE-SS-112HMF TE Con​​nectivity（美國廠），OJE-SS-1XXHMF, XX 代表線圈的驅動電壓有,05,12,24V Rated Voltage 30 VDC, 250VAC Rated Current 3 to 10A TTi TRIH-24VDC-SD-2CM-R Techtronic Industries Company Limited（香港廠） 不同型號線圈的驅動電壓不同 MY-GS Omron（日本廠）動作及歸復時間接在 20 毫秒以下 不同型號線圈的驅動電壓不同 Rayex LEG-12 瑞鎰電機，台廠，LEG-XX，XX 代表線圈的驅動電壓 3,5,6,9,12,24,48V Rated Voltage 24 VDC, 240VAC Rated Current 5A SRD-05VDC-SL-C 宁波松乐继电器有限公司（SONGLE RELAY）（中國廠） Rated Voltage 30 VDC, 250VAC Rated Current 10A   ]]></content>
   </entry>
   
   <entry>
@@ -220,6 +535,23 @@ Pin 線圈（Coil） COM（Common）表示共接點 NO（Normally Open）表示�
   
   <entry>
     <title>Arterytek</title>
+    <url>/post/952c2abe-6a39-473e-a9d5-7af2ce3f6cea/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded/Arterytek</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  函数加载到 Flash 或 SRAM 指定地址 将函数加载到 Flash 指定地址：
+1 2 3 void Test(void) __attribute__((section(&#34;.ARM.__at_0x08001000&#34;))); void Test(void) {} 将函数加载到 SRAM 指定地址
+1 2 3 void Test(void) __attribute__((section(&#34;.ARM.__at_0x20001000&#34;))); void Test(void) {} 只在 Keil 上有效
+arterychip FAQ0050   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Arterytek</title>
     <url>/post/c12ecda3-0232-4770-81ce-ca249796fcc9/</url>
     <categories>
       
@@ -233,6 +565,46 @@ Pin 線圈（Coil） COM（Common）表示共接點 NO（Normally Open）表示�
 1 2 3 void Test(void) __attribute__((section(&#34;.ARM.__at_0x08001000&#34;))); void Test(void) {} 将函数加载到 SRAM 指定地址
 1 2 3 void Test(void) __attribute__((section(&#34;.ARM.__at_0x20001000&#34;))); void Test(void) {} 只在 Keil 上有效
 arterychip FAQ0050   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Keil</title>
+    <url>/post/aa9b0da0-406d-4522-acbf-7fa90ac67b57/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 编译函数或变量到指定地址 将函数加载到指定位置 示例将 main.c 中的 delay 函数指定到 0x08020000 地址，可以在 c 文件中函数的定义处指定 delay 函数。 void delay(void) __attribute__ ((section(&amp;quot;.ARM.__at_0x08020000&amp;quot;))); 将数组加载到指定位置 int Temp[] __attribute__ ((section(&amp;quot;.ARM.__at_0x08020000&amp;quot;))) = {0x1, 0x2}; 将变量加载到指定位置以 AT32F403AVGT7 为例： 示例可以直接将 c 代码修改如下： const int Temp __attribute__ ((section(&amp;quot;.ARM.__at_0x08020000&amp;quot;))) = 10; // RO int Temp __attribute__ ((section(&amp;quot;.ARM.__at_0x20000000&amp;quot;))) = 10; // RW 加入 C Source File User 右鍵 &gt; Manage Project Item &gt; Add Files 記得要選要加入的 Group，加入 C 檔即可，H 檔不用加
+1 2 3 4 5 I2c |-inc |-Source.h |-src |-Source.c 建議維持此資料夾結構
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Shell Script Compiler</title>
+    <url>/post/e31ceef8-f518-4d92-97fb-2cfb5f74627d/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   shc 一個通用的 shell 腳本編譯器。Shc 接受一個在命令列中指定的腳本，並產生 C 原始碼。生成的原始碼隨後會被編譯並鏈接，以產生一個去除符號表的二進位可執行文件。 編譯後的二進位文件仍然依賴於 shell 腳本第一行中指定的 shell（即 shebang，例如 #!/bin/sh），因此 shc 無法創建完全獨立的二進位文件。 Shc 本身並不是一個像 cc 那樣的編譯器，而是對 shell 腳本進行編碼和加密，並生成具有到期功能的 C 原始碼。之後，它使用系統的編譯器來編譯出一個去除符號表的二進位文件，該文件的行為與原始腳本完全相同。在執行時，編譯後的二進位文件將解密並使用 shell 的 -c 選項來執行代碼。
+Usage 1 shc -f script.sh -o binary Shell Script Compiler無法保護你的腳本 危險行為 撰寫了一個 shell script，裡面包含 API 金鑰等機敏資訊 為了避免一般用戶讀到腳本內的 API 金鑰等機敏內容，所以使用 shc 轉成 binary，看似一般人讀不到腳本內容，就放在 production 環境
+Note that it doesn&rsquo;t work with bash (or sh based on bash), as one can do: env SHELLOPTS=verbose ./script.x to see the content of the script. There&rsquo;s probably easy ways to bypass with other shells as well.
+How to convert a shell script into a binary executable @ Calmarius 1 2 3 4 #!/bin/bash unset SHELLOPTS echo &#34;Hello World&#34; echo &#34;At $(pwd)&#34; 建立 hello.sh
+1 2 3 4 5 6 7 8 9 eric$ shc -f hello.sh -o hello eric$ file hello hello: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=55f83777c52f6f496c169094ae232b7b23ec4b61, for GNU/Linux 3.2.0, stripped eric$ nm hello nm: hello: no symbols eric$ ldd hello linux-vdso.so.1 (0x00007ffc5eac9000) libc.so.6 =&gt; /lib/x86_64-linux-gnu/libc.so.6 (0x00007633f5000000) /lib64/ld-linux-x86-64.so.2 (0x00007633f53c3000) 編譯並確定他是 elf，沒有 symbols
+1 2 3 4 5 6 7 8 9 eric$env SHELLOPTS=verbose ./hello #!/bin/bash unset SHELLOPTS ./hello: line 3: unset: SHELLOPTS: cannot unset: readonly variable echo &#34;Hello World&#34; Hello World echo &#34;At $(pwd)&#34; At /home/eric/Downloads 雖然排版亂了，但還是看到了 code 由於 SHELLOPTS 是 readonly 變數，即使在腳本裡面嘗試unset SHELLOPTS去反制，也無法阻擋SHELLOPTS=verbose效果
+1 strace -s 10000000 -v ./hello 2&gt;&amp;1 | grep bash 用 strace 也可以看到要給 bash 跑的指令，雖然比 SHELLOPTS=verbose 亂的多
+1 shc -U -f hello.sh -o hello 官方表示 -U 可以被免被 strace 追蹤，但 202502 測試時會返回 ./hello: Operation not permitted 無法使用
+  ]]></content>
   </entry>
   
   <entry>
@@ -255,6 +627,21 @@ How to convert a shell script into a binary executable @ Calmarius 1 2 3 4 #!/bi
 1 strace -s 10000000 -v ./hello 2&gt;&amp;1 | grep bash 用 strace 也可以看到要給 bash 跑的指令，雖然比 SHELLOPTS=verbose 亂的多
 1 shc -U -f hello.sh -o hello 官方表示 -U 可以被免被 strace 追蹤，但 202502 測試時會返回 ./hello: Operation not permitted 無法使用
   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>SMBus</title>
+    <url>/post/bdf8e2db-f4d3-43da-a2f2-b7277ee9d2c9/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   SMBus Specifications 跟 I2C 很像的協議
+SMBus vs I2C I²C 匯流排可在任何時刻停滯（時鐘靜止），而不影響數據傳輸。主設備或從設備皆可將時鐘線保持在低電位，直到完成數據處理。 SMBus 匯流排要求時鐘線不低於 10kHz，且不高於 100kHz，並設有 35ms 超時機制，若時鐘線維持低電位超過 35ms，則從設備將自動重置其介面。 由於 SMBus 要求時鐘不能靜止，因此 SMBus 需要一個最小時鐘速率，而 I²C 則沒有此限制 資料持留時間(Data Hold Time)的要求,SMBus 規定 SMBCLK 線路的準位下降後,SMBDAT 上的資料必須持續保留 300nS,但 I2C 卻沒有對此有相同的強制要求。 I²C 允許從設備 (Slave) 在地址階段回應 NACK，當設備無法接收數據時 (例如正在執行即時任務)，可以拒絕通信。此時，主設備 (Master) 可以發送 STOP 信號 或 重啟 START 信號 以重新傳輸;SMBus 要求設備始終應答 (ACK) 自己的地址，以確保能夠偵測到 可移除設備 是否仍然連接至匯流排。 Address 0000 1xxx = I2C HS-mode master code; SMBus reserved for future use. 0101 000x = SMBus reserved for ACCESS.bus host. 0110 111x = SMBus reserved for ACCESS.bus default address. 001 100x = SMBus Alert Response address. 1100 001x = SMBus Device Default address.   ]]></content>
   </entry>
   
   <entry>
@@ -290,6 +677,48 @@ CharSet Indicates how to marshal string parameters to the method and controls na
 Timer System.Timers.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入，默默地吞掉異常 System.Threading.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入，不跟 UI 共用線程 System.Windows.Forms.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入,他跟 UI 是同一個線程，會堵塞 UI，可以直接寫 UI 元件 不可以在 System.Timers.Timer 或 System.Threading.Timer 中存取UI 線程的物件，可能拋錯或無聲的線程終止
 1 2 3 4 5 6 7 private void SysTime1Sec_Elapsed(object stst) { if (Interlocked.Increment(ref ReentrancyLock) &gt; 1) { return; } ... Interlocked.Exchange(ref ReentrancyLock, 0); } 此方法可以保證 SysTime1Sec_Elapsed 不被重入
 DataGridView 顏色不改變 若要使用特定值自訂單元格樣式，請實作 DataGridView.CellFormatting 事件的處理程序 datagridview 控制項存在一個問題，即在表單顯示之前無法更改任何單元格的顏色。因此，在呼叫 Shown() 之前運行的方法或觸發的事件將無法改變顏色
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>C Sharp</title>
+    <url>/post/affed9c1-c0ed-455d-8504-4365a6b76970/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CSharp</tag>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Bind Event 一定要用設計窗口的屬性新增，不可以直接寫同名函數，不會綁定
+Require UAC 加入應用程式資訊清單 在應用程式資訊清單中將 requestedExecutionLevel 改為以下設定 1 &lt;requestedExecutionLevel level=&#34;requireAdministrator&#34; uiAccess=&#34;false&#34; /&gt; 確定屬性 &gt; 應用程式 &gt; 程式資訊清單 指向加入的應用程式資訊清單 Add Dll 將 dll 及其所需檔案利用 加入 &gt; 現有項目 加入專案 dll 的 屬性&gt;建置動作 設定為內容，其他設為無 所有加入的檔案 屬性&gt;複製到輸出目錄 設定為一律複製 用 DllImport 連結要使用的函式在 class 定義中 DllImport exposed by an unmanaged dynamic-link library (DLL) as a static entry point
+1 2 [DllImport(&#34;WinIo64.dll&#34;, CallingConvention = CallingConvention.StdCall)] public static extern bool GetPortVal(UInt16 PortAddr, ref UInt32 pPortVal, UInt16 Size); ref UInt32 表示 Uint32*，呼叫時為 GetPortVal(0x62, ref pPortVal, 1); 屬性
+CharSet Indicates how to marshal string parameters to the method and controls name mangling CharSet.Unicode CharSet.Ansi EntryPoint = &ldquo;MessageBox&rdquo; dll 內函數的名子 CallingConvention CallingConvention.Cdecl CallingConvention.Winapi CallingConvention.StdCall AnyCPU AnyCPU 的陷阱: 如果你将项目的目标平台设置为 AnyCPU，这并不能保证兼容性。 AnyCPU 会根据运行程序的系统选择 32 位或 64 位模式(即使在同意台機器上選擇不同的建置目標也會使位元模式改變) 請在 屬性 &gt; 建置 &gt; 目標平台 中修改
+Timer System.Timers.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入，默默地吞掉異常 System.Threading.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入，不跟 UI 共用線程 System.Windows.Forms.Timer 如果處裡函式的執行時間比計時器間隔還長會導致處裡函式被重入,他跟 UI 是同一個線程，會堵塞 UI，可以直接寫 UI 元件 不可以在 System.Timers.Timer 或 System.Threading.Timer 中存取UI 線程的物件，可能拋錯或無聲的線程終止
+1 2 3 4 5 6 7 private void SysTime1Sec_Elapsed(object stst) { if (Interlocked.Increment(ref ReentrancyLock) &gt; 1) { return; } ... Interlocked.Exchange(ref ReentrancyLock, 0); } 此方法可以保證 SysTime1Sec_Elapsed 不被重入
+DataGridView 顏色不改變 若要使用特定值自訂單元格樣式，請實作 DataGridView.CellFormatting 事件的處理程序 datagridview 控制項存在一個問題，即在表單顯示之前無法更改任何單元格的顏色。因此，在呼叫 Shown() 之前運行的方法或觸發的事件將無法改變顏色
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Windows API Set</title>
+    <url>/post/20b26130-2c63-4316-8cb7-ea597a4bf830/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Windows API Set 適用於 Windows 10 以上
+Windows API set name is a virtual alias for a physical .dll file. It&rsquo;s an implementation-hiding technique, where you as the caller don&rsquo;t have to know exactly which module is hosting the information. PC 上的任何位置不一定存在具有該名稱的 dll 檔
+API 集由一個強契約名稱來標識 以api-開頭的名稱表示保證存在於所有 Windows 版本上的 API。 以ext-開頭的名稱表示可能並非在所有 Windows 版本上都存在的 API。 這個名稱必須以序列l&amp;lt;n&amp;gt;-&amp;lt;n&amp;gt;-&amp;lt;n&amp;gt;結尾，其中n由十進制數字組成。 該名稱不區分大小寫。 範例:
+api-ms-win-core-ums-l1-1-0 ext-ms-win-com-ole32-l1-1-5 ext-ms-win-ntuser-window-l1-1-0 ext-ms-win-ntuser-window-l1-1-1 Windows API 索引 Windows 應用程式開發介面 （API） 參考內容清單。
+使用 Windows API，您可以開發可在所有 Windows 版本上順利執行的應用程式，同時利用每個版本特有的特性和功能。 請注意，這先前稱為 Win32 API。Windows API 名稱更準確地反映其在 16 位 Windows 中的根目錄，以及其在 64 位 Windows 上的支援。
   ]]></content>
   </entry>
   
@@ -356,6 +785,51 @@ Bit 4 Charge Voltage, DACV 0 R/W Set 1 to Adds 24mV of charger voltage. Bit 5 Ch
   </entry>
   
   <entry>
+    <title>BQ24725A</title>
+    <url>/post/dc32cf69-8bba-49bd-ac73-516a85b9ea88/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  德州儀器的 Battery Charge Controller 支援用 I2C 設定最大充電電壓及電流，並提供電路保護
+Enhanced safety features for over voltage protection, over current protection, battery, inductor and MOSFET short circuit protection BQ24725A 使用兩個電荷泵分別驅動 n 通道 MOSFET（ACFET、RBFET 和 BATFET），以實現自動系統電源源選擇。
+Charge Voltage 1.024 ~ 19.2 V Charge Current 0.128~ 8.128 A AC Adapter Input Voltage 4.5V ~ 24V I2C 寫入格式 I2C 讀取格式 I2C Command 設置不合法的值會被設回預設值 如果長時間沒有由 I2C 寫入充電電壓或充電電流會停止充電
+0x12 ChargeOption Read or Write Charger Options Control Default 0xF902
+Bit 0 Charge Inhibit 0: Enable Charge default 1: Inhibit Charge 充電總開關，預設會開，但預設電壓電流為零所以還是不會充 Bit 14:13 WATCHDOG Timer Adjust 00: Disable Watchdog Timer 01: Enabled, 44 sec 10: Enabled, 88 sec 11: Enable Watchdog Timer (175s) default 設定連續 SMBus 寫入充電電壓或充電電流命令之間的最大延遲時間。如果在看門狗計時器啟用的情況下，IC 未在看門狗時間期限內接收到寫入充電電壓或充電電流的命令，則充電將會暫停。 當看門狗計時器超時且充電暫停後，接收到寫入充電電壓或充電電流命令時，充電將會恢復。 0x14 ChargeCurrent Read or Write 7-Bit Charge Current Setting (最大值，最大努力，不保證) Default 0x0000 the BQ24725A provides a charge current range of 128mA to 8.128A, with 64mA step resolution
+Bit 12 Charge Current, DACICHG 6 R/W 0 = Adds 0mA of charger current. 1 = Adds 4096mA of charger current. Bit 11 Charge Current, DACICHG 5 R/W 0 = Adds 0mA of charger current. 1 = Adds 2048mA of charger current. Bit 10 Charge Current, DACICHG 4 R/W 0 = Adds 0mA of charger current. 1 = Adds 1024mA of charger current. Bit 9 Charge Current, DACICHG 3 R/W 0 = Adds 0mA of charger current. 1 = Adds 512mA of charger current. Bit 8 Charge Current, DACICHG 2 R/W 0 = Adds 0mA of charger current. 1 = Adds 256mA of charger current. Bit 7 Charge Current, DACICHG 1 R/W 0 = Adds 0mA of charger current. 1 = Adds 128mA of charger current. Bit 6 Charge Current, DACICHG 0 R/W 0 = Adds 0mA of charger current. 1 = Adds 64mA of charger current. 設定值小於 128mA 時會被重設為預設值
+0x15 ChargeVoltage Read or Write 11-Bit Charge Voltage Setting(最大值，最大努力，不保證) Default 0x0000 The BQ24725A provides charge voltage range from 1.024V to 19.200V, with 16mV step resolution
+Bit 4 Charge Voltage, DACV 0 R/W Set 1 to Adds 24mV of charger voltage. Bit 5 Charge Voltage, DACV 1 R/W Set 1 to Adds 25mV of charger voltage. Bit 6 Charge Voltage, DACV 2 R/W Set 1 to Adds 26mV of charger voltage. Bit 7 Charge Voltage, DACV 3 R/W Set 1 to Adds 27mV of charger voltage. Bit 8 Charge Voltage, DACV 4 R/W Set 1 to Adds 28mV of charger voltage. Bit 9 Charge Voltage, DACV 5 R/W Set 1 to Adds 29mV of charger voltage. Bit 10 Charge Voltage, DACV 6 R/W Set 1 to Adds 210mV of charger voltage. Bit 11 Charge Voltage, DACV 7 R/W Set 1 to Adds 211mV of charger voltage. Bit 12 Charge Voltage, DACV 8 R/W Set 1 to Adds 212mV of charger voltage. Bit 13 Charge Voltage, DACV 9 R/W Set 1 to Adds 213mV of charger voltage. Bit 14 Charge Voltage, DACV 10 R/W Set 1 to Adds 214mV of charger voltage. 0x3F InputCurrent Read or Write 6-Bit Input Current Setting Default 0x1000
+0XFE ManufacturerID Read Only Manufacturer ID 0x0040
+0xFF DeviceID Read Only Device ID 0x000B
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>whisper</title>
+    <url>/post/a186e435-2f11-491d-86be-66fcac87c816/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Ai</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Open Ai Whisper Whisper 是一種通用語音辨識模型。它是在大量不同音訊資料集上進行訓練的，也是一個多任務模型，可以執行多語言語音識別、語音翻譯和語言識別。 Open Ai 用 Pytorch 實做的語音轉文字的實做，多語言效果良好
+1 2 pip install -U openai-whisper pipx install openai-whisper 1 whisper --model tiny --language Chinese ~/Downloads/untitled.mp3 model 有以下值可選
+tiny	Parameter 39M base	Parameter 74M small	Parameter 244M medium	Parameter 769M large	Parameter 1550M turbo	Parameter 809M 另有 tiny.en base.en small.en medium.en 只支援英文的模型
+Whisper.cpp 看著 Open Ai Whisper 寫的 Cpp 實做，快的多
+1 2 3 4 cmake --build build -j 8 --config Release cd build make ./bin/whisper-cli -m /home/eric/whisper.cpp/models/ggml-tiny.bin -f ../samples/jfk.wav 只有 CPU 運算
+1 apt install libavformat-dev libavformat-dev libavutil-dev libavformat-extra libavtp0 加入 ffmpeg
+Vulkan faster-whisper Cpp 實做，降低浮點數精度
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>whisper</title>
     <url>/post/75927838-f695-4e61-b2b2-a5a977bf958a/</url>
     <categories>
@@ -392,6 +866,21 @@ AMD CPU 1 2 3 4 git clone --depth 1 https://github.com/ggerganov/llama.cpp.git c
   </entry>
   
   <entry>
+    <title>Llam Cpp</title>
+    <url>/post/89ee835b-9cc6-4c71-b280-0948787c34e9/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Ai</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Build 1 curl -L https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-IQ3_M.gguf?download=true -o Llam-3.2-1B.gguf 下載 Llam 模型
+AMD CPU 1 2 3 4 git clone --depth 1 https://github.com/ggerganov/llama.cpp.git cmake -Bbuild cd build/ make -j8 1 bin/llama-cli -m Llam-3.2-1B.gguf -p &#34;Hi&#34; -n 100 Vulkan AMD 1 2 3 sudo apt install vulkan-tools libvulkan-dev glslc bin/llama-cli -m Llam-3.2-1B.gguf -p &#34;Hi&#34; -n 100 -ngl 1000   ]]></content>
+  </entry>
+  
+  <entry>
     <title>Blum Blum Shub</title>
     <url>/post/cf8e5f13-a6de-4624-9e14-975a34df1b86/</url>
     <categories>
@@ -405,6 +894,39 @@ AMD CPU 1 2 3 4 git clone --depth 1 https://github.com/ggerganov/llama.cpp.git c
     <content type="html"><![CDATA[  簡介 Blum, Blum &amp; Shub 一種偽隨機數產生器 $\displaystyle x_{n+1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ , p and q are not factors of $x_{0}$ 第 i 項的疊代公式
 $\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$
 1 2 3 4 5 p = 11 q = 23 x = 3 for i in range(10000): x = (x ** 2) % (p * q) 1 [9, 81, 236, 36, 31, 202, 71, 234, 108, 26, 170, 58, 75, 59, 192, 179, 163, 4, 16, 3]   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Blum Blum Shub</title>
+    <url>/post/cf66bdbe-d4a9-4bd8-9bb3-d62b9137fab2/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 Blum, Blum &amp; Shub 一種偽隨機數產生器 $\displaystyle x_{n+1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ , p and q are not factors of $x_{0}$ 第 i 項的疊代公式
+$\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$
+1 2 3 4 5 p = 11 q = 23 x = 3 for i in range(10000): x = (x ** 2) % (p * q) 1 [9, 81, 236, 36, 31, 202, 71, 234, 108, 26, 170, 58, 75, 59, 192, 179, 163, 4, 16, 3]   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Linux From Scratch</title>
+    <url>/post/577f2dc7-5169-4b62-9551-7637bec9f763/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Linux From Scratch 手把手教你如何重頭建置 Linux 發行版，2024年還有更新，有包好可以直接建置的軟體包
+注意 2.2. Host System Requirements 必須要確定列表都有裝
+注意 6.5. Coreutils-9.5 在 build 資料夾中 ./configure 會失敗，要在 coreutils 包的根資料夾
+  ]]></content>
   </entry>
   
   <entry>
@@ -425,8 +947,44 @@ $\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$
   </entry>
   
   <entry>
+    <title>Logic Analyzer</title>
+    <url>/post/d325c833-4795-42b1-b46f-e71cde1847f0/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Hardware</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Logic Analyzer 機器上無顯示，需要連接電腦
+Homepage - DreamSourceLab 6 千台幣 ，掏寶上有便宜的盜版 Analog Discovery 3 1.2 萬台幣， 16 Channels + 125MS/s, Oscilloscope Bandwidth 9 MHz, Waveform Generator 更偏向學生使用的工程工作室 PicoScope 2000 Series 1 萬台幣，勉強商用 Saleae Logic Analyzers 3 萬台幣 8 Channels + 500MS/s, Oscilloscope Bandwidth 5 MHz TravelLogic 4000 TL4134B 皇晶科技 - Acute 台廠，7萬塊，商用, 34 Channels + 2GB/s Chip EZ-USB FX2LP FX2G2 USB 2.0 Peripheral Controller - Infineon Technologies 英飛凌的EZ-USB FX2LP 和EZ-USB FX2G2 是業界事實上的USB 2.0 週邊控制器，為任何設備添加了USB 高速(480 Mbps)、全速(12 Mbps) 和低速(1.5 Mbps)連接。 EZ-USB FX2LP 和 FX2G2 的通用可程式介面 (GPIF) 可連接到處理器、影像感測器、FPGA 或 ASIC。使用者可以對 GPIF（通用可編程介面）進行編程，使其表現得像 FIFO、非同步 SRAM、位址/資料復用介面、CompactFlash 或專有介面
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Path</title>
     <url>/post/18be0903-ac92-45ce-8fcf-64028969acc8/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Naming Files, Paths, and Namespaces DOS Path C:\File 路徑不得有以下保留字元：
+&lt; (less than) &amp;gt; (greater than) : (colon) &amp;quot; (double quote) / (forward slash) \ (backslash) | (vertical bar or pipe) ? (question mark) * (asterisk) ASCII NULL 檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元 shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑 Do not use the following reserved names for the name of a file: CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9
+2018\January.xlsx A relative path to a file in a subdirectory of the current directory \Program Files\Custom Utilities\StringFinder.exe A relative path from the root of the current drive C:\Projects\apilibrary\apilibrary.sln An absolute file path from the root of drive C C:Projects\apilibrary\apilibrary.sln A relative path from the current directory of the C drive 注意最後兩個路徑的區別。兩者都指定了可選的磁碟卷標 (在這兩種情況下均為 C:)，但第一個路徑從指定卷的根目錄開始，而第二個路徑則不是。結果，第一個路徑是從 C: 磁碟驅動器根目錄開始的絕對路徑，而第二個路徑是從 C: 磁碟驅動器當前目錄開始的相對路徑。當需要使用第一種形式時，卻錯誤地使用了第二種形式，是涉及 Windows 文件路徑的常見錯誤來源之一
+Universal Naming Convention(UNC) 描述網路資源（例如共用檔案、目錄或印表機）位置的通用語法 \\HostName[@SSL][@Port]\SharedFolder\Resource UNC 最大長度為 260 \\127.0.0.1\c$\MinGW 表示 Local File System 的 c:\MinGW 磁碟 C 用 $c 表示，c 不區分大小寫 Windows API 中的檔案 I/O 函數會將 / 轉換為 \，作為將名稱轉換為 NT 樣式名稱的一部分，但使用 \\?\ 前綴時除外
+MAX_PATH 從 Windows 10 版本 1607 開始，許多常見 Win32 檔案和目錄函數中已刪除MAX_PATH限制。但是，您的應用程式必須滿足兩個條件
+設定註冊表 1 2 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem] &#34;LongPathsEnabled&#34;=dword:00000001 應用程式清單聲明長路徑 1 2 3 4 5 &lt;application xmlns=&#34;urn:schemas-microsoft-com:asm.v3&#34;&gt; &lt;windowsSettings xmlns:ws2=&#34;http://schemas.microsoft.com/SMI/2016/WindowsSettings&#34;&gt; &lt;ws2:longPathAware&gt;true&lt;/ws2:longPathAware&gt; &lt;/windowsSettings&gt; &lt;/application&gt; Long UNC 開頭方式跟 UNC 不一樣 \\?\c:\ 資料夾需要 \ 結尾 Long UNC 最大長度為 32767 \\?\C:\test\longUNC.exe 如果 Long UNC 以空白結尾
+无法双击执行 无法通过命令行执行(Long UNC 也不行) 如果同資料下有無空白版本，檔案管理器的屬性會是沒空白版本的資訊 如果同資料下有無空白版本，檔案管理器的刪除會刪到沒空白的版本 可以用 Long UNC 刪除, 創建   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Path</title>
+    <url>/post/999643d0-efed-48f7-bcbf-8e952b9e4fb7/</url>
     <categories>
       
     </categories>
@@ -484,6 +1042,25 @@ repeated START 如果控制器仍然希望在总线上通信，它可以生成�
   </entry>
   
   <entry>
+    <title></title>
+    <url>/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Frequencies Standard mode: 100 kilobits per second. Fast mode: 400 kilobits per second. 時序 在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱 tr SCL, SDA 上升或下降從 70% 到 30% 的時間 Max Standard 300 ns, Fast 300 ns tLOW SCL 維持低電平 Min Standard 4.7 μs, Fast1.2 μs tHIGH SCL 維持高電平 Min Standard 4.0 μs, Fast0.6 μs tHD;DAT SCL 下降到SDA 狀態改變完成的時間 沒有最小時間規範 tSU;DAT SDA 狀態改變完成到 SCL 重新拉高的時間 Min Standard 250 ns, Fast 100 ns Data Transfer 所有位元組均以 MSB 位元先移位的方式傳送 除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化
+0. 啟動 主設備發起的每個 I2C 指令都以START 條件開始，以STOP 條件結束。對於這兩種情況，SCL 必須維持高。 SDA 從高到低的轉換被視為START，從低到高的轉換被視為STOP
+1. ADDRESS 在啟動條件之後，主設備可以產生重複的啟動。這相當於正常的啟動，並且通常後面跟著從 I2C 位址 每一次啟動後 Master 通常會向 bus 寫 slave 的地址(7 bit or 10 bit)加上 1 bit 的讀寫指示(1 = Read , 0 = Write)，Slave 須向 master 寫 ACK
+2. DATA 需要一些時間來處理接收到的位元組或尚未準備好發送下一個位元組的從設備可以將時鐘拉低以向主設備發出信號以指示其應該等待。一旦時鐘被釋放，主設備就可以繼續處理下一個位元組
+3. 停止 SCL 必須維持高，SDA 從低到高的轉換被視為STOP
+repeated START 如果控制器仍然希望在总线上通信，它可以生成一个重复的 START 条件 (Sr) 并寻址另一个目标，而无需首先生成 STOP 条件 如果產生重複的 START …  ]]></content>
+  </entry>
+  
+  <entry>
     <title>I2C.md</title>
     <url>/post/eb1707ef-96ef-464c-9d29-986539a917d8/</url>
     <categories>
@@ -500,6 +1077,40 @@ repeated START 如果控制器仍然希望在总线上通信，它可以生成�
 2. DATA 需要一些時間來處理接收到的位元組或尚未準備好發送下一個位元組的從設備可以將時鐘拉低以向主設備發出信號以指示其應該等待。一旦時鐘被釋放，主設備就可以繼續處理下一個位元組
 3. 停止 SCL 必須維持高，SDA 從低到高的轉換被視為STOP
 repeated START 如果控制器仍然希望在总线上通信，它可以生成一个重复的 START 条件 (Sr) 并寻址另一个目标，而无需首先生成 STOP 条件 如果產生重複的 START …  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>I2C.md</title>
+    <url>/post/851489a9-e517-41c3-9a56-0352775c299c/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Frequencies Standard mode: 100 kilobits per second. Fast mode: 400 kilobits per second. 時序 在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱 tr SCL, SDA 上升或下降從 70% 到 30% 的時間 Max Standard 300 ns, Fast 300 ns tLOW SCL 維持低電平 Min Standard 4.7 μs, Fast1.2 μs tHIGH SCL 維持高電平 Min Standard 4.0 μs, Fast0.6 μs tHD;DAT SCL 下降到SDA 狀態改變完成的時間 沒有最小時間規範 tSU;DAT SDA 狀態改變完成到 SCL 重新拉高的時間 Min Standard 250 ns, Fast 100 ns Data Transfer 所有位元組均以 MSB 位元先移位的方式傳送 除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化
+0. 啟動 主設備發起的每個 I2C 指令都以START 條件開始，以STOP 條件結束。對於這兩種情況，SCL 必須維持高。 SDA 從高到低的轉換被視為START，從低到高的轉換被視為STOP
+1. ADDRESS 在啟動條件之後，主設備可以產生重複的啟動。這相當於正常的啟動，並且通常後面跟著從 I2C 位址 每一次啟動後 Master 通常會向 bus 寫 slave 的地址(7 bit or 10 bit)加上 1 bit 的讀寫指示(1 = Read , 0 = Write)，Slave 須向 master 寫 ACK
+2. DATA 需要一些時間來處理接收到的位元組或尚未準備好發送下一個位元組的從設備可以將時鐘拉低以向主設備發出信號以指示其應該等待。一旦時鐘被釋放，主設備就可以繼續處理下一個位元組
+3. 停止 SCL 必須維持高，SDA 從低到高的轉換被視為STOP
+repeated START 如果控制器仍然希望在总线上通信，它可以生成一个重复的 START 条件 (Sr) 并寻址另一个目标，而无需首先生成 STOP 条件 如果產生重複的 START …  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>NTP</title>
+    <url>/post/98c8f422-b43f-4e42-88cd-acb013d24909/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  RFC 1305
+台灣 T1 tock.stdtime.gov.tw watch.stdtime.gov.tw time.stdtime.gov.tw clock.stdtime.gov.tw tick.stdtime.gov.tw 台灣的 NTP 由中華電信研究所時間與頻率國家標準實驗室維護   ]]></content>
   </entry>
   
   <entry>
@@ -529,6 +1140,35 @@ repeated START 如果控制器仍然希望在总线上通信，它可以生成�
       
     </tags>
     <content type="html"><![CDATA[  冷凍 義美豬肉 810g 122元 標太郎高麗菜 700g 129元 達人上菜豬肉高麗菜 704g 149元 八方雲集招牌 約560g 125元 1400g 310元 及第豬肉水餃 950g 139 巷口 鵝媽媽精緻手工大水餃 40顆／200   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>水餃</title>
+    <url>/post/62b1d78f-b98d-4a99-9ca6-d55020de7100/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  冷凍 義美豬肉 810g 122元 標太郎高麗菜 700g 129元 達人上菜豬肉高麗菜 704g 149元 八方雲集招牌 約560g 125元 1400g 310元 及第豬肉水餃 950g 139 巷口 鵝媽媽精緻手工大水餃 40顆／200   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Ampere</title>
+    <url>/post/03b47c75-4fac-4831-a6b8-9f28c0f77777/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Ampere Arm server CPU 設計製造商，核心數在 32 - 196 Core，128 PCIE lane，已有資料中心使用
+  ]]></content>
   </entry>
   
   <entry>
@@ -562,8 +1202,38 @@ repeated START 如果控制器仍然希望在总线上通信，它可以生成�
   </entry>
   
   <entry>
+    <title>Ampere</title>
+    <url>/post/bb4de561-3a7d-4bf5-a9b9-7262c540e9c4/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/ComputerSystemOrganization</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Ampere Arm server CPU 設計製造商，核心數在 32 - 196 Core，128 PCIE lane，已有資料中心使用
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Arm Server</title>
     <url>/post/84b1b7ab-0228-4156-b820-ec12bc320d07/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Hardware</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Arm Tech Symposia 2024 Wywynn Amd 作過Arm Cpu Wywynn 作過的 Arm base server 每個機架 100-300 W 耗能 直接冷卻晶片 AI 晶片可能需要互聯 Arm base AI 機櫃產品範例 大概一億台幣每機櫃 該機櫃可能會漏水
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Arm Server</title>
+    <url>/post/02c7c532-1a9c-4da3-8fca-c12b91ee7a7f/</url>
     <categories>
       
     </categories>
@@ -600,8 +1270,56 @@ repeated START 如果控制器仍然希望在总线上通信，它可以生成�
   </entry>
   
   <entry>
+    <title>Macro</title>
+    <url>/post/b3edca46-cf6d-41b2-bb9f-d5bdacee4f48/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  本節在 MinGW32 GCC-6.3.0-1 環境下編譯
+1 2 3 4 #define Min(x, y) ((x) &lt; (y) ? (x) : (y)) 2 * Min(2, 3); // 2 * ((2) &lt; (3) ? (2) : (3)); Min(3, Min(4 ,5)); // ((3) &lt; (((4) &lt; (5) ? (4) : (5))) ? (3) : (((4) &lt; (5) ? (4) : (5)))); Min(3, 4 &lt; 5 ? 4 : 5); // ((3) &lt; (4 &lt; 5 ? 4 : 5) ? (3) : (4 &lt; 5 ? 4 : 5)) 函数宏需要在參數跟代換區塊的最外圍加上小括號避免代換結果有非預期的運算子結合
+1 2 3 #define Min(x, y) ((x) &lt; (y) ? (x) : (y)) int a = 1; a = Min(++a, 2); // a = ((++a) &lt; (2) ? (++a) : (2)); 注意++a被執行兩次，目前沒有優雅地處理方法
+1 2 3 #define Min(x, y) {(x) &lt; (y) ? (x) : (y);} 2 * Min(2, 3); // compile error int a = Min(2, 3); // compile error 其實大括號也可以區隔運算子，但不能 assign 與再跟其他運算子結合
+1 2 3 #define Subx(num) void Sub_##num(void) {printf(&#34;this is &#34; #num &#34;\n&#34;);} Subx(0) // void Sub_0(void) {printf(&#34;this is &#34; &#34;0&#34; &#34;\n&#34;);} Subx(123) // void Sub_123(void) {printf(&#34;this is &#34; &#34;123&#34; &#34;\n&#34;);} 巨集利用字串化運算子及語彙基元帶入運算子(Token-pasting operator)，生成函數定義
+1 2 3 4 5 6 7 #define foo abc #define gfoo(x) Foo_##x #define gfooo(x) gfoo(x) gfoo(foo)(); // Foo_foo(); gfooo(foo)(); // Foo_abc(); gfooo( foo)(); // Foo_abc(); gfooo( foo )(); // Foo_abc(); Token-pasting operator 會終止巨集替代 Token-pasting operator 會忽略前後空白
+1 2 3 4 #define print(s) printf(#s) print(123\n); // printf(&#34;123\n&#34;); print(abc \n); // printf(&#34;abc \n&#34;); print(abc *#@ \n); // printf(&#34;abc *#@ \n&#34;); 字串化運算子會字串化空白跟#，&amp;quot;'[]{}(); 不能正常字串化
+1 2 3 4 5 #define STRINGIZE(z) #z #define ADD_SLASH_X(y) STRINGIZE(\x ## y) #define SYMBOL_STR(x) ADD_SLASH_X(x) printf(EXP_STR(35)); // &#34;\x35&#34; aka 5 printf(EXP_STR(61)); // &#34;\x61&#34; aka a 傳入 Ascii 的 16 進制值回傳該 Ascii 字串 C macro : turn a number into a string 1 2 3 4 5 6 7 8 9 #if DLEVEL == 0 #define STACK 0 #elif DLEVEL == 1 #define STACK 100 #elif DLEVEL &gt; 5 display( debugptr ); #else #define STACK 200 #endif Macro 條件判斷
+1 2 #define MASTER_BOARD #if defined (MASTER_BOARD) // true 即便 define 沒有定義值，用 defined (MASTER_BOARD) 測試時仍然為真
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Virtual Machine</title>
     <url>/post/1fc8bbc7-b8d8-4f8b-93a4-bfa25ba89e43/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+      <tag>CS/VirtualMachine</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  qemu-user qemu-system virt-manager libvirt 的 GUI
+libvirt kvm-ok 用於檢察 CPU 是否支援虛擬化 libvirt: Domain XML format virtiofsd qemu 再做 filesystem share 時沒裝 virtiofsd 啟動虛擬機時會報失敗 virt-manager 中 Add Hardware 選 filesystem Source Path 選在 host 要往 guest share 的路徑 Target Path 是 virtiofs 在 guest 中要打的 Tag，不建議有斜線
+1 mount -t virtiofs share /mnt/share 在 guest 上 mount Share Filesystem
+qemu-guest-agent qemu guest 建議安裝的軟體用於快照，有教學要求 systemctl enable 但我在 ubuntu 24.04 上測試惠自動 enable
+Log $HOME/.virtinst/virt-install.log – virt-install tool log file. $HOME/.virt-manager/virt-manager.log – virt-manager tool log file. /var/log/libvirt/qemu/ – Log files for each running virtual machine. If centos is virtual machine name, than log file is /var/log/libvirt/qemu/centos.log Virtsh libvirtd 的命令行界面
+1 virsh list 列出正在運行的虛擬機器
+1 virsh start &lt;guestname&gt; 要啟動虛擬機器
+Spice Simple Protocol for Independent Computing Environments 用以共享視訊、錄製音訊、共享 USB 裝置和共用資料夾 SPICE 專案旨在提供完整的開源解決方案，以無縫方式遠端存取虛擬機器 需要 SPICE 用戶端才能連線到來賓。在 Arch 中，可以使用下列客戶端：
+virt-viewer spice-vdagent 作為 ubuntu24 的 spice 客戶端程式 客機的 VGA 可以從 SPICE 傳出 Virtio-FPGA - a virtualization solution for SoC-attached FPGAs 最近，FPGA 加速器越來越受歡迎，因為它們提供了一種滿足即時應用的高運算和低功耗需求的合適方法。現代電動交通系統（例如飛機、道路車輛）可以從嵌入式 FPGA 中獲益匪淺，它將高性能和靈活性功能整合到單一 SoC 中。同時，FPGA資源的虛擬化旨在增強這些系統的強大隔離性、整合性和安全性。在本文中，我們提出了一種新穎的虛擬化框架，針對 Linux 和 QEMU/KVM 設定中的 SoC 連接的 FPGA 設備。我們使用 Virtio 作為一種有效方式從客戶系統配置 FPGA 資源的方法。此外，我們也採用 Linux VFIO 和裝置樹覆蓋技術，以便為客戶系統提供動態可存取的 FPGA 資源。詳細描述了從虛擬化環境動態配置和利用 FPGA 資源的能力。介紹了此解決方案的評估流程，並且從客戶系統存取 FPGA 設備時，虛擬化開銷的基準測試為最低（約 10%）
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Virtual Machine</title>
+    <url>/post/9952557c-b808-49e6-895e-cff159a3d64e/</url>
     <categories>
       
     </categories>
@@ -653,6 +1371,56 @@ pipx Install and Run Python Applications in Isolated Environment pipx 為每個�
   </entry>
   
   <entry>
+    <title>Version Management</title>
+    <url>/post/4ec0260b-6eef-47a2-bd6e-2680723d9bae/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Python</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  py Python Launcher for Windows
+1 2 py --list py -V3:11 啟動新版本要用 cmd，用 windows 版的 bash 會 hang 新 python 版本不能用 py 裝，要去 python 官網下載安裝包 路徑在 c:Windows\py
+pyenv pyenv 讓您輕鬆地在多個 Python 版本之間切換。它簡單、不引人注目，並且遵循 UNIX 單一用途工具只做好一件事的傳統。 技術上是個 bash 變數墊片，會抓 python 在本地 build
+1 2 3 4 git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.bashrc echo &#39;command -v pyenv &gt;/dev/null || export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.bashrc echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.bashrc 大概是 clone pyenv 到 ~/.pyenv 在加 PYENV_ROOT 到環境變數 只能為每一個使用者單獨安裝，sudo 會裝去 /root
+Install For All User Step-by-Step Guide: Setting Up pyenv 1 2 3 4 5 6 7 8 9 10 apt install --yes libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev apt install --yes xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libncursesw5-dev git clone --depth 3 https://github.com/pyenv/pyenv.git /usr/share/pyenv cat &gt; /etc/profile.d/pyenv.sh &lt;&lt; EOF export PYENV_ROOT=&#34;/usr/share/pyenv&#34; command -v pyenv &gt;/dev/null || export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; EOF chmod 777 -R /usr/share/pyenv chmod 755 /etc/profile.d/pyenv.sh 1 pyenv install --list 列出所有能安裝的版本
+1 pyenv versions 列出以安裝的版本
+如果您是虔誠的 virtualenv 或 venv 用戶，請不要擔心：pyenv 與兩者都能很好地協作。事實上，如果您願意，可以保持相同的工作流程
+Managing Multiple Python Versions With pyenv Pip 使用 python3.X -m pip 而不是 pip install：為避免當使用者擁有多版 Python 版本時，使用自己不明確的 pip 版本
+Requirement 通常拿來保存專案的包相依性
+1 python -m pip install -r /path/to/requirements.txt 安裝
+1 python -m pip freeze &gt; requirements.txt 產生
+Venv systemd 可以直接執行 Venv 創造出的 python 不需要載入環境變數
+pipx Install and Run Python Applications in Isolated Environment pipx 為每個應用程式及其關聯的套件建立一個隔離的環境
+1 pipx install --global pycowsay 將應用程式公開給所有的系統使用者
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>AT32F425 pwc_voltage_regulate_set</title>
+    <url>/post/5f04ef82-362c-4c67-97a2-9f3414e9c17a/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded/Arterytek</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  在將 AT32F425 BSP 從 V2.0.0 更新到 V2.1.2 發現 pwc_voltage_regulate_set() 行為有差異
+AT32F425 BSP 应用指南 查閱 AT32F425固件库BSP&amp;amp;Pack应用指南 5.14.10 函数 pwc_voltage_regulate_set
+下表描述了函数 pwc_voltage_regulate_set 表 365. 函数 pwc_voltage_regulate_set 项目 描述 函数名 pwc_voltage_regulate_set 函数原型 void pwc_voltage_regulate_set(pwc_regulator_type pwc_regulator) 功能描述 深度睡眠模式下电压调节器状态选择 输入参数 pwc_regulator：电压调节器状态选择 该参数可以选取 pwc_regulator_type 内的任意一个枚举值. pwc_regulator pwc_regulator 用于选择电压调节器的状态，其可选参数罗列如下 PWC_REGULATOR_ON： 深度睡眠模式下电压调节器正常开启 PWC_REGULATOR_LOW_POWER： 深度睡眠模式下电压调节器处于低功耗模式 PWC_REGULATOR_EXTRA_LOW_POWER： 深度睡眠模式下电压调节器处于额外低功耗模式 示例
+1 2 /* congfig the voltage regulator mode */ pwc_voltage_regulate_set(PWC_REGULATOR_LOW_POWER); 確定 pwc_regulator 有三個選項
+Implementation V2.0.0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 typedef enum{ PWC_REGULATOR_ON = 0x00, /*!&lt; voltage regulator state on when deepsleep mode */ PWC_REGULATOR_LOW_POWER = 0x01, /*!&lt; voltage regulator state low power when deepsleep mode */ PWC_REGULATOR_EXTRA_LOW_POWER = 0x02 /*!&lt; voltage regulator state extra low power when deepsleep mode */ } pwc_regulator_type; void pwc_voltage_regulate_set(pwc_regulator_type pwc_regulator){ switch(pwc_regulator){ case 0: PWC-&gt;ctrl2_bit.vrexlpen = 0; PWC-&gt;ctrl_bit.vrsel = 0; break; case 1: PWC-&gt;ctrl2_bit.vrexlpen = 0; PWC-&gt;ctrl_bit.vrsel = 1; break; case 2: PWC-&gt;ctrl2_bit.vrexlpen = 1; PWC-&gt;ctrl_bit.vrsel = 1; break; default: break; } } V2.1.2 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 typedef enum{ PWC_REGULATOR_ON = 0x00, /*!&lt; voltage regulator state on when deepsleep mode */ PWC_REGULATOR_LOW_POWER = 0x01 /*!&lt; voltage regulator state low power when deepsleep mode */ } pwc_regulator_type; void pwc_voltage_regulate_set(pwc_regulator_type pwc_regulator){ switch(pwc_regulator){ case PWC_REGULATOR_ON: PWC-&gt;ctrl_bit.vrsel = FALSE; break; case PWC_REGULATOR_LOW_POWER: PWC-&gt;ctrl_bit.vrsel = TRUE; break; default: break; } } 顯然 V2.1.2 更改的了 pwc_voltage_regulate_set 實作方法跟選項但文件並未更改
+Solve 廠商回英文郵件已更改
+原因應為 ES0004_AT32F425_Errata_Sheet_V2.0.7_CH.pdf
+1.4.4 DEEPSLEEP 内部电压调节器额外低功耗模式无法使用 问题描述： DEEPSLEEP模式下，操作内部电压调节器额外低功耗模式使能位（VREXLPEN），可能会误修 改到内部电压调节器默认值，从而导致芯片运行异常。 解决方法： 无，不操作位于 PWC_CTRL2 寄存器的内部电压调节器额外低功耗模式使能位（VREXLPEN）
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>AT32F425 pwc_voltage_regulate_set</title>
     <url>/post/de25b679-7703-4966-a0f2-fb6ba8fb87ec/</url>
     <categories>
@@ -690,6 +1458,37 @@ Atmel tinyAVR Atmel megaAVR Atmel SAM D10 Cypress PSoC 4000S Freescale KE04 Free
   </entry>
   
   <entry>
+    <title>Low Cost Microcontroller</title>
+    <url>/post/efe31f45-ca5b-4a5a-89d4-025f7d520bfa/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Puya PADAUK Technology 台灣廠商 Holtek 台灣廠商 EFM32 Zero Gecko 32-bit 美國廠商 大部分低於 4 cent 的 MCU 只能單次燒入 Browse the Microcontroller pages of LCSC and you’ll see tons of low-cost MCUs from companies like Padauk, Nyquest, Holychip, SimOne, and Fremont Micro Devices — with prices as low as 4 cents - the cheapest flash microcontroller you an buy is actually an arm cortex m0 The Amazing $1 Microcontroller 大量介紹低於 1 USD 的 MCU
+Atmel tinyAVR Atmel megaAVR Atmel SAM D10 Cypress PSoC 4000S Freescale KE04 Freescale KL03 Holtek HT66 Infineon XMC11001 Microchip PIC16 Microchip PIC24 Microchip PIC32MM Nuvoton N76 Nuvoton M051 NXP LPC811 Renesas RL7 Sanyo LC87 Silicon Labs EFM8 ST STM8 ST STM32F0 STC STC8 TI MSP430FR   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Ubuntu</title>
+    <url>/post/519ed0db-2d71-4f31-8bc9-f863c12cc17a/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Official CD Mirrors for Ubuntu 2024 在下載 ubuntu 24 LTS 發現官網的下載數度極慢，且頁面上找不到 CD Mirror List，特別記下 CD Mirrors 的網址
+Apt Package Conflict Ubuntu 24.04 遇到與開 Update Repo 時無法安裝 Python3-venv, 應為 Python3-venv 需求更新的 Python3 但如果只開Update Repo 會沒有
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Ubuntu.md</title>
     <url>/post/331678a7-2813-44de-bdbf-8995adca022d/</url>
     <categories>
@@ -703,6 +1502,21 @@ Atmel tinyAVR Atmel megaAVR Atmel SAM D10 Cypress PSoC 4000S Freescale KE04 Free
     <content type="html"><![CDATA[   Official CD Mirrors for Ubuntu 2024 在下載 ubuntu 24 LTS 發現官網的下載數度極慢，且頁面上找不到 CD Mirror List，特別記下 CD Mirrors 的網址
 Apt Package Conflict Ubuntu 24.04 遇到與開 Update Repo 時無法安裝 Python3-venv, 應為 Python3-venv 需求更新的 Python3 但如果只開Update Repo 會沒有
   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>RaspberryPi</title>
+    <url>/post/857670bd-cbf7-419f-8db3-4f21ede764c5/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Pi3 的chip文件 BCM2837 Bare metal Raspberry Pi 3 tutorials raspi3-tutorial Pi4 的chip文件 Bcm2711 Pin Raspberry Pi GPIO pin define Raspberry Pi Pinout pigg GUI for View and Config RaspberryPi GPIO
+GPIO 引腳可設定為高電平 3.3V 或低電平 0V，Pi 4 用電源供應器實測可以感受到 1 mA 3.3V，最低 1.2 還會判 Hight Raspberry Pi 1 Raspberry Pi I2C clock-stretching bug Raspberry Pi I2C clock-stretching bug 時鐘拉伸僅在 I2C 讀取確認階段之後（讀取 ACK/NACK 後）直接起作用，並且僅當時鐘拉伸超過 0.5 個時脈週期時才起作用。 時鐘延長在 I2C 寫入確認階段開始時不起作用（即從機必須決定是否發送 ACK 或 NACK 的時刻） 除了從機可能會錯過太短的時脈的問題之外，當時脈拉長時， Raspberry Pi 還會過早讀取 SDA。因此，即使在 I2C 讀取確認階段將時鐘拉伸非常非常小，也會導致資料損壞。 GPIO GPIO sysfs 1 2 3 4 5 6 7 8 9 10 11 12 13 14 $ cd /sys/class/gpio $ ls export gpiochip0 gpiochip504 unexport $ echo 26 &amp;gt; export $ ls export gpio26 gpiochip0 gpiochip504 unexport $ ls gpio26 active_low device direction edge power subsystem uevent value $ cat gpio26/direction in $ echo out &amp;gt; gpio26/direction $ cat gpio26/value 0 $ echo 1 &amp;gt; gpio26/value 古老的手段，準備棄用，非常慢 直接操作 /sys/class/gpio ，無法確定是否爭用，程式意外結束時不會被 OS …  ]]></content>
   </entry>
   
   <entry>
@@ -723,6 +1537,25 @@ GPIO 引腳可設定為高電平 3.3V 或低電平 0V，Pi 4 用電源供應器�
   <entry>
     <title>Optimizing Compiler</title>
     <url>/post/c15558f7-397c-4977-862e-4885899a87a5/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/TheoryOfComputation</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  從零開始建構 C 語言最佳化編譯器 Jserv 在 Coscup 2024 的演講，基於 shecc 從零開始建構 C 語言最佳化編譯器 basic block 程式碼單一入口，單一出口的區域
+可達性 (reachability) 除了起始節點外，若一個基本區塊在最佳化中沒有前任節點連接，則此基本區塊被稱為不可到達 (unreachable)，我們可安全的移除該基本區塊來簡化 CFG，如 C 語言關鍵字 break, continue, return 後的程式碼及 if, for, while 中條 件恆為 0 的情況。
+支配性 (domination) 若從起始點到節點 n 都必經節點 d，則稱節點 d 為節點 n 的支配節點 (dominator)，記作 d dom n;而其中最接近節點 n 的支配節點 m 又稱為直接支配 節點 (immediate dominator)，記作 m idom n。將 m 作為親代節點、n 作為子節點，我們可建立另外一種樹狀結構 ── 支配樹 (dominator tree)，記錄從起始點到某個基本區塊節點中必經的路徑。
+結合可達性分析，若節點 n 不可到達，則其在支配樹中的所有子節點將同樣不可到達，這時我們可快速且安全地從 CFG 中移除這些基本區塊節點。
+shecc shecc看起來很完善，有甚麼可以貢獻的東西 (2024) Issues | shecc 有好多 issue 可以解啊。 c-preprocess 和 frontend 可以一起做R。 bug 還是很多，也可以去找 bug 提出來。 產生的程式碼需要做 bootstrapping，目前只能跑在 QEMU，希望找些其他系統模擬的方法支援非 Linux OS 目前只支援 ARM／RISC-V，看看有沒有人可以貢獻 x86(-64) 之類的處理器後端。 建構流程 Bootstrapping 分成三個階段，可自舉 stage0: 用 gcc/clang/MSVC 編譯，產生可執行檔 out/shecc，針對原生的處理器架構 stage1: 用 stage0 產生的程式編譯 shecc 原始程式碼，產生的執行檔 out/shecc-stage1.elf 是ArmV7 或 RISC-V 指令集 stage2: 用 stage1 產生的 out/shecc-stage1.elf 編譯自己
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Optimizing Compiler</title>
+    <url>/post/0b82d920-f723-40bf-b8a3-7a0f39b3cb2a/</url>
     <categories>
       
     </categories>
@@ -768,6 +1601,52 @@ Sanitizer Undefined Behavior Sanitizer’s arithmetic overflow checkers to the r
   </entry>
   
   <entry>
+    <title>Mitigating Integer Overflow in C</title>
+    <url>/post/33b86bb4-774f-4e92-9367-598e10566b9b/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  現代編譯器 Integer Overflow 行為調查 Mitigating Integer Overflow in C Side Overflow 整數超過其所能表示的最大值 在 C 中，沒有任何語言層級的功能能處理
+Can’t calculate 3 * 128 (384) with 8 bit unsigned storage: 1 1000 0000 (9th bit has nowhere to go…) == 128 8 value bits (representation range of 0-255)
+現在機器中的處理方法 None 由 CPU 決定 Warp around to the end of range (回繞) Saturate 不超過最大值或最小值 ex: refcount_t Tarp 停止執行 Undefined behavior C Standard For unsigned int Warp around
+C Standard For signed int Undefined behavior 這是統一 C 行為最難的地方 In practice this used to mean the “none” strategy, which for all sane (2s-complement) systems would result in wrap-around.
+1 2 3 4 5 if (value + offset &lt; value) { /* Overflow detected, reject bad offset. */ 3 return -EINVAL; } do_things_knowing_offset_is_safe(value + offset); 利用回繞做出的 Overflow 檢查 會被優化破壞掉
+-fno-strict-overflow (-fwrapv) changes strategy for signed integer overflow from undefined behavior to wrap-around
+Sanitizer Undefined Behavior Sanitizer’s arithmetic overflow checkers to the rescue! -fsanitize=signed-integer-overflow -fsanitize=unsigned-integer-overflow (Clang only) (also -fsanitize=pointer-overflow but not discussed today) Two possible handlers warn, but continue with calculation anyway (default) trap, via -fsanitize-trap=[SANITIZER|GROUP|all]
+對於 -fsanitize=signed-integer-overflow 時使用 -fno-strict-overflow 會確定使用 Warp around 而不是 Undefined Behavior 對於 -fsanitize=unsigned-integer-overflow 我們清楚的知道她會回繞，但這是 Undefined Behavior
+1 2 3 4 5 if (check_add_overflow(value, offset, &amp;result)) { /* Overflow detected, reject bad offset. */ return -EINVAL; } do_things_knowing_offset_is_safe(result); 強制檢查
+1 2 if (value + offset &lt; value) { ... } if (value + offset &lt; 0) { ... } Linux 還有利用 overflow 的行為 unsigned arithmetic has always been expected to wrap-around
+1 typedef unsigned int __attribute__((wraps)) u32_wrap; 1 #define KVM_HVA_ERR_RO_BAD (-2UL) /* Hmm &#34;ULONG_MAX - 1&#34; is getting ugly */ As a short-hand for set all the bits or slightly less than max value 所以提供跳過檢查的語法
+1 void process_all(u32 num) { while (num--) process(num); } Sanitizer 會報錯也會 overflow 但是是預期行為，Sanitizer 分析時要跳過
+1 2 3 u8 us u32 ub = 255; us = ub + 1; 超過賦值方向所能容忍的最大值 上方範例會通過 Sanitizer 檢查，下面追加兩支旗標偵測 -fsanitize=implicit-signed-integer-truncation Has the widest coverage due to integer promotion, i.e. from signed -fsanitize=implicit-unsigned-integer-truncation
+修正狀態 Linux v6.9 Introduce CONFIG_UBSAN_SIGNED_WRAP for testing, which works with tip-of-tree Clang, but is still rough around the edges Linux v6.10 Aug 2024 False positives found via syzkaller are addressed. CONFIG_UBSAN_SIGNED_WRAP ready for wider testing. Let Sanitizer work Clang 19.0 fix (signed, unsigned) integer overflow sanitizers work with -fno-strict-overflow wraps attribute available Gcc In 2024 Need fix signed, unsigned integer overflow sanitizers CPP 可以重載運算子在 overflow 時拋異常，以上問題在 C 才有
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Windows PE</title>
+    <url>/post/165d2e82-4416-4d7c-b096-876be249f68d/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 Windows Portable Executable (PE) and Common Object File Format (COFF) files 檔案格式
+PE32 表示 X86 32bit 機器 PE32+ 表示 X86-64 64bit 機器 PE Format 官方完整格式說明
+一定由 DOS Header 開始，開頭前兩個 byte 為 0x4D4A NT Headers 1 2 3 4 5 typedef struct _IMAGE_NT_HEADERS64 { DWORD Signature; // PE 簽名 IMAGE_FILE_HEADER FileHeader; IMAGE_OPTIONAL_HEADER64 OptionalHeader; } IMAGE_NT_HEADERS64, *PIMAGE_NT_HEADERS64; 64 和 32 位元的 OptionalHeader 結構不一樣
+FileHeade 1 2 3 4 5 6 7 8 9 typedef struct _IMAGE_FILE_HEADER { WORD Machine; // 平台，intel 386 為 0x014c，intel 64 為 0x0200 WORD NumberOfSections; // Section 數量，最多 96 個字節 DWORD TimeDateStamp; // 編譯日期 DWORD PointerToSymbolTable; DWORD NumberOfSymbols; WORD SizeOfOptionalHeader; // OptionalHeader 大小, 32 位通常為 E0，64 位通常為 F0 WORD Characteristics; // 檔案屬性，EXE 通常為 010f，DLL 通常為 210e } IMAGE_FILE_HEADER, *PIMAGE_FILE_HEADER; 重要的只有 Machine, TimeDateStamp, Characteristics
+Optional Header 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 …  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Windows PE</title>
     <url>/post/15f9338a-1f8e-4195-adf9-ea6d9e258a98/</url>
     <categories>
@@ -805,6 +1684,30 @@ Optional Header 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 2
   
   <entry>
     <title>Bash</title>
+    <url>/post/1751da0c-b85d-40ec-93e5-65499d181839/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  重導向 1 2 echo &amp;#34;echo&amp;#34; &amp;gt; log.txt echo &amp;#34;echo&amp;#34; 2&amp;gt; log.txt 第一行會重導向 stdout，第二行會重導向 stderr
+1 ls /dev 2&amp;gt;&amp;amp;1 | tee result.txt 把 stdout and stderr 複製到 result.txt 及銀幕 tee -a result.txt 附加在 result.txt 原內容後面
+Echo 1 echo &amp;#34;Date $(date)&amp;#34; 直接在 echo 中呼叫指令
+1 echo &amp;#34;${var}&amp;#34; 顯示變數的值
+1 2 3 4 echo -e &amp;#34;Hello\nworld&amp;#34; echo -e &amp;#39;Hello\nworld&amp;#39; echo Hello$&amp;#39;\n&amp;#39;world echo Hello ; echo world 換行，只有 bash 支援
+1 printf &amp;#34;hello\nworld\n&amp;#34; 在 UNIX 上可攜
+File 1 2 tail -n 20000 -q sync.md &amp;gt; .sync.md mv .sync.md sync.md 如果 sync.md 大於 20000 行則將檔頭截斷否則保留原始檔案
+變數 1 2 3 SyncRlt=&amp;#34;$?&amp;#34; RltFile=&amp;#34;r.log&amp;#34; echo &amp;#34;SyncRlt ${SyncRlt}&amp;#34; &amp;gt; ${RltFile} 型態只有字串，等號兩側不可以有空格 ${var} 可以使用變數，會在執行該行前被替換
+Debug 1 2 bash +x sync.bash bash --verbose sync.bash Array 1 2 3 array=(1,2,3,4) array=(1 2 3 4) echo ${arary[@]} 定義跟顯示
+1 2 3 for str in ${myArray[@]}; do echo $str done 尋訪
+1 2 3 for i in ${!myArray[@]}; do echo &amp;#34;element $i is ${myArray[$i]}&amp;#34; done …  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Bash</title>
     <url>/post/a7694bb4-65f2-4762-9808-d1b1d1897006/</url>
     <categories>
       
@@ -829,6 +1732,21 @@ Debug 1 2 bash +x sync.bash bash --verbose sync.bash Array 1 2 3 array=(1,2,3,4)
   
   <entry>
     <title>Ch340.md</title>
+    <url>/post/d2ec1661-0fbf-48cd-9535-5330af2b233c/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 南京沁恒 (WCH) 製造的 USB 轉 RS-232,Uert 晶片，在國際上不好買 有很多廠商選用 中文文件(比英文完整) 英文文件 型號選擇 使用 CH341 的驅動 CH341SER CH341 支援轉換 i2c,spi
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Ch340.md</title>
     <url>/post/b751c62a-82d6-4054-944a-ec34e0c6fbd0/</url>
     <categories>
       
@@ -839,6 +1757,33 @@ Debug 1 2 bash +x sync.bash bash --verbose sync.bash Array 1 2 3 array=(1,2,3,4)
       
     </tags>
     <content type="html"><![CDATA[  簡介 南京沁恒 (WCH) 製造的 USB 轉 RS-232,Uert 晶片，在國際上不好買 有很多廠商選用 中文文件(比英文完整) 英文文件 型號選擇 使用 CH341 的驅動 CH341SER CH341 支援轉換 i2c,spi
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Rclone</title>
+    <url>/post/d6c6acf7-3263-44da-9a80-f8e993105aa1/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+      <tag>CS/Software</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   rclone Rclone 是一个用于管理云存储上的文件的命令行程序 Windows 上設定檔在 C:\Users\eric2_chen\AppData\Roaming\rclone\rclone.conf --interactive 在執行操作前先詢問，通常在錯誤復原中使用
+config 1 rclone config 命令行互動式設定遠端
+ls 1 2 rclone ls note: rclone ls --max-depth 1 note: 列出遠端資源，遠端一定要加冒號 note:，會遞迴的列出檔案樹上的全部資源 --max-depth 1 用以限制只列一級資料夾
+ls to list size and path of objects only lsl to list modification time, size and path of objects only lsd to list directories only lsf to list objects and directories in easy to parse format lsjson to list objects and directories in JSON format bisync 使用差分同步
+在兩條路徑之間執行雙向同步 Bisync 在 rclone 中提供了雙向雲端同步解決方案。它保留先前運行中的 Path1 和 Path2 檔案系統清單。在每次連續運行時，它將：
+列出 Path1 和 Path2 上的文件，並檢查每一側的變更。更改包括New、Newer、Older和Deleted文件 將 Path1 上的變更傳播到 Path2，反之亦然 1 rclone bisync . note: --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -vP --drive-skip-gdocs --fix-case --exclude &#34;.**&#34; --resync 先設定好 obsibian 作為遠端 第一次上傳，如同 sync 不會刪除 path1 裡的任何文件
+1 rclone bisync . note: --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only -v --drive-skip-gdocs --fix-case --max-delete 5 --max-lock 720 --exclude &#34;.**&#34; 之後直接兩個資料夾同步
+--max-lock [second] bisync 會產生操作中的檔案列表在操作目錄，如果異常中斷會導致下一次執行失敗，直到 lock 檔被刪除 --check-sync=only 只確定兩側檔案是否一致，不改變任何檔案 Windows 上 C:\Users\eric2_chen\AppData\Local\rclone\bisync 為儲存檔案系統清單的路徑 --recover 如果異常終止而使 lock 檔位被解鎖，不想--resync 強制覆蓋碗端檔案，可使用此指令指無視 lock 檔
+Google Drive root_folder_id 可以指定以特定資料夾做為根，在 Scope 為 drive or drive.file 都可以運作 如果用 Scope 為 drive.file 設定不同的使用者上傳到同一個 root_folder_id 會無法看到對方的上傳
+警告 當設定 Scope 為 drive.file 與 FolderSync 以同步手機筆記時即使以相同使用者授權 Rclone 也無法看到 FolderSync 新增的檔案，但 Rclone 新增的 FolderSync 可以看見 Rclone 同步不同電腦的話則可以正常同步
+--drive-acknowledge-abuse Google 可能白目地認為某些檔案存在風險而阻止您下載，此標誌忽略此限制
   ]]></content>
   </entry>
   
@@ -888,6 +1833,24 @@ Differential Synchronization Differential Synchronization Differential Synchroni
   </entry>
   
   <entry>
+    <title>Synchronization.md</title>
+    <url>/post/d6fb8a09-4c12-404b-81c9-448f84c9a015/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 檔案同步 目前有三種方法
+Lock 將要修改的檔案鎖定，不允許其他程式修改，如果鎖沒有失效時間，可能導致崩潰程式永遠占用鎖 Operational Transformation 紀錄每個程式修改的每一行，並將記錄傳播給其他程式，基於 Operational Transformation Operational Transformation Frequently Asked Questions and Answers Concurrency Control in Groupware Systems 原始論文 Three-way Merge 客戶端將文件的內容傳送到伺服器。 伺服器執行三向合併以提取使用者的變更並將其與其他使用者的變更合併。 伺服器將文件的新副本傳送給客戶端 半雙工系統，Subversion 使用此方法
+Differential Synchronization Differential Synchronization Differential Synchronization 差異同步是一種對稱演算法，它透過不斷循環的背景比對（diff）與修補（patch）操作來保持兩個文件的同步
+資料流概覽 理想化的差異同步資料流如下所示，假設兩個文件（分別稱為「客戶端文本」與「伺服器端文本」）位於同一台電腦上，沒有網路延遲的影響
+比較 Client Text 與 Common Shadow，計算 Diff 這會回傳 Client Text 相較於 Common Shadow 的變更（編輯操作列表） 將 Client Text 的內容複製到 Common Shadow 必須確保此複製的內容與第一步時的 Client Text 完全相同，在多執行緒環境中，應先對文本進行快照（snapshot） 應用 Diff 變更至 Server Text（最佳努力方式） 嘗試將編輯操作套用到 Server Text，允許部分變更可能因為內容變動而失敗 更新 Server Text 伺服器端文本應用變更，這個步驟必須原子性（atomic），但不一定要阻塞（blocking），可多次嘗試，直到 Server Text 穩定。 對 Server Text 進行對稱的反向同步 現在，Common Shadow 代表的是前一次同步時的 Client Text，透過相同的流程， …  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Markdown Parse Survey On Js and Python</title>
     <url>/post/deecd741-5c0a-4e06-a8c5-4f9195e19935/</url>
     <categories>
@@ -903,6 +1866,51 @@ Differential Synchronization Differential Synchronization Differential Synchroni
 1 2 3 4 astrender = MarkdownRenderer() # plugins=[&#39;strikethrough&#39;, &#39;footnotes&#39;, &#39;table&#39;,&#39;task_lists&#39; , &#39;math&#39;] ast = mistune.create_markdown(renderer=&#39;ast&#39;, escape=False)(md) mdc = astrender(ast, state=mistune.core.BlockState()) 文件沒有明寫此用法但 v3.0.2 確定可以在專案中使用 plugins 被註解應為加入 plugins 時無法 astrender 回 markdown，需要自己撰寫 render
 Survey 背景調查過以下函式庫
   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Markdown Parse Survey On Js and Python</title>
+    <url>/post/b37ad273-a641-4220-ab43-c098673456fd/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  目標 取得一份 markdown 的 ast，在遍歷樹結構時同時修改節點值，不會增刪節點，最後在轉換回 markdown 具體專案需求請見 rfmswg 最基本要支援 common markdown，註腳可選
+結論 只有 mistune 可以做到
+1 2 3 4 astrender = MarkdownRenderer() # plugins=[&#39;strikethrough&#39;, &#39;footnotes&#39;, &#39;table&#39;,&#39;task_lists&#39; , &#39;math&#39;] ast = mistune.create_markdown(renderer=&#39;ast&#39;, escape=False)(md) mdc = astrender(ast, state=mistune.core.BlockState()) 文件沒有明寫此用法但 v3.0.2 確定可以在專案中使用 plugins 被註解應為加入 plugins 時無法 astrender 回 markdown，需要自己撰寫 render
+Survey 背景調查過以下函式庫
+marked Js 庫 有 AST 但 AST 只能編譯成 Html，無法編譯回 markdown
+markdown-it Js 庫 文件中找不到 AST 樹資訊
+remarkable Js 庫 符合 common markdown 的設定會導致 AST 無法編譯回
+Python-Markdown Python 庫
+我想要解析然後遍歷一個 Markdown 檔案。我正在尋找類似 xml.etree.ElementTree 但適用於 Markdown 的東西 正如另一位評論者提到的，Python-Markdown 具有擴展 API，並且它在內部使用 xml.etree.ElementTree。理論上，你可以創建一個擴展來訪問該內部的 ElementTree 對象，然後對其進行所需的操作。然而，如果你使用原始 HTML（包括 HTML 實體）和/或 codehilite 擴展，則最終獲得的文檔可能是不完整的，因為在序列化的字符串上還有一些後處理器會執行額外的處理。因此，我不太推薦這種方法來達成你的目的。（完整聲明：我是 Python-Markdown 的開發者。）
+Parse and traverse elements from a Markdown file 官方開發者不推薦使用 AST
+Markdown Parse Implementation List   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>LinuxLink</title>
+    <url>/post/3c7e0b36-0391-4543-b88e-7803953a3b83/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  執行期尋找 shared library 的流程 若 shared library 名稱內有 “/”，表示它是路徑，直接用這個路徑找 若 executable 內有定義 DT_RPATH 沒定義 DT_RUNPATH，從 DT_RPATH 列的目錄裡找 從 LD_LIBRARY_PATH 列的目錄裡找 從 DT_RUNPATH 列的目錄裡找 從 ldconfig 產生的 cache 內找 (/etc/ld.so.cache) 從 OS 的預設位置找: 先找 /lib 再找 /usr/lib Tool 1 nm -Du /bin/ls 列出未定義需要外部提供的 symbol
+1 2 ldd /bin/ls objdump -p /bin/ls 列出需要的 shared library
+ldd 會嘗試尋找後給出找到的 shared library 路徑
+1 2 LD_DEBUG=libs out/Debug/chrome LD_DEBUG=symbols out/Debug/chrome 看找shared library的過程
+1 2 3 4 -I&lt;search path to include files&gt; -L&lt;search path to the lib file&gt; -l&lt;libname&gt; -rpath=&lt;runtime library search path&gt; GCC 連結查找參數
+1 -rpath=&#39;$ORIGIN&#39;/lib rpath 可以用相對於可執行檔的路徑
+1 LD_LIBRARY_PATH=. ./main 在執行資料夾下找shared library
+Reference Linux 編譯 shared library 的方法和注意事項 ) (C/C++ ) 如何在 Linux 上使用自行編譯的第三方函式庫 ) Linux 執行時尋找 symbol 的流程以及 shared library 相關知識 )   ]]></content>
   </entry>
   
   <entry>
@@ -946,6 +1954,22 @@ MFT NTFS 使用主文件表 (MFT) 來儲存有關檔案和目錄的資訊。 MFT
   
   <entry>
     <title>可變參數的 C 函數</title>
+    <url>/post/4e379ed8-01e4-4e5a-a5a7-de85b6407561/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  VariadicFunction 1 2 3 4 5 6 7 8 #include &lt;stdarg.h&gt; void error(const char *fmt, ...) { va_list argp; va_start(argp, fmt); vfprintf(stderr, fmt, argp); va_end(argp); } 用 ...表達接受可變數量的參數，va_list argp 是一個指向第一個可變參數的指針，無法知道長度及型態， 沒有可移植 ) 的方法把可變數量的參數傳給下一個可變數量的參數的函式，有一些相依CPU的 方法 ，有部分可變數量參數的函式也提供接收 va_list 的版本如 vprintf, vfprintf, vsprintf
+1 2 3 4 5 #define my_printf(format, ...) \ do { \ fprintf(stderr, &#34;Calling printf with fmt %s\n&#34;, format); \ some_other_variadac_function(format, ##__VA_ARGS__); \ } while(0) Variadic Macros 1 #define ProxDebugPrintf(...) printf(__VA_ARGS__) Variadic Macros 可以傳遞可變數量的參數
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>可變參數的 C 函數</title>
     <url>/post/8dda7ba1-be2d-4883-a49d-e475012c4a61/</url>
     <categories>
       
@@ -976,6 +2000,38 @@ MFT NTFS 使用主文件表 (MFT) 來儲存有關檔案和目錄的資訊。 MFT
   </entry>
   
   <entry>
+    <title>Brainfuck.md</title>
+    <url>/post/6ffd2f71-7b03-4485-aab9-3f6fc104725f/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 一個由 8 支指令組成的圖靈完備程式語言
+&amp;amp;gt; Increment the pointer. &amp;amp;lt; Decrement the pointer. + Increment the byte at the pointer. - Decrement the byte at the pointer. . Output the byte at the pointer. , Input a byte and store it in the byte at the pointer. [ Jump forward past the matching ] if the byte at the pointer is zero. ] Jump backward to the matching [ unless the byte at the pointer is zero. 有一個有限長度的連續記憶體，及一個指針來表明當前指令要操作的區塊 BrainFuck Programming Tutorial by: Katie awesome Brainfuck-An Eight-Instruction Turing-Complete Programming Language Index of brainfuck Brainfuck 實作及程式收集 some brainfuck fluff by daniel b cristofani Brainfuck Esolangs Wiki Brainf*** brain------------------------------------------------------fuck.com Portable Portable Brainfuck 元胞數組的實際大小是實現定義的。但是，該數組應始終包含至少 9999 個單元。 （允許大小小至 4 位數字是為了程式設計師用三行 C 程式碼等編寫解釋器的好處。） 如果程式嘗試將指標移到第一個陣列單元下方或最後一個陣列單元之外，則該程式的行為是未定義的。 （一些實現會導致指標迴繞，但許多（也許是大多數）實現的行為方式與 C 指標漫遊到任意記憶體一致。） 單一單元格可以包含的值的範圍是實現定義的。 （範圍也不必一致：考慮「bignum」實現的情況，其單元格的範圍僅受當前可用資源的限 …  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>CVE 2024</title>
+    <url>/post/eb63c0ba-fa51-42b2-ba8f-e9773c9779d0/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Security</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 紀錄知道的漏洞
+Linux CVE-2024-1086 Linux netfilter nf_tables元件中存在釋放後使用漏洞，可被利用來實現本機權限提升。nf_hook_slow() 被二次釋放
+CVE-2024-3094 Open sshd 使用的 XZ Utils 被匿名貢獻者加入惡意程式碼，在正式 release 前被發現，只要確定沒使用到測試版的 Open sshd 即不會被引響
+WIP How to extract the malware payload Everything I know about the XZ backdoor 教學文章，如何安全的利用套件安裝程式取出有風險的樣本 CVE-2023-6546 Linux kernel n_gsm(只有 tty 會使用到) 存在提權漏洞 New Linux LPE via GSMIOC_SETCONF_DLCI YuriiCrimson&amp;rsquo;s version (April 6-ish) It seems to use GSMIOC_SETCONF_DLCI, PoC supposedly works on current Ubuntu and Debians, but is stopped by LKRG. PoC and writeup are here: ExploitGSM jmpeaux&amp;rsquo; version (March 21) This seems similar, also using GSMIOC_SETCONF_DLCI. In the screen shots, even the working dir for the PoC is identical to 1). Yurii claims jmpeaux stole his work. Writeup: The-tale-of-a-GSM-Kernel-LPE PoC: GSM_Linux_Kernel_LPE_Nday_Exploit ZDI-24-020 / CVE-2023-6546 (January) This also exploits a race condition resulting UAF in the gsm_dlci struct. It&amp;rsquo;s a little …  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Bypass windows defender</title>
     <url>/post/772cf18e-62ae-4e48-a846-044fbeffa2a9/</url>
     <categories>
@@ -987,6 +2043,21 @@ MFT NTFS 使用主文件表 (MFT) 來儲存有關檔案和目錄的資訊。 MFT
       
     </tags>
     <content type="html"><![CDATA[  
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Forgetting the history of Unix is coding us into a corner</title>
+    <url>/post/05a5f8e2-af5a-4cc1-a942-92b9e6045270/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 Forgetting the history of Unix is coding us into a corner FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念，蠻詳細的，對每一個時代的 UNIX 都有介紹
   ]]></content>
   </entry>
   
@@ -1019,6 +2090,43 @@ MFT NTFS 使用主文件表 (MFT) 來儲存有關檔案和目錄的資訊。 MFT
       
     </tags>
     <content type="html"><![CDATA[   Balanced Allocations with the Choice of Noise   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Balanced Allocations with the Choice of Noise</title>
+    <url>/post/f6f811e5-aa99-4665-b65a-b17353d76069/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+      <tag>todo</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Balanced Allocations with the Choice of Noise   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Linux Serial</title>
+    <url>/post/306dba9d-e116-4209-96ee-3823b214bc08/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Serial Device RS-485 接口洞很多，但只需要兩條線，原則上地線不用接，半雙工
+指令 原則上 Serial Device 會出現在 /dev/ttyS[數字] 路徑上
+1 setserial -g /dev/ttyS[0123] 列出串口晶片名及中斷
+1 dmesg | grep tty 1 stty -F /dev/ttyS0 -a 顯示該 Serial Device 的連線設定資料，其他應用程式連接時也可能會更改
+1 cat /dev/ttyS0 讀資料，如果串口有吐的話
+1 stty -F /dev/ttyS0 9600 cs8 -cstopb -parenb set the baud rate to 9600, 8 bits, 1 stop bit, no parity 重啟後會重設
+Ref Serial HOWTO 圖片來源 Jona, CC BY-SA 4.0 , via Wikimedia Commons Mayayu, CC BY-SA 3.0 , via Wikimedia Commons
+  ]]></content>
   </entry>
   
   <entry>
@@ -1057,6 +2165,20 @@ Ref Serial HOWTO 圖片來源 Jona, CC BY-SA 4.0 , via Wikimedia Commons Mayayu,
   </entry>
   
   <entry>
+    <title></title>
+    <url>/post/bf8cdf06-e0e7-4f13-8766-55c05b25e0e6/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   MQTT Explorer 好用的 MQTT 多平台 GUI 客戶端，有可攜版本 MqttX EMQX cloud 寫的，畫面良好，mqtt 有的設定都有   ]]></content>
+  </entry>
+  
+  <entry>
     <title>MQTT.md</title>
     <url>/post/48b1c318-2a55-4d16-957e-6f1d3f7540dd/</url>
     <categories>
@@ -1073,6 +2195,42 @@ Topic UTF-8 string 如Germany/Bavaria/car/2382340923453/latitude 用 / 表示層
 Paho Mqtt eclipse 寫的純 python 庫 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, clean_session=True)clean_session 必須要是 True 否則行為很怪
 Last Will and Testament 連線時設定，在客戶端未使用 DISCONNECT 斷開連線時由 broker 發送，跟一般的消息結構一致
 Tool Public MQTT Broker EMQX Public MQTT Broker Mosquitto Ref MQTT Essentials Guide and eBook   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>MQTT.md</title>
+    <url>/post/d7e7ee3b-c06e-4755-8d4a-3b93c10307ee/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 用於 IOT 裝置的消息傳送協議，可在不穩定的網路下運作
+Publish Subscribe Publisher 向一個 topic 發布消息， Subscriber 從訂閱的 topic 中接收消息，在同一個 topic 中 Publisher 和 Subscriber 都可以有多個客戶端同時使用
+Topic UTF-8 string 如Germany/Bavaria/car/2382340923453/latitude 用 / 表示層級 訂閱時可以使用通配符，+ 選取同一層級，# 選取同一層級及往下所有層級，如# 表示機器上所有的 topic, Topic 區分大小寫 客戶端在發布或訂閱主題之前不需要建立所需的主題。代理接受每個有效主題，無需任何事先初始化。 前綴 $SYS/ 表示 broker 內部狀態，不會被 # 選取 雖然可以，但不建議斜線開頭 QOS 0 只傳送一次，射後不理 1 自少傳送一次，訊息可能會重複 2 一定只傳送一次 QOS 會引響 broker 與客戶端的封包發送量 QOS,封包數 0,1 1,2 2,4 Publisher 和 Subscriber 可以使用不同的 QOS 持久化 broker 會記住 Subscriber 的訂閱，當同一個 ClientId 重新連線時 當 QOS 為 1 和 2 時維持尚未確認消息 ClientId 應特定於每個客戶和經紀商。如果代理不需要維護任何狀態，則 MQTT 3.1.1 允許使用空 ClientId。但是，此連線必須將 clean_session 標誌設為 true，否則代理將拒絕該連線。 clean_session 為 True 時表示不需要持久化 Retain 原則上，broker 不會保留 Publish 的訊息，訊息要不被傳送給 Subscriber 要不被拋棄，Publish 的 Retain 選項會讓 broker 保留最後一則訊息
+Paho Mqtt eclipse 寫的純 python 庫 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, clean_session=True)clean_session 必須要是 True 否則行為很怪
+Last Will and Testament 連線時設定，在客戶端未使用 DISCONNECT 斷開連線時由 broker 發送，跟一般的消息結構一致
+Tool Public MQTT Broker EMQX Public MQTT Broker Mosquitto Ref MQTT Essentials Guide and eBook   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Cherrypy Cookie</title>
+    <url>/post/e4472f3e-8d85-4c63-a86c-901b3265bdda/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  cherrypy cookie 概述 他是用python的simple cookie，所以Morsel屬性該有的多有(屬性要小寫)，但她不能刪除只能設程過期
+Cookie 設定 1 2 cherrypy.response.cookie[key] = value #設質 cherrypy.response.cookie[key][&#34;max-age&#34;] = 60*60*8 #有效期8小時 Cookie 讀取 1 2 cie = cherrypy.request.cookie.keys() #取得所有cookie uid = cherrypy.request.cookie[&#34;uid&#34;].value 設定跟讀取在不同物件上
+在cherrypy 18.5 上測試
+  ]]></content>
   </entry>
   
   <entry>
@@ -1094,6 +2252,25 @@ Cookie 設定 1 2 cherrypy.response.cookie[key] = value #設質 cherrypy.respons
   
   <entry>
     <title>OpenSsh.md</title>
+    <url>/post/d76ac79a-3be4-4e8a-9e66-f50f8682d5d9/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  交換openssh登入金鑰 必須先做一把RSA出來(我只用puttygen讀出來的格式試過) 公鑰放到遠端主機要登入使用者的家目錄 ~/.ssh/authorized_keys ~/.ssh/authorized_keys 必須是 600 ~/.ssh 必須是 700 使用者級組別必須與登入名稱一致 以上在cent os7 及 6上試過
+據說有指令的做法，要是有大大知道，告訴我一下
+ref:https://askubuntu.com/questions/306798/trying-to-do-ssh-authentication-with-key-files-server-refused-our-key
+Make key On Linux 1 ssh-keygen [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa] [-C comment] 它會問你要存那跟密碼，如果不要密碼就留白
+1 2 eval $(ssh-agent -s) ssh-add ~/.ssh/prikey 啟動 ssh-agent 及把key 加入 ssh-agent 如果 ssh-add -K ~/.ssh/prikey 報錯就下 ssh-add ~/.ssh/prikey
+連線測試 1 ssh -vT git@github.com   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>OpenSsh.md</title>
     <url>/post/00d21e87-dfff-4644-b457-3c61f7139cb6/</url>
     <categories>
       
@@ -1109,6 +2286,29 @@ ref:https://askubuntu.com/questions/306798/trying-to-do-ssh-authentication-with-
 Make key On Linux 1 ssh-keygen [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa] [-C comment] 它會問你要存那跟密碼，如果不要密碼就留白
 1 2 eval $(ssh-agent -s) ssh-add ~/.ssh/prikey 啟動 ssh-agent 及把key 加入 ssh-agent 如果 ssh-add -K ~/.ssh/prikey 報錯就下 ssh-add ~/.ssh/prikey
 連線測試 1 ssh -vT git@github.com   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>vCard.md</title>
+    <url>/post/30ecd80a-2441-4be6-85d7-d0a2bd2d31bd/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 vCard 由 MIME 定義的電子名片格式
+在 H4 聚會時發現某社群朋友的 QrCode 名片在 iphone 上會亂碼，無聊當起 RFC 警察來研究是哪一方不照標準實作 經朋友確認，讓我發它的個資上 blog 歡迎去他的 個人網站 看看 編碼 先檢查編碼，檢查林字符的位子是 utf-8 在 RFC 6350 3.1 . Charset 中確認編碼必須是 utf-8
+VERSION 用某網站做了一個一樣資訊的來比較，發現多了一個 VERSION ，在 RFC 2426 3.6.9 VERSION Type Definition 中發現
+Type special notes: The property MUST be present in the vCard object. The value MUST be &ldquo;3.0&rdquo; if the vCard corresponds to this specification. Type example: VERSION:3.0
+顯然標準要求版本號一定要填
+RFC 6350 6.7.9 . VERSION，vCARD VERSION 4.0 也要求一定要填，而且需要跟在 vCARD 之後。
+RFC 6868 中禁用了一些 utf-8 字符，不過本事件沒有用到
+  ]]></content>
   </entry>
   
   <entry>
@@ -1161,6 +2361,54 @@ Container 1 2 docker ps docker container ls 列出執行中的 Container
   </entry>
   
   <entry>
+    <title>Docker.md</title>
+    <url>/post/7aa17696-6cb0-49b3-baec-48427a53fd87/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Install 1 2 apt install -y docker.io apt install -y docker-compose 官網會要你用 docker 自己的 apt 但 debian 12 的官方庫有包
+Build 注意補充參數位子不可以移動
+Run 1 docker run -d --name web --net=host nginx 啟動 docker 並放於背景執行 建議 network 用 host mode 避免預設的 bridge mode 需要 server 聽在 0.0.0.0
+1 -p 8888:8000 bridge mode 時做 port 映射(Host:Container)
+1 docker attach web 進入 web Container 的 shell
+1 docker exec web ps 在 web Container 的 shell 執行 ps
+1 docker logs web web Container 的 log
+Image 1 docker image [補充參數] ls 列出所有 build 好的 image
+Container 1 2 docker ps docker container ls 列出執行中的 Container
+1 2 docker ps -a docker container -a ls 列出所有的 Container
+1 docker container prune 清理所有停止的 container
+移除所有沒用到的 Docker 物件 1 docker system prune -a Image Kasm Workspaces 提供有圖形化介面的 Docker Image(需用 KasmVNC 連線) Default Docker Image docker run --rm -it --shm-size=512m -p 6901:6901 -e VNC_PW=password kasmweb/firefox:dev https://127.0.0.1:6901 連線 Kasm Docker Image 預設需要 https 在瀏覽器中用 User : kasm_user，Password: password 登入
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>ELF</title>
+    <url>/post/b66949be-2081-4604-8a58-0169f1c887bb/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Linux</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 在 Linux 中，ELF代表可執行和可連結格式。它是可執行檔、目標程式碼、共用程式庫和核心轉儲的標準檔案格式。 Linux 以及其他類 UNIX 系統使用 ELF 作為二進位檔案的主要格式
+又名 Object File Introduction To ELF In Linux: A Simple Guide To Executable Files Exploring object file formats 簡介了可執行檔的歷史及 EIF 格式 a.out 是 Unix 一開始(PDP-11)使用的連結檔格式，原始是 16 位元但可以延展成 32 及 64 位元
+Structure Executable Headers (Ehdr) 在檔案開頭由Magic 7f454c 開始
+Class 32bit or 64bit 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 typedef struct{ unsigned char	e_ident[EI_NIDENT];	/* Magic number and other info */ Elf64_Half	e_type;	/* Object file type */ Elf64_Half	e_machine;	/* Architecture */ Elf64_Word	e_version;	/* Object file version */ Elf64_Addr	e_entry;	/* Entry point virtual address */ Elf64_Off	e_phoff;	/* Program header table file offset */ Elf64_Off	e_shoff;	/* Section header table file offset */ Elf64_Word	e_flags;	/* Processor-specific flags */ Elf64_Half	e_ehsize;	/* ELF header size in bytes */ Elf64_Half	e_phentsize;	/* Program header table entry size */ Elf64_Half	e_phnum;	/* Program header table entry count */ Elf64_Half	e_shentsize;	/* Section header table entry size */ Elf64_Half	e_shnum;	/* Section header table entry count */ Elf64_Half	e_shstrndx;	/* Section header string table index */ } Elf64_Ehdr; e_ident
+Section Headers (Shdr) Program Headers (Phdr) Command readelf -h /usr/bin/find 列出 ELF 標頭資訊
+readelf -S /usr/bin/find List All Section
+nm hello 列出定義在 hello 中的 symbol
+nm -D hello List dynamic symbols
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Ipv6.md</title>
     <url>/post/22d6876c-b099-46db-b714-e983e6254cf8/</url>
     <categories>
@@ -1175,6 +2423,54 @@ Container 1 2 docker ps docker container ls 列出執行中的 Container
     </tags>
     <content type="html"><![CDATA[  Ipv6 in url RFC2732 要求填入ipv6目標的url要用&quot;[]&ldquo;括起來如
 1 http://[2604:a880:4:1d0::59a:9000]/ 否則Chrome會幫你拿去搜尋
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Ipv6.md</title>
+    <url>/post/18164eaa-0699-409d-ae80-7c9d65deb7cc/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Ipv6 in url RFC2732 要求填入ipv6目標的url要用&quot;[]&ldquo;括起來如
+1 http://[2604:a880:4:1d0::59a:9000]/ 否則Chrome會幫你拿去搜尋
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>DNS.md</title>
+    <url>/post/c2635887-900c-4063-ac99-718bef3dfb5d/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/NetWork</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  acme.sh ACME Shell script acme-sh doc 確定能用的純Bash Script要SSL憑證命令行工具，確定Let&rsquo;s Encrypt可用，可以自動RENEW及搬憑證指定路徑
+Server Technitium 用 C# 寫的 DNS Authoritative, Recursive server，可以在 Windows 及 Linux 上執行 MaraDNS 單一可執行檔，全部文字設定檔的 DNS Authoritative, Recursive server CoreDNS 用 Goland 寫的 DNS Authoritative, CoreDNS 沒有本機（即用 Go 編寫）遞歸解析器，需要用 cgo 連結 libunbound   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>論文帶貨</title>
+    <url>/post/393f9e04-5983-4709-8f4d-4047e60d58dd/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>Sci</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   复旦团队用喝茶看见人体经络 Comparative analysis of global consumer behaviour in the context of different manual dishwashing methods DOI:10.1111/j.1470-6431.2011.01051.x Bosh付錢的各國人洗碗的耗水量潔淨程度研究，結論為Bosh洗碗機表現最好
   ]]></content>
   </entry>
   
@@ -1233,6 +2529,45 @@ refs/tags/&amp;lt;refname&amp;gt; Tag 名稱 refs/heads/&amp;lt;refname&amp;gt; 
   </entry>
   
   <entry>
+    <title>Git.md</title>
+    <url>/post/03762eae-3998-4a29-bcca-e86fab02fa58/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Git Server 1 git init --bare 會產生一個沒有工作目錄的 git repo
+1 git clone ssh://UserName@host.com:port/path/to/repo 用 ssh 拉遠端機器的git repo回來
+1 git clone /port/path/to/repo git local clone
+File Permission 如果在 git 中放可執行檔，git 可能不會正確給予可執行權限，導致每次 pull 都會改變權限
+1 git ls-tree HEAD 1 2 3 4 5 6 7 100644 blob 03d73c7753ad8624326cc21c84f4bf6cff665111 .gitignore 100644 blob 28ad11c0d207a9cef0b588eb1eb1925eb9aa0e0c .gitmodules 100755 blob ab6b28bd6514f4ea3d39a3361c9461ba5e4752dc README.md 040000 tree e872376a7169a3d136aa9e82b8755765e1393a04 etc 040000 tree 26431089c1aaa47c277ffe8363c66e7cd54d9abe prvl 160000 commit 1772dafe7241dcc84a710f2b59d3f53eceae1afb quote_generate 040000 tree 5e754b8b1284727eb640080a04d07199425df7c0 usr 他會列出檔案跟資料夾的 hash，資料夾可以用 hash 繼續爬樹
+1 git update-index --chmod=+x script.sh 用檔名改權限， hash 沒用權限只能+x, -x 數字沒用
+登入權杖 在某些機器上 git 預設不存登入權杖，下面的命令可以使儲存庫儲存登入權杖，登入權杖在 Linux 預設明文存在~/.git-credentials
+1 git config --global credential.helper store 快取登入權杖，避免它存在磁碟上
+1 git config --global credential.helper &#39;cache --timeout=3600&#39; Submodule 1 git config submodule.my-submodule.url &#34;https url for the submodule&#34; 更改 Submodule URL
+歷史 Git 的故事：這一次沒這麼好玩 Git 起源歷史的詳細文章
+Branch 1 git checkout -b &lt;branch-name&gt; 將跟蹤分支設為 branch-name 如果不存在就創建
+移動分支到指定 Commit 1 git switch -C &lt;branch-name&gt; [&lt;start-point&gt;] 強制移動分支到指定 commit ，-C C 大寫分支必須存在，-c c 小寫分支必須不存在(Git 2.23.0 版以上)
+1 git reset --hard &lt;new-tip-commit&gt; 將現在指向的分支移動到 new-tip-commit，但實際操做時有可能斷頭
+gitignore 1 git clean -fX 清除 gitignore 中包含的檔案 github/gitignore gitignore 範本集合
+1 2 3 4 5 6 *.a # ignore all .a files !lib.a # but do track lib.a, even though you&#39;re ignoring .a files above /TODO # only ignore the TODO file in the current directory, not subdir/TODO build/ # ignore all files in any directory named build doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt doc/**/*.pdf # ignore all .pdf files in the doc/ directory and any of its subdirectories Pattern Matching 正斜線 ( /) 開始模式以避免遞歸 正斜線 ( /) 結束模式來指定目錄
+Configuration 1 git config --list 列出 .git/config 的設定值
+1 git config --list --show-origin 列出所有 git 的設定值及設定該值的設定檔
+Clone 1 git clone --depth 5 https://github.com/torvalds/linux.git 限制最深 clone 的樹層數，減少 clone 的資料量(大庫不需要歷史紀錄時很好用)
+Git Revisions 指定 Git 的修訂版本和範圍
+1 git diff HEAD..84dd02d464488a58c177271846157b45e7d587b6 指定範圍，HEAD 到特定 commit
+1 git show HEAD^2 HEAD 前兩個節點
+1 git show &lt;refname&gt; &amp;lt;refname&amp;gt;，例如 master、Heads/master、refs/heads/master 一個象徵性的參考名稱，以下格式有效(包括但不限於)
+refs/tags/&amp;lt;refname&amp;gt; Tag 名稱 refs/heads/&amp;lt;refname&amp;gt; 本地分支名稱 refs/remotes/&amp;lt;refname&amp;gt; 遠端分支名稱 File Change History 1 2 3 gitk &lt;filename&gt; gitk --follow &lt;filename&gt; git log --follow -p &lt;filename&gt; Gitlab Access Token 2023 年後如果要用 HTTPS 協議 clone gitlab 上的專案，不能再用 gitlab 的登入密碼作為權杖，要為每一個專案創造一個 Access Token(在 Settings &gt; Access Tokens)，並用以下 url clone 專案
+1 git clone https://&lt;your-username&gt;:&lt;your-pat&gt;@gitlab.com/&lt;your-username&gt;/&lt;your-repository&gt;.git 如果登入時被問密碼，給 your-pat
+關聯 SSH 金鑰 貼上公鑰時要注意最後是否有空格
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>Astronomy Picture Of The Day</title>
     <url>/post/206351c4-5db9-4ce9-8752-05db0a29bec0/</url>
     <categories>
@@ -1245,6 +2580,38 @@ refs/tags/&amp;lt;refname&amp;gt; Tag 名稱 refs/heads/&amp;lt;refname&amp;gt; 
     </tags>
     <content type="html"><![CDATA[  每天一幅不同的影像或照片，並由專業天文學家簡明的解說，帶你遨遊迷人的宇宙。
 http://sprite.phys.ncku.edu.tw/astrolab/mirrors/apod/apod.html 成大翻譯的中文 https://apod.nasa.gov/apod/astropix.html Nasa 原站   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Astronomy Picture Of The Day</title>
+    <url>/post/c8187224-e6ae-42ac-8857-62c7b839b59f/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>Sci</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  每天一幅不同的影像或照片，並由專業天文學家簡明的解說，帶你遨遊迷人的宇宙。
+http://sprite.phys.ncku.edu.tw/astrolab/mirrors/apod/apod.html 成大翻譯的中文 https://apod.nasa.gov/apod/astropix.html Nasa 原站   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>CVE 2023</title>
+    <url>/post/5f167e1f-0e61-484e-8c34-21f3501a35d8/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Security</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Windows CVE-2023-38831 6.23 之前的 RARLabs WinRAR 版本中已發現可利用的漏洞。該漏洞使攻擊者能夠透過特製的 ZIP 檔案執行任意程式碼。此漏洞是由於對包含良性文件（例如普通 .PDF 文件）以及共享相同名稱的資料夾的 ZIP 存檔處理不當而產生的。當使用者嘗試存取良性檔案時，存檔可能包括包含可執行內容的類似命名的資料夾。在嘗試存取良性文件期間會處理資料夾中的惡意內容，從而促進任意程式碼的執行。
+更新 WinRAR 到高於 6.23 即可完全不受引響
+CVE-2023-38831 PoC CVE-2024-38074 9.8 分，遠端無授權執行
+  ]]></content>
   </entry>
   
   <entry>
@@ -1267,6 +2634,24 @@ CVE-2023-38831 PoC CVE-2024-38074 9.8 分，遠端無授權執行
   <entry>
     <title>MinGW32</title>
     <url>/post/e9d30901-1f83-4f7b-9a71-5991bf00a562/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  CreateProcess 1 process_begin: CreateProcess(NULL, /c/MinGW/bin/mingw32-gcc hello.c -o hello.exe, ...) failed. 不論/c/MinGW/bin/mingw32-gcc(UNIX PATH) 還是C:\MinGW\bin\mingw32-gcc(Window Path)多不行，需要把/c/MinGW/bin/加入環境變數直接呼叫mingw32-gcc，建議直接改 Makefile
+bash 改環境變數要去Windows進階使用者設定改，export,set多沒用
+Undef 1 2 3 4 5 CROSS_PREFIX=mingw32- CC=$(CROSS_PREFIX)gcc -U _WIN32 all: $(CC) hello.c -o hello.exe 1 2 3 4 5 6 7 8 #include &lt;stdio.h&gt; int main(){ printf(&#34;Hello World!\n&#34;); #if defined(_WIN32) printf(&#34;Defined _WIN32.\n&#34;); #endif return 0; } 1 Hello World! mingw 用 -U 作為旗標確定可以 undefine mingw取消預定義的_WIN32
+1 2 3 4 5 CROSS_PREFIX=mingw32- CC=$(CROSS_PREFIX)gcc all: $(CC) hello.c -o hello.exe 1 2 3 4 5 6 7 8 9 #include &lt;stdio.h&gt; #undef _WIN32 int main(){ printf(&#34;Hello World!\n&#34;); #if defined(_WIN32) printf(&#34;Defined _WIN32.\n&#34;); #endif return 0; } 1 Hello World! undef _WIN32 也可以取消預定義的_WIN32
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>MinGW32</title>
+    <url>/post/29d53e7c-f463-4d53-b69e-ca5e971cbf4c/</url>
     <categories>
       
     </categories>
@@ -1312,6 +2697,31 @@ gitlab email   ]]></content>
   
   <entry>
     <title>城市尋寶-捷運踩地雷解答.md</title>
+    <url>/post/c4442139-ff7e-4147-be92-adf2a3f41664/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>生活</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  遊戲說明 由 城市謎案公司 出的虛實整合遊戲，需要下載APP並開啟GPS大部分的關卡多需要定位正確才能開啟(需要付錢才有帳號權限QQ)，需要遊戲本。
+題解 南港 題本3 解答&quot;GO&quot;
+東湖 題本14 解答&quot;禮物&quot;
+象山 題本9 解答&quot;356&quot;
+G == 0 H == 1 A == 2 I == 4 N == 5 U == 6 O == 7 Z == 8 L == 9
+動物園 題本1 解答&quot;HALF&quot;
+台北車站 題本6 解答&quot;傘&quot; 遊玩時看板已遺失
+頂埔 題本2 解答&quot;文德&quot;
+解題方法應該是找到列車上消失的注音，但我列舉捷運全線二字站名
+雙連 題本12 解答&quot;210&quot;
+猜捷運票價總和，北捷20元起算每次加5快
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>城市尋寶-捷運踩地雷解答.md</title>
     <url>/post/18a3c468-d156-4ca3-82c1-353dfd55feb4/</url>
     <categories>
       
@@ -1333,6 +2743,42 @@ G == 0 H == 1 A == 2 I == 4 N == 5 U == 6 O == 7 Z == 8 L == 9
 雙連 題本12 解答&quot;210&quot;
 猜捷運票價總和，北捷20元起算每次加5快
   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Cloud</title>
+    <url>/post/fd5329e9-5989-4693-8dba-b104e754897b/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   AWS vs GCP reliability is wildly different 一個很有錢的研究者一直去AWS和GCP開機器(T4 GPU 實例)，比較他們機器開啟的成功率跟耗時 AWS(平均15秒)明顯快及穩定GCP(平均45秒)許多，AWS失敗次數也少很多。
+Root cause chronicles: connection collapse 應為 mysql 連線池預設值過小（30）且 移除未使用的連線的時間過長，導致部後端元件無法連至 mysql 導致超時
+How an empty S3 bucket can make your AWS bill explode 202405 AWS 會對錯誤的 S3 請求收費，但 S3 ID 是全球唯一的且可能洩漏，或因為資料公開存取等原因公開，該文章描述應一個特殊的 S3 ID 被某備份程式作為預設 ID 而導致巨額收費，且 AWS 沒打算解
+CDN 低機率憑證送錯 如果使用 CloudFront 或 ALB 的 CDN 都有低機率憑證送錯，鄙公司已經遇到三次了(202502)
+OpenAi Kubernetes 控制面板超載導致連鎖故障 OpenAI 在全球運行數百個 Kubernetes 叢集 (cluster) 2024-12-11 我們部署了一個新的 telemetry 服務，以收集 Kubernetes 控制面板的詳細指標，新服務的配置意外導致每個叢集中的每個節點 (node) 執行高成本的 Kubernetes API 操作，且該成本會隨著叢集規模增長。由於數千個節點同時執行這些操作，Kubernetes API 伺服器 (server) 變得不堪負荷，導致大多數大型叢集的 Kubernetes 控制面板宕機 簡而言之，根本原因是一項新的 telemetry 服務配置意外產生了大規模 Kubernetes API 負載，導致控制面板超載，並破壞了基於 DNS 的服務發現機制 (service discovery)
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>軟硬體共同設計期末作業.md</title>
+    <url>/post/8f254811-7e97-4c16-a091-86f27c9d7733/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  HW1 用Kruskal–Wallis求圓周率前800有效位 程式碼來自 Computing Pi in C Computing Pi in C
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 #include &amp;lt;stdio.h&amp;gt; int main() { int r[2800 + 1]; int i, k; int b, d; int c = 0; for (i = 0; i &amp;lt; 2800; i++) { r[i] = 2000; } for (k = 2800; k &amp;gt; 0; k -= 14) { d = 0; i = k; for (;;) { d += r[i] * 10000; b = 2 * i - 1; r[i] = d % b; d /= b; i--; if (i == 0) break; d *= i; } printf(&amp;#34;%.4d&amp;#34;, c + d / 10000); c = d % 10000; } return 0; } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 void line_12(){ r[i] = 2000; } void line_22(){ d += r[i] * 10000; } void line_23(){ b = 2 * i - 1; } void line_24(){ r[i] = d % b; d /= b; } void line_27(){ c = d % 10000; } 很明顯是line_24()，我想做記憶體線性存取加速。
+HW2 本機編譯 本來不知道.h.c檔只有單向include，一直在嘗試-I -L 直接傳給gcc秒解。 我還是搞不懂gcc target file 跟 -I的差別
+讀寫SD 先上結論 1 2 3 4 5 6 7 8 9 10 //FIleIo/diskio.h /*---------------------------------------*/ /* Prototypes for disk control functions */ int …  ]]></content>
   </entry>
   
   <entry>
@@ -1374,6 +2820,27 @@ ref https://coolgood88142.github.io/zh-tw/posts/hugo/   ]]></content>
   </entry>
   
   <entry>
+    <title>Hugo 教學</title>
+    <url>/post/3aa09ab5-0883-4a07-a924-efe2bb9d6d7d/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Backend</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  install 先去 copr 裝hugo官方的repo
+1 yum install hugo 應該就有hugo可以用了 2025 Ubuntu 24 Apt 安裝版本為 0.123.7; Githab last is 0.143.1, 有些 theme 可不能用
+Hugo is available in three editions: standard, extended, and extended/deploy. 至少要 extended 才有 Webp 及 SASS
+使用 裝theme
+1 git clone https://github.com/hauke96/hugo-theme-hamburg.git themes/hamburg 改設定檔
+1 2 3 4 baseURL = &#34;http://example.org/&#34; languageCode = &#34;en-us&#34; title = &#34;ericchen&#34; theme = &#34;hamburg&#34; 1 2 3 4 5 hugo new site blog cd blog hugo new posts/myfirst.md hugo #生成網頁 hugo server -D myfirst應該會出現在content下面 Template lookup order 如果要覆蓋 themes 提供的文件，如 themes/hugo-theme-next/assets/css/_variables/base.scss 可以用assets/css/_variables/base.scss 覆蓋，確定可以覆蓋scss 跟靜態文件，預設 site 根資料夾中沒有 assets 請直接創一個
+hugo-theme-next 用 hugo-theme-next-starter 開始，自己建 site 會 build 不過
+ref https://coolgood88142.github.io/zh-tw/posts/hugo/   ]]></content>
+  </entry>
+  
+  <entry>
     <title>BBDB.md</title>
     <url>/post/322511ba-553b-4c12-a049-0396f8322727/</url>
     <categories>
@@ -1388,6 +2855,40 @@ ref https://coolgood88142.github.io/zh-tw/posts/hugo/   ]]></content>
 RNN -&gt; CNN(ResNet) TSN Temporal Segment Networks: Towards Good Practices for Deep Action Recognition
 IDT+FV Action Recognition with Improved Trajectories
 每三貞240pxpx為輸入 分析原點直方圖輸入梯度（HOG）光流（HOF）和運動邊界直方圖（MBH） 16-layer VGG model
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>BBDB.md</title>
+    <url>/post/7310010f-76bb-4110-b533-eb48c761f8e8/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Ai</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   Baseball Database (BBDB) 4TB 的已標記棒球比賽影像庫，以手動(7000)或半自動(loU&lt;0.5)標註
+RNN -&gt; CNN(ResNet) TSN Temporal Segment Networks: Towards Good Practices for Deep Action Recognition
+IDT+FV Action Recognition with Improved Trajectories
+每三貞240pxpx為輸入 分析原點直方圖輸入梯度（HOG）光流（HOF）和運動邊界直方圖（MBH） 16-layer VGG model
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Fisher Yates Shuffle</title>
+    <url>/post/a44e1e83-49dc-4835-87f6-d7df19fab154/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 Ronald Fisher 和 Frank Yates 發明的均勻洗牌算法
+算法 索引從0開始往len(卡排列表)遞增，索引i與隨機選擇的卡牌交換 隨機選擇的卡牌如果用rand() mod (len(卡排列表) - i)取隨機的卡牌，會不均勻
   ]]></content>
   </entry>
   
@@ -1410,6 +2911,31 @@ IDT+FV Action Recognition with Improved Trajectories
   <entry>
     <title>Five Five Letter Word</title>
     <url>/post/72a82069-4596-42f1-adc5-165f259781ce/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   word list 大量有意義單字的txt文件
+問題 five five-letter words with twenty-five unique letters 找出五個由五個字符組成的單字，其中25的字符皆不相同的組合 參考解答 共813組
+解法 改成逐字比較，如果前面的字已經有相 Maximum disjoint set 簡單出暴的使用五個迴圈搜尋 複雜度為n**5,n = 22950，我跑了一個多小時沒結果 PS.官方說要1個月
+900 秒用 pyhon 15 秒用 Jave 同字母的話，直接放棄後面比較
+Someone improved my code by 40,832,277,770% 後續影片
+利用英文字符出現頻率不同的特性，字頻較低的先搜尋
+線程
+將字母組成集合，只先搜最少用的集合
+Algorithm X
+五個字符用字母順序用字母順序轉成整數 &rsquo;etaoinshrdlcumwfgypbvkjxqz&rsquo; 該字典的統計結果
+原始問題 The Jotto Problem 技術報告上，未使用電腦 可以用 Dancing Link 論文解決問題
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Five Five Letter Word</title>
+    <url>/post/88d6a38d-e6e4-494f-b071-95220fc0ac16/</url>
     <categories>
       
     </categories>
@@ -1458,6 +2984,31 @@ Algorithm X
   </entry>
   
   <entry>
+    <title>CPE (沒)解題技巧</title>
+    <url>/post/73e85ae0-b05d-44ec-b17c-a577a532b161/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  CPE (沒)解題技巧 我遇到的困難 scanf 測資 1234 A
+1 scanf(&#34;%d%c&#34;,&amp;i,&amp;c); 看起來可以 i=1234 c=&rsquo; '
+1 scanf(&#34;%d %c&#34;,&amp;i,&amp;c); 空白佔一格
+沒有debuger 先問問同學你們用的debuger是什麼? 只有 printf() 所以我多用 #ifdef debug
+英文 我多先讀一遍，把全部不會跟不確定意思的字抄下來查，然後再讀一遍 他不能複製貼上
+記憶體溢取很有機會整台當 c style string VS c++stream 我選 c style 功能全部自己幹
+(沒有)練習方式 其實我每次多裸考，考了很多次還只有三題，很爛
+我大部分多是寫專案 最常用的方法是status tree 是真的建樹，反正我十分鐘就可以了。
+這跟CPE有什麼關西呢? 對語言的理解(不論是語意還是執行期行為)
+唯有code夠肥時你才看得出c語法裡頭的玄妙處 對你寫得出算法的理解
+有很多算法很妙，但即便我看過N次，我還是寫不出來比如大部分的DP,K-Means 考程式競賽code命名法會爛掉嗎? 我本來就很爛沒差 反正你程式寫大就會rewrite 結構命名會被迫變好，其實這是經驗跟習慣
+  ]]></content>
+  </entry>
+  
+  <entry>
     <title>2019-2九州之旅.md</title>
     <url>/post/0e98a7b8-bac4-443a-a7a9-93932a5d8a31/</url>
     <categories>
@@ -1478,6 +3029,23 @@ Algorithm X
   
   <entry>
     <title>RSA</title>
+    <url>/post/94bfadd2-2995-4240-b5d2-f3cadf1c8e70/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Algorithm</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 一個簡單的 RSA 實作
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 import random #des p,q p=113 q=117 prim=[64513,64553,64577,65419,66301,65651,67139,67141,65537,66293,65687,66919,66347,65447] def gcd(p,q): if (q == 0): return ( p, 1, 0 ) d,b,a = gcd(q, p % q); b=b-(p//q)*a return (d, a, b) def inverse(k,n): d,a,b= gcd(k, n); if (d &gt; 1): print(&#34;Inverse does not exist.&#34;); return 0; if (a &gt; 0): return a; return n + a; def keygen(p,q): n=p*q oln=(q-1)*(p-1) e=prim[random.randint(0,len(prim))] d=inverse(e,oln) return (e,n),(d,n) def decode(s): #english only ls=[] if len(s)%2==1: s+=&#39; &#39; for i in range(0,len(s),2): ls.append(ord(s[i])*0xff+ord(s[i+1])) return ls def encode(ls): s=&#34;&#34; for i in ls: s=s+chr(i//0xff)+chr(i%0xff) return s def syc(m,e,n): c=[] for i in range(0,len(m)): c.append(pow(m[i],e,n)) return c def usyc(c,d,n): m=[] for i in range(0,len(c)): m.append(pow(c[i],d,n)) return m print(keygen(p,q)) c=syc(decode(&#34;nttucsie&#34;),7237327049, 26217266885746803617) m=usyc(c,4962162255038558585, 26217266885746803617) print(encode(m)) keygen() 用以產生金鑰對，返回temp(公，私)，pq因大於10^10 sys() 給定encod過的串列及私鑰，返回加密串列，建議以base64 服用 usys() 給定加密串列及公鑰，返回encod過的串列。
+原則上接受無上限長的公私鑰
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>RSA</title>
     <url>/post/d32257ec-17af-43df-a994-70ef1ec1a523/</url>
     <categories>
       
@@ -1490,6 +3058,26 @@ Algorithm X
     <content type="html"><![CDATA[  簡介 一個簡單的 RSA 實作
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 import random #des p,q p=113 q=117 prim=[64513,64553,64577,65419,66301,65651,67139,67141,65537,66293,65687,66919,66347,65447] def gcd(p,q): if (q == 0): return ( p, 1, 0 ) d,b,a = gcd(q, p % q); b=b-(p//q)*a return (d, a, b) def inverse(k,n): d,a,b= gcd(k, n); if (d &gt; 1): print(&#34;Inverse does not exist.&#34;); return 0; if (a &gt; 0): return a; return n + a; def keygen(p,q): n=p*q oln=(q-1)*(p-1) e=prim[random.randint(0,len(prim))] d=inverse(e,oln) return (e,n),(d,n) def decode(s): #english only ls=[] if len(s)%2==1: s+=&#39; &#39; for i in range(0,len(s),2): ls.append(ord(s[i])*0xff+ord(s[i+1])) return ls def encode(ls): s=&#34;&#34; for i in ls: s=s+chr(i//0xff)+chr(i%0xff) return s def syc(m,e,n): c=[] for i in range(0,len(m)): c.append(pow(m[i],e,n)) return c def usyc(c,d,n): m=[] for i in range(0,len(c)): m.append(pow(c[i],d,n)) return m print(keygen(p,q)) c=syc(decode(&#34;nttucsie&#34;),7237327049, 26217266885746803617) m=usyc(c,4962162255038558585, 26217266885746803617) print(encode(m)) keygen() 用以產生金鑰對，返回temp(公，私)，pq因大於10^10 sys() 給定encod過的串列及私鑰，返回加密串列，建議以base64 服用 usys() 給定加密串列及公鑰，返回encod過的串列。
 原則上接受無上限長的公私鑰
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>Microprocessor Mid-term Project.md</title>
+    <url>/post/119c3c4a-c975-4e32-b258-a005219c70cc/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  target 我相信你們大家多看過 chrome://dino/ 就復刻一個，應該會在uart上，但RJ-433的2.5mb/s讓人恐懼 如果寫不上去就去LCD(應該是兩個點)，計分會用七段顯示器。 蹲下可以，腳不會動。
+元件 timer,鋒鳴器，uart,按鈕，七段顯示器
+程式結構! 流程 1 2 3 4 5 6 7 8 9 st=&gt;start :刻元件介面 e=&gt;end: debug op=&gt;operation: lowlevel print function(緩衝區，分頁選擇器，協議) op2=&gt;operation: 顯示api op1=&gt;operation: main c0=condition:耦合測試 st-&gt;op-&gt;op2-&gt;po1-&gt;c0 c0(fail)-&gt;st c0(pass)-&gt;e 這是時間跟達成率的關西 e^x + cos(x) 我原本想做弊，結果他不是javastript QQ
+search &ldquo;Atari Breakout&rdquo; in google picture 如果我有空想重操舊業算算彈性碰撞的話，完全沒有實踐的想法。
+Java 是個很棒的語言 對 C++ 社群有非常大的貢獻 他收留了所有寫不好 C++ 的人 維持了 C++ 神聖中土上高貴住民的純粹血統
+所以我去寫java
   ]]></content>
   </entry>
   
@@ -1529,6 +3117,21 @@ lcd版 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 2
   </entry>
   
   <entry>
+    <title>Microprocessor Term Report.md</title>
+    <url>/post/cb18799c-dddb-4973-be25-f7f37ce6e963/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Embedded</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  目的 我致敬了google的小恐龍 先示範
+lcd版 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 #include &amp;lt;stdlib.h&amp;gt; #include &amp;#34;WT59F064.h&amp;#34; #include &amp;#34;lcd.h&amp;#34; #include &amp;#34;keyboard_io.h&amp;#34; int cactus[2]={0xffff,0xffff},djmp=0,score=0,gameover=0; char trans(int i){ if(i&amp;lt;10){ return &amp;#39;0&amp;#39;+i; }else{ return &amp;#39;A&amp;#39;+(i-10); } } void ISR_forward(){ TIM0_CNT = 0; TIM0_OFIF |= BIT4; if(gameover==1){ return; } if(TIM0_MAT0A&amp;gt;100){ TIM0_MAT0A-=1; } WriteIns(0x0100); if(cactus[0]==0){ …  ]]></content>
+  </entry>
+  
+  <entry>
     <title>c語言教學.md</title>
     <url>/post/a55e1785-0cf5-4361-bb63-cdd366f74579/</url>
     <categories>
@@ -1545,6 +3148,53 @@ lcd版 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 2
 字元 1 char c; 其實就是一個8bit整數 一般是ascii
 Array 1 int arr[10]; 用 [] 表示一堆連續的資料，如上述範例表示10個連續的整數
 C String 1 char s[64]; 用零結尾的連續字元，如果零在第3個位子，那字串就只有3個字元
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>C語言教學.md</title>
+    <url>/post/b208b3ea-ff4a-4595-8f3a-6eff29a72912/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  型別 就是我們對一串資料的態度 先看一串資料 請幻想有一堆格子，每隔多只有0跟1兩種可能，存取方式不限
+整數 1 unsigned int i; 連續16 or 32 or 64 bit 0x0000 -&gt; 0 0x0001 -&gt; 1 0xffff -&gt; 65535
+1 int i; 我想用最左的bit當正負記號1為負 然後就出現兩個0了0x8000 0x0000 所以把0xffff 當-1 0xfffe -&gt; -2 正負轉換為 (~i)+1
+字元 1 char c; 其實就是一個8bit整數 一般是ascii
+Array 1 int arr[10]; 用 [] 表示一堆連續的資料，如上述範例表示10個連續的整數
+C String 1 char s[64]; 用零結尾的連續字元，如果零在第3個位子，那字串就只有3個字元
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>CScope.md</title>
+    <url>/post/57bc0c6d-e9cd-4e7f-9641-c95151153a6c/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  c的變數可見域 半夜隔壁房再吵，睡不著寫第一篇教學幹話。其實是自己金魚腦，要筆記。
+區域變數 區域變數(幹在函數第一層)，你寫在函數裡的那一種(main也算)，只有宣告下面的看的見，如果再”{}”裡，就裡面看的到。
+1 2 3 4 5 6 int main(){ int x; for(int i;;){ int y; } } x main內全可見，i,y for內可見。
+全域變數 全域變數，沒extern(就那個讓你在c裡寫其他語言的關鍵字)就你該張檔看的到，有的話include會汙染，
+通常拿來讓函式回傳不只一個質。
+1 2 3 4 5 6 7 8 int g; int func(){ ++g; return 0; } int main(){ return g?func():2; } g全域可見
+static，修飾字，加給全域變數時是幹話，加給函式時會在編譯時分配通常在data區，離開函式時值不話消失，
+故不能遞迴，初始質只會處裡一次，可以直接給在函式裡。
+1 2 3 4 5 6 7 8 9 int func(){ static int g=0; return ++g; } int main(){ int x=func(); x=func(); x=func(); } x為1，2，3
+全域，static不給初始質是0，區域看你電腦心情。
+同名變數部分，會先遮蔽全域，至於涵式內同名，你去死。
+先暫時打在fb，等到天荒地老我把我網站做好再搬過去，程式多沒測，通常也沒什麼意義。
+現在這文應該已經在我部落格了應該拉
   ]]></content>
   </entry>
   
@@ -1572,6 +3222,70 @@ static，修飾字，加給全域變數時是幹話，加給函式時會在編�
 同名變數部分，會先遮蔽全域，至於涵式內同名，你去死。
 先暫時打在fb，等到天荒地老我把我網站做好再搬過去，程式多沒測，通常也沒什麼意義。
 現在這文應該已經在我部落格了應該拉
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>程式語言</title>
+    <url>/post/4ad37e09-1480-4313-beb2-2cc6fe6c717c/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/TheoryOfComputation</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  簡介 大學時程式語言課程的上課筆記
+記憶體管理議題 ada 動態的他會收回去
+c/c++ 自己管，指標可以指向任何地方(通常拿來做記憶體管理) 指標可移動 須明確取參 參照像const pointer
+c# 僅參照
+堆積管理 可動或固定大小
+收回方式 1.紀錄多少人參照到，沒就收回 有參照循環議題 2.直到沒記憶體才回收，回收時檢查是否有參照到
+型態確定 assign or function or operator 檢查 需有相容的概念(可隱含轉換) 強型別:編譯期檢查全部型別 如ada(可以關)、jave、c#
+運算式 運算子結合率(變數 &gt; 常數 &gt; 小括號)
+如果函式會改變變數值，先後很重要 解1:不准改 解2:給定方向(如java)
+結合方向
+ruby 凡是多是方法
+Overloading operator (重載運算子) C++ 潛在問題
+1 2 int *a,a; c=b*a; 指標||乘法 (???) 無法檢查!!! 矩陣乘法，還是元素相乘
+轉型 不能轉 ada 明確型態轉換 C: (int) angle python: int(angle) base 10 十進位轉換
+overflow(太大超過) || underflow(太小無法表示) exception : catch 解決
+關聯運算式 強制轉換 c:明寫，算到知道答案就不算了 (a&lt;b&lt;c) != (a&lt;b &amp;&amp; b&lt;c) rudy: 用== 跟=?分辨轉型
+指派(assignment) ada用(:=) if(a=b) //ERROR 語意錯誤(bug) c中 a+=d 同於 a=a+b
+  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>C++ Vector Internal</title>
+    <url>/post/d05cac72-7f07-44c8-9375-2f37eb07968f/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/CAndCpp</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  基本概念 動態請求的array 就是太小重要更大的，然後搬過去 看code
+1 2 3 4 5 6 7 8 9 tem* resize(unsigned long vsize){ tem *pay=new tem[vsize],*ppa,*endp=pay+vsize,*par; for(par=arr,ppa=pay;ppa&lt;=endp&amp;&amp;par&lt;=endc;++ppa,++par){ *ppa=*par; } delete [] arr; arr=pay;crr=par;endc=endp; return arr; } 他有規範要寫的函式
+有 標準 IEEE死要錢&#x1f4a9;
+去看cpp reference 我有寫，示範:
+帶大家去幹 apache 的(gun看不懂)
+先換名子
+1 2 3 4 5 6 7 8 typedef _TypeT value_type; typedef _Allocator allocator_type; typedef _TYPENAME allocator_type::size_type size_type; typedef _TYPENAME allocator_type::difference_type difference_type; typedef _TYPENAME allocator_type::reference reference; typedef _TYPENAME allocator_type::const_reference const_reference; typedef _TYPENAME allocator_type::pointer pointer; typedef _TYPENAME allocator_type::const_pointer const_pointer; 還有一些很噁爛的沒過來
+看結構
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 iterator _C_begin; iterator _C_end; unsigned int * _C_bufend; struct _C_VectorAlloc: allocator_type { _C_VectorAlloc (const allocator_type &amp;__alloc) : allocator_type (__alloc), _C_begin (), _C_end (), _C_bufend () { /* empty */} pointer _C_begin; pointer _C_end; pointer _C_bufend; } _C_alloc; 直接指過去
+建構子
+1 2 3 4 5 6 7 8 template&lt;class _InputIter&gt; vector (_InputIter __first, _InputIter __last) : allocator_type (), _C_bufend () { size_type __n = _DISTANCE (__first, __last, size_type); _C_init(__n); _C_copy(__first, __last, _C_begin); } 假裝分配器已知，直接初始化 用前後家長度幹__n(vec.size())，應為那還是沒做除法XDDD
+insert()
+1 2 3 4 5 6 7 8 9 10 template &lt;class _InputIter&gt; void _C_insert (const iterator &amp;__it, _InputIter __first, _InputIter __last, void*) { _RWSTD_ASSERT_RANGE (begin (), __it); _RWSTD_ASSERT_RANGE (__first, __last); // dispatch to an insert suitable for the category of InputIter _RWSTD_INSERT_RANGE (__it, __first, __last, _RWSTD_ITERATOR_CATEGORY (_InputIter, __first)); } push_back()
+1 2 3 4 5 void _C_push_back (const_reference __x) { _RWSTD_ASSERT (_C_alloc._C_end != _C_alloc._C_bufend); _C_alloc.construct (_C_alloc._C_end, __x); ++_C_alloc._C_end; } pop_back()
+1 2 3 4 5 void pop_back () { _RWSTD_ASSERT (!empty ()); _C_alloc.destroy (_C_alloc._C_end - 1); --_C_alloc._C_end; } 1 2 3 bool empty () const { return _C_alloc._C_begin == _C_alloc._C_end; } swap()
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 swap (vector &amp;__other) { if (get_allocator () == __other.get_allocator ()) { pointer __tmp = _C_alloc._C_begin; _C_alloc._C_begin = __other._C_alloc._C_begin; __other._C_alloc._C_begin = __tmp; __tmp = _C_alloc._C_end; _C_alloc._C_end = __other._C_alloc._C_end; __other._C_alloc._C_end = __tmp; __tmp = _C_alloc._C_bufend; _C_alloc._C_bufend = __other._C_alloc._C_bufend; __other._C_alloc._C_bufend = __tmp; } else { // not exception-safe _C_unsafe_swap (__other); } } 會寫出來就是他直接copy，一個一個
+asign()
+1 2 3 4 5 6 7 void _C_assign (_InputIter __first, _InputIter __last, void*) { _RWSTD_ASSERT_RANGE (__first, __last); // dispatch to an assign suitable for the category of InputIter _RWSTD_ASSIGN_RANGE (__first, __last, _RWSTD_ITERATOR_CATEGORY (_InputIter, __first)); } resize()
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 void _C_fill (iterator __first, iterator __last, bool __val) { while (__first != __last) *__first++ = __val; } void _C_fill_n (iterator __first, size_type __n, bool __val) { while (__n-- &gt; 0) *__first++ = __val; } template &lt;class _Iterator&gt; iterator _C_copy (_Iterator __first, _Iterator __last, iterator __res) { while (__first != __last) *__res++ = *__first++; return __res; } 其實已經有 大大 幹過，寫得比我好太多了，不過他是做m$的
   ]]></content>
   </entry>
   
@@ -1622,6 +3336,36 @@ Test /opt/note/DataView.md Fail PropertieParsar &amp;mdash; Not at first of file
 Test /opt/note/ExcludeFile.txt Fail PropertieParsar Not suffix with .md {}
 Test /opt/note/obsibian.md Fail PropertieParsar &amp;mdash; Not at first of file {}
 Test /opt/note/sync.bash Fail …  ]]></content>
+  </entry>
+  
+  <entry>
+    <title>GnuEfi</title>
+    <url>/post/6dea1f0e-987d-42d9-ba0f-86e9835a4e9f/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[   https://wiki.osdev.org/GNU-EFI https://sourceforge.net/projects/gnu-efi/ 官網找不到剩sourceforge可以下載，把EDK2的header檔打包成可以用GCC工具鏈編譯專案。 在Ubuntu 22.04LTS上測試確定Hello World可用。
+安裝 確定GCC工具鏈可用 下載並解壓縮 切進下載的資料夾 1 make make install 如果要改預設安裝路徑，要改Make.defaults中的PREFIX := /usr/local/gnu-efi 不然會裝去/usr/local 編譯 編譯 1 gcc -I/usr/local/gnu-efi/include/efi -fpic -ffreestanding -fno-stack-protector -fno-stack-check -fshort-wchar -mno-red-zone -maccumulate-outgoing-args -c hello.c -o hello.o Link 1 ld -shared -Bsymbolic -L/usr/local/gnu-efi/lib -T/usr/local/gnu-efi/lib/elf_x86_64_efi.lds /usr/local/gnu-efi/lib/crt0-efi-x86_64.o hello.o -o hello.so -lgnuefi -lefi 轉換為efi格式 1 objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym -j .rel -j .rela -j .rel.* -j .rela.* -j .reloc --target efi-app-x86_64 --subsystem=10 hello.so hello.efi   ]]></content>
+  </entry>
+  
+  <entry>
+    <title>SymbolicLink</title>
+    <url>/post/1d6b188d-f52f-4795-a730-a5e7d78c7dcc/</url>
+    <categories>
+      
+    </categories>
+    <tags>
+      
+      <tag>CS/Windows</tag>
+      
+    </tags>
+    <content type="html"><![CDATA[  Windows 無法在未使用uac提權的前提下建立軟連結(即使有資料夾完全控制權限也不行)，但可以以以下方式繞過:
+開啟開發者模式 mklink 應該也可以繞過(待確認)   ]]></content>
   </entry>
   
   <entry>

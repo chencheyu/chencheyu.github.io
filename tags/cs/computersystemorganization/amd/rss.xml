@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS/ComputerSystemOrganization/AMD on 哲佑碎碎念</title>
+    <link>/tags/cs/computersystemorganization/amd/</link>
+    <description>Recent content in CS/ComputerSystemOrganization/AMD on 哲佑碎碎念</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/cs/computersystemorganization/amd/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AMD Microcode</title>
+      <link>/post/18ca6adc-2fd1-4a87-ac2e-b78f72ab6fcc/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/post/18ca6adc-2fd1-4a87-ac2e-b78f72ab6fcc/</guid>
+      <description>&lt;h2 id=&#34;microcode-update&#34;&gt;Microcode Update&#xA;&lt;a class=&#34;header-anchor&#34; href=&#34;#microcode-update&#34;&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;AMD 產生了一個新的微碼補丁，補丁以二進位形式交付給 BIOS、OS 和其他合作夥伴；這個 blob 內部包含以下元件：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;描述補丁頭格式、其設計的 CPU 的元資料、日期和版本資訊的標題。&lt;/li&gt;&#xA;&lt;li&gt;2048 位元RSA PKCS &lt;code&gt;#1&lt;/code&gt;簽章。&lt;/li&gt;&#xA;&lt;li&gt;2048 位元 RSA 公鑰模數（0x10001 作為指數）。&lt;/li&gt;&#xA;&lt;li&gt;公鑰的2048 位元 蒙哥馬利逆（用於簡化 RSA 模運算）。&lt;/li&gt;&#xA;&lt;li&gt;指示補丁的其餘部分是否已加密的位元。&lt;/li&gt;&#xA;&lt;li&gt;符合暫存器和遮罩值的數組，用於選擇要修補的微碼和指令。&lt;/li&gt;&#xA;&lt;li&gt;一組捆綁在四個「四元組」中的微操作，每個微操作都與一個序列字配對，指示下一步執行的位置&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;一旦收到新的補丁，微碼將在運行時或下次重啟時加載。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

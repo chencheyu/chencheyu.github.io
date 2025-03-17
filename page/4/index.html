@@ -90,7 +90,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.css?=1741874841">
+<link rel="stylesheet" href="/css/main.min.css?=1742222802">
 
 
 <style type="text/css">
@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
       <a href="/archives/">
-        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-count">173</span>
         <span class="site-state-item-name">日誌</span>
       </a>
     </div>
@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div class="site-state-item site-state-tags">
       <a href="/tags/">
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">標籤</span>
       </a>
     </div>
@@ -493,15 +493,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     <div class="siteinfo-item">
       <div class="item-name"><i class="fa fa-font"></i>總字數：</div>
-      <div class="item-count" id="wordsCount" data-count="130345"></div>
+      <div class="item-count" id="wordsCount" data-count="172306"></div>
     </div>
     <div class="siteinfo-item">
       <div class="item-name"><i class="fa fa-mug-hot"></i>閱讀約：</div>
-      <div class="item-count" id="readTimes" data-times="311"></div>
+      <div class="item-count" id="readTimes" data-times="450"></div>
     </div>
     <div class="siteinfo-item">
       <div class="item-name"><i class="fa fa-clock-rotate-left"></i>最後更新於：</div>
-      <div class="item-count" id="last-push-date" data-lastpushdate="2025-03-10 00:00:00 &#43;0000 UTC"></div>
+      <div class="item-count" id="last-push-date" data-lastpushdate="2025-03-14 00:00:00 &#43;0000 UTC"></div>
     </div>
   </div>
 </div>
@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/7a35b127-d9f1-47e4-a15f-e2e00c824dcf/">
+    <link itemprop="mainEntityOfPage" href="/post/89ee835b-9cc6-4c71-b280-0948787c34e9/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -570,314 +570,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <meta itemprop="description" content="保持简单的易用性和强大的功能。">
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Synchronization.md">
-      <meta itemprop="description" content="簡介
-
-檔案同步
-目前有三種方法
-
-Lock
-將要修改的檔案鎖定，不允許其他程式修改，如果鎖沒有失效時間，可能導致崩潰程式永遠占用鎖
-Operational Transformation
-紀錄每個程式修改的每一行，並將記錄傳播給其他程式，基於 Operational Transformation
-
-
-     Operational Transformation Frequently Asked Questions and Answers
-    
-    
-    
-
-
-
-    Concurrency Control in Groupware Systems
-    
-
-原始論文
-Three-way Merge
-
-
-  
-    
-客戶端將文件的內容傳送到伺服器。
-伺服器執行三向合併以提取使用者的變更並將其與其他使用者的變更合併。
-伺服器將文件的新副本傳送給客戶端
-
-  
-半雙工系統，Subversion 使用此方法">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/7a35b127-d9f1-47e4-a15f-e2e00c824dcf/" itemprop="url" class="post-title-link">Synchronization.md</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-06-28T00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-28 00:00:00 &#43;0000 UTC">
-    2024-06-28
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/7a35b127-d9f1-47e4-a15f-e2e00c824dcf/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h2 id="簡介">簡介
-<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
-</h2><p>檔案同步
-目前有三種方法</p>
-<ul>
-<li>Lock
-將要修改的檔案鎖定，不允許其他程式修改，如果鎖沒有失效時間，可能導致崩潰程式永遠占用鎖</li>
-<li>Operational Transformation
-紀錄每個程式修改的每一行，並將記錄傳播給其他程式，基於 Operational Transformation</li>
-<li>
-<a href="https://web.archive.org/web/20200623064915/https://www3.ntu.edu.sg/home/czsun/projects/otfaq/" title=" Operational Transformation Frequently Asked Questions and Answers" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-     Operational Transformation Frequently Asked Questions and Answers
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a></li>
-<li>
-<a href="../16486bfc-3d68-4caa-8422-f6f3c55d1c41.pdf" title="Concurrency Control in Groupware Systems" >
-    Concurrency Control in Groupware Systems
-    
-</a>
-原始論文</li>
-<li>Three-way Merge</li>
-</ul>
-
-  <blockquote>
-    <ol>
-<li>客戶端將文件的內容傳送到伺服器。</li>
-<li>伺服器執行三向合併以提取使用者的變更並將其與其他使用者的變更合併。</li>
-<li>伺服器將文件的新副本傳送給客戶端</li>
-</ol>
-  </blockquote>
-<p>半雙工系統，Subversion 使用此方法</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/7a35b127-d9f1-47e4-a15f-e2e00c824dcf/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/deecd741-5c0a-4e06-a8c5-4f9195e19935/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Markdown Parse Survey On Js and Python">
-      <meta itemprop="description" content="目標
-
-取得一份 markdown 的 ast，在遍歷樹結構時同時修改節點值，不會增刪節點，最後在轉換回 markdown
-具體專案需求請見
-最基本要支援 common markdown，註腳可選
-結論
-
-只有 
-
-    mistune
-    
-    
-    
- 可以做到">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/deecd741-5c0a-4e06-a8c5-4f9195e19935/" itemprop="url" class="post-title-link">Markdown Parse Survey On Js and Python</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-06-26T00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-26 00:00:00 &#43;0000 UTC">
-    2024-06-26
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/deecd741-5c0a-4e06-a8c5-4f9195e19935/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h3 id="目標">目標
-<a class="header-anchor" href="#%e7%9b%ae%e6%a8%99"></a>
-</h3><p>取得一份 markdown 的 ast，在遍歷樹結構時同時修改節點值，不會增刪節點，最後在轉換回 markdown
-具體專案需求請見
-最基本要支援 common markdown，註腳可選</p>
-<h3 id="結論">結論
-<a class="header-anchor" href="#%e7%b5%90%e8%ab%96"></a>
-</h3><p>只有 
-<a href="https://mistune.lepture.com/en/latest/index.html" title="mistune" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    mistune
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a> 可以做到</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/deecd741-5c0a-4e06-a8c5-4f9195e19935/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/ed79c016-42c2-48fa-821d-1869dfcfaad5/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="LinuxLink">
-      <meta itemprop="description" content="執行期尋找 shared library 的流程
-
-
-若 shared library 名稱內有 “/”，表示它是路徑，直接用這個路徑找
-若 executable 內有定義 DT_RPATH 沒定義 DT_RUNPATH，從 DT_RPATH 列的目錄裡找
-從 LD_LIBRARY_PATH 列的目錄裡找
-從 DT_RUNPATH 列的目錄裡找
-從 ldconfig 產生的 cache 內找 (/etc/ld.so.cache)
-從 OS 的預設位置找: 先找 /lib 再找 /usr/lib
-
-Tool
+      <meta itemprop="name" content="Llam Cpp">
+      <meta itemprop="description" content="Build
 
 
 
@@ -885,389 +579,12 @@ Tool
 1
 
 
-nm -Du /bin/ls  
+curl -L https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-IQ3_M.gguf?download=true -o Llam-3.2-1B.gguf
 
 
 
-列出未定義需要外部提供的 symbol">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/ed79c016-42c2-48fa-821d-1869dfcfaad5/" itemprop="url" class="post-title-link">LinuxLink</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-06-21T00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-21 00:00:00 &#43;0000 UTC">
-    2024-06-21
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/ed79c016-42c2-48fa-821d-1869dfcfaad5/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h3 id="執行期尋找-shared-library-的流程">執行期尋找 shared library 的流程
-<a class="header-anchor" href="#%e5%9f%b7%e8%a1%8c%e6%9c%9f%e5%b0%8b%e6%89%be-shared-library-%e7%9a%84%e6%b5%81%e7%a8%8b"></a>
-</h3><ol>
-<li>若 shared library 名稱內有 “/”，表示它是路徑，直接用這個路徑找</li>
-<li>若 executable 內有定義 DT_RPATH 沒定義 DT_RUNPATH，從 DT_RPATH 列的目錄裡找</li>
-<li>從 LD_LIBRARY_PATH 列的目錄裡找</li>
-<li>從 DT_RUNPATH 列的目錄裡找</li>
-<li>從 ldconfig 產生的 cache 內找 (/etc/ld.so.cache)</li>
-<li>從 OS 的預設位置找: 先找 /lib 再找 /usr/lib</li>
-</ol>
-<h3 id="tool">Tool
-<a class="header-anchor" href="#tool"></a>
-</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">nm -Du /bin/ls  </span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<p>列出未定義需要外部提供的 symbol</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/ed79c016-42c2-48fa-821d-1869dfcfaad5/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/3e809070-d9f0-4c16-bb4d-e8a777ddec32/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Windows.md">
-      <meta itemprop="description" content="
-
-    PE
-    
-
-
-
-    Path
-    
-
-
-
-    _MinGW32
-    
-
-
-
-    CSharp
-    
-
-
-
-    WindowsApiSet
-    
-
-
-
-    BypassWindowsDefender
-    
-
-
-
-    暫停微軟更新100年（win10 / 11適用）
-    
-    
-    
-
-
-
-
-
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
-&#34;PauseFeatureUpdatesStartTime&#34;=&#34;2024-01-01T00:00:01Z&#34;
-&#34;PauseQualityUpdatesStartTime&#34;=&#34;2024-01-01T00:00:01Z&#34;
-#暫停功能更新與重大更新的起始時間(GMT時間)
-&#34;PauseFeatureUpdatesEndTime&#34;=&#34;2124-01-01T00:00:01Z&#34;
-&#34;PauseQualityUpdatesEndTime&#34;=&#34;2124-01-01T00:00:01Z&#34;
-#暫停功能更新與重大更新的到期時間(GMT時間)
-&#34;PauseUpdatesStartTime&#34;=&#34;2024-01-01T00:00:01Z&#34;
-&#34;PauseUpdatesExpiryTime&#34;=&#34;2124-01-01T00:00:01Z&#34;
-#暫停自動更新的起始與到期時間(GMT時間)
-
-
-
-
-
-    Tftpd64
-    
-    
-    
-
-
-IPv4 and IPv6 server for DHCP, TFTP, DNS, SNTP and Syslog on windows
-需要先啟動服務 .\tftpd64_svc.exe -debug  or">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/3e809070-d9f0-4c16-bb4d-e8a777ddec32/" itemprop="url" class="post-title-link">Windows.md</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-06-21T00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-21 00:00:00 &#43;0000 UTC">
-    2024-06-21
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/3e809070-d9f0-4c16-bb4d-e8a777ddec32/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <p>
-<a href="../aced79f2-f880-4aba-a6c9-96ec8656b635.md" title="PE" >
-    PE
-    
-</a>
-
-<a href="../fb4a3895-4d9e-4bf9-9aa3-793c4edba7eb.md" title="Path" >
-    Path
-    
-</a>
-
-<a href="CS/Windows/_MinGW32.md" title="_MinGW32" >
-    _MinGW32
-    
-</a>
-
-<a href="../c2bd8c22-9200-4e77-9436-1215d9620693.md" title="CSharp" >
-    CSharp
-    
-</a>
-
-<a href="../a7e8ae6e-3e00-42a0-924a-df2cf070acd4.md" title="WindowsApiSet" >
-    WindowsApiSet
-    
-</a>
-
-<a href="../772cf18e-62ae-4e48-a846-044fbeffa2a9.md" title="BypassWindowsDefender" >
-    BypassWindowsDefender
-    
-</a></p>
-<h2 id="暫停微軟更新100年win10--11適用httpsforumgamercomtwcphpbsn60030ampsna650231">
-<a href="https://forum.gamer.com.tw/C.php?bsn=60030&amp;amp;snA=650231" title="暫停微軟更新100年（win10 / 11適用）" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    暫停微軟更新100年（win10 / 11適用）
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>
-<a class="header-anchor" href="#%e6%9a%ab%e5%81%9c%e5%be%ae%e8%bb%9f%e6%9b%b4%e6%96%b0100%e5%b9%b4win10--11%e9%81%a9%e7%94%a8httpsforumgamercomtwcphpbsn60030ampsna650231"></a>
-</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
-</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
-</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>HKEY_LOCAL_MACHINE<span class="se">\S</span>OFTWARE<span class="se">\M</span>icrosoft<span class="se">\W</span>indowsUpdate<span class="se">\U</span>X<span class="se">\S</span>ettings<span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseFeatureUpdatesStartTime&#34;</span><span class="o">=</span><span class="s2">&#34;2024-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseQualityUpdatesStartTime&#34;</span><span class="o">=</span><span class="s2">&#34;2024-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#暫停功能更新與重大更新的起始時間(GMT時間)</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseFeatureUpdatesEndTime&#34;</span><span class="o">=</span><span class="s2">&#34;2124-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseQualityUpdatesEndTime&#34;</span><span class="o">=</span><span class="s2">&#34;2124-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#暫停功能更新與重大更新的到期時間(GMT時間)</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseUpdatesStartTime&#34;</span><span class="o">=</span><span class="s2">&#34;2024-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;PauseUpdatesExpiryTime&#34;</span><span class="o">=</span><span class="s2">&#34;2124-01-01T00:00:01Z&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#暫停自動更新的起始與到期時間(GMT時間)</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<h2 id="tftpd64httpspjo2githubiotftpd64">
-<a href="https://pjo2.github.io/tftpd64/" title="Tftpd64" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    Tftpd64
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>
-<a class="header-anchor" href="#tftpd64httpspjo2githubiotftpd64"></a>
-</h2><p>IPv4 and IPv6 server for DHCP, TFTP, DNS, SNTP and Syslog on windows
-需要先啟動服務 <code>.\tftpd64_svc.exe -debug</code>  or</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/3e809070-d9f0-4c16-bb4d-e8a777ddec32/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/8dda7ba1-be2d-4883-a49d-e475012c4a61/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="可變參數的 C 函數">
-      <meta itemprop="description" content="VariadicFunction
+下載 Llam 模型
+AMD CPU
 
 
 
@@ -1276,194 +593,39 @@ IPv4 and IPv6 server for DHCP, TFTP, DNS, SNTP and Syslog on windows
 2
 3
 4
-5
-6
-7
-8
 
 
-#include &lt;stdarg.h&gt;  
-void error(const char *fmt, ...)  
-{  
-va_list argp;  
-va_start(argp, fmt);  
-vfprintf(stderr, fmt, argp);  
-va_end(argp);  
-}  
+git clone --depth 1 https://github.com/ggerganov/llama.cpp.git
+cmake -Bbuild
+cd build/
+make -j8
 
 
 
 
-用 ...表達接受可變數量的參數，va_list argp 是一個指向第一個可變參數的指針，無法知道長度及型態，
-
-    沒有可移植
-    
-) 的方法把可變數量的參數傳給下一個可變數量的參數的函式，有一些相依CPU的
-
-    方法
-    
-    
-    
-，有部分可變數量參數的函式也提供接收 va_list  的版本如 vprintf, vfprintf, vsprintf">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/8dda7ba1-be2d-4883-a49d-e475012c4a61/" itemprop="url" class="post-title-link">可變參數的 C 函數</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
 
 
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-06-21T00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-21 00:00:00 &#43;0000 UTC">
-    2024-06-21
-  </time>
-</span>
-
-    
+1
 
 
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/8dda7ba1-be2d-4883-a49d-e475012c4a61/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h3 id="variadicfunction">VariadicFunction
-<a class="header-anchor" href="#variadicfunction"></a>
-</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
-</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
-</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
-</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
-</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
-</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
-</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdarg.h&gt;  </span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">error</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">fmt</span><span class="p">,</span> <span class="p">...)</span>  
-</span></span><span class="line"><span class="cl"><span class="p">{</span>  
-</span></span><span class="line"><span class="cl"><span class="n">va_list</span> <span class="n">argp</span><span class="p">;</span>  
-</span></span><span class="line"><span class="cl"><span class="nf">va_start</span><span class="p">(</span><span class="n">argp</span><span class="p">,</span> <span class="n">fmt</span><span class="p">);</span>  
-</span></span><span class="line"><span class="cl"><span class="nf">vfprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">argp</span><span class="p">);</span>  
-</span></span><span class="line"><span class="cl"><span class="nf">va_end</span><span class="p">(</span><span class="n">argp</span><span class="p">);</span>  
-</span></span><span class="line"><span class="cl"><span class="p">}</span>  
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<p>用 <code>...</code>表達接受可變數量的參數，<code>va_list argp</code> 是一個指向第一個可變參數的指針，無法知道長度及型態，
-<a href="%5Bhttps://c-faq.com/varargs/invvarargs.19920714.html%5D%28https://c-faq.com/varargs/invvarargs.19920714.html" title="沒有可移植" >
-    沒有可移植
-    
-</a>) 的方法把可變數量的參數傳給下一個可變數量的參數的函式，有一些相依CPU的
-<a href="https://c-faq.com/varargs/invvarargs.19890604.html" title="方法" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    方法
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>，有部分可變數量參數的函式也提供接收 <code>va_list </code> 的版本如 <code>vprintf, vfprintf, vsprintf</code></p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/8dda7ba1-be2d-4883-a49d-e475012c4a61/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/7d126e73-4398-4f3f-a16b-5fd4ebf5868c/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Brainfuck.md">
-      <meta itemprop="description" content="簡介
-
-一個由 8 支指令組成的圖靈完備程式語言
-
-&amp;gt; 	Increment the pointer.
-&amp;lt; 	Decrement the pointer.
-&#43; 	Increment the byte at the pointer.
-- 	Decrement the byte at the pointer.
-. 	Output the byte at the pointer.
-, 	Input a byte and store it in the byte at the pointer.
-[ 	Jump forward past the matching ] if the byte at the pointer is zero.
-] 	Jump backward to the matching [ unless the byte at the pointer is zero.
-有一個有限長度的連續記憶體，及一個指針來表明當前指令要操作的區塊
+bin/llama-cli -m Llam-3.2-1B.gguf -p &#34;Hi&#34; -n 100
 
 
 
-    BrainFuck Programming Tutorial by: Katie
-    
-    
-    
+Vulkan AMD
+
+
+
+
+1
+2
+3
+
+
+sudo apt install vulkan-tools libvulkan-dev glslc
+
+bin/llama-cli -m Llam-3.2-1B.gguf -p &#34;Hi&#34; -n 100 -ngl 1000
+
 ">
     </span>
     
@@ -1473,7 +635,7 @@ va_end(argp);
   
   
   
-  <a href="/post/7d126e73-4398-4f3f-a16b-5fd4ebf5868c/" itemprop="url" class="post-title-link">Brainfuck.md</a>
+  <a href="/post/89ee835b-9cc6-4c71-b280-0948787c34e9/" itemprop="url" class="post-title-link">Llam Cpp</a>
   
   
    </h2> 
@@ -1490,8 +652,8 @@ va_end(argp);
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-05-10T00:00:00" itemprop="dateCreated datePublished" datetime="2024-05-10 00:00:00 &#43;0000 UTC">
-    2024-05-10
+  <time title="創建時間：2025-01-02T00:00:00" itemprop="dateCreated datePublished" datetime="2025-01-02 00:00:00 &#43;0000 UTC">
+    2025-01-02
   </time>
 </span>
 
@@ -1513,7 +675,7 @@ va_end(argp);
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/7d126e73-4398-4f3f-a16b-5fd4ebf5868c/">
+  <span id="pageview-count" data-path="/post/89ee835b-9cc6-4c71-b280-0948787c34e9/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -1531,27 +693,62 @@ va_end(argp);
       
 
   
-  <h3 id="簡介">簡介
-<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
-</h3><p>一個由 8 支指令組成的圖靈完備程式語言</p>
-<ul>
-<li><code>&amp;gt;</code> 	Increment the pointer.</li>
-<li><code>&amp;lt;</code> 	Decrement the pointer.</li>
-<li><code>+</code> 	Increment the byte at the pointer.</li>
-<li><code>-</code> 	Decrement the byte at the pointer.</li>
-<li><code>.</code> 	Output the byte at the pointer.</li>
-<li><code>,</code> 	Input a byte and store it in the byte at the pointer.</li>
-<li><code>[</code> 	Jump forward past the matching <code>]</code> if the byte at the pointer is zero.</li>
-<li><code>]</code> 	Jump backward to the matching <code>[</code> unless the byte at the pointer is zero.
-有一個有限長度的連續記憶體，及一個指針來表明當前指令要操作的區塊</li>
-</ul>
-<p>
-<a href="https://gist.github.com/roachhd/dce54bec8ba55fb17d3a" title="BrainFuck Programming Tutorial by: Katie" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    BrainFuck Programming Tutorial by: Katie
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a></p>
+  <h3 id="build">Build
+<a class="header-anchor" href="#build"></a>
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl -L https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-IQ3_M.gguf?download<span class="o">=</span><span class="nb">true</span> -o Llam-3.2-1B.gguf</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>下載 Llam 模型</p>
+<h4 id="amd-cpu">AMD CPU
+<a class="header-anchor" href="#amd-cpu"></a>
+</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --depth <span class="m">1</span> https://github.com/ggerganov/llama.cpp.git
+</span></span><span class="line"><span class="cl">cmake -Bbuild
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build/
+</span></span><span class="line"><span class="cl">make -j8</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">bin/llama-cli -m Llam-3.2-1B.gguf -p <span class="s2">&#34;Hi&#34;</span> -n <span class="m">100</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="vulkan-amd">Vulkan AMD
+<a class="header-anchor" href="#vulkan-amd"></a>
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span><span class="lnt" id="hl-3-3"><a class="lnlinks" href="#hl-3-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install vulkan-tools libvulkan-dev glslc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bin/llama-cli -m Llam-3.2-1B.gguf -p <span class="s2">&#34;Hi&#34;</span> -n <span class="m">100</span> -ngl <span class="m">1000</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
   
 
 
@@ -1561,7 +758,7 @@ va_end(argp);
  
 
 <div class="post-button">
-  <a class="btn" href="/post/7d126e73-4398-4f3f-a16b-5fd4ebf5868c/#more" rel="contents">
+  <a class="btn" href="/post/89ee835b-9cc6-4c71-b280-0948787c34e9/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -1576,7 +773,7 @@ va_end(argp);
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/772cf18e-62ae-4e48-a846-044fbeffa2a9/">
+    <link itemprop="mainEntityOfPage" href="/post/cf8e5f13-a6de-4624-9e14-975a34df1b86/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -1586,120 +783,47 @@ va_end(argp);
       <meta itemprop="description" content="保持简单的易用性和强大的功能。">
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Bypass windows defender">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/772cf18e-62ae-4e48-a846-044fbeffa2a9/" itemprop="url" class="post-title-link">Bypass windows defender</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-03-23T00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-23 00:00:00 &#43;0000 UTC">
-    2024-03-23
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/772cf18e-62ae-4e48-a846-044fbeffa2a9/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <p><img src="/imgs/img-lazy-loading.gif" data-src="CS/Windows/BypassWindowsDefender.jpg" alt=""  /></p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/772cf18e-62ae-4e48-a846-044fbeffa2a9/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/41ec7a20-d1c5-4cfe-b27f-8604a0a8e670/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Forgetting the history of Unix is coding us into a corner">
+      <meta itemprop="name" content="Blum Blum Shub">
       <meta itemprop="description" content="簡介
 
 
 
-    Forgetting the history of Unix is coding us into a corner
+    Blum, Blum &amp; Shub
     
     
     
 
-FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念，蠻詳細的，對每一個時代的 UNIX 都有介紹">
+一種偽隨機數產生器
+$\displaystyle x_{n&#43;1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ ,  p and q are not factors of $x_{0}$
+第 i 項的疊代公式
+$\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$
+
+
+
+1
+2
+3
+4
+5
+
+
+p = 11
+q = 23
+x = 3
+for i in range(10000):
+    x = (x ** 2) % (p * q)
+
+
+
+
+
+
+1
+
+
+[9, 81, 236, 36, 31, 202, 71, 234, 108, 26, 170, 58, 75, 59, 192, 179, 163, 4, 16, 3]
+
+">
     </span>
     
     <header class="post-header">
@@ -1708,7 +832,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   
   
   
-  <a href="/post/41ec7a20-d1c5-4cfe-b27f-8604a0a8e670/" itemprop="url" class="post-title-link">Forgetting the history of Unix is coding us into a corner</a>
+  <a href="/post/cf8e5f13-a6de-4624-9e14-975a34df1b86/" itemprop="url" class="post-title-link">Blum Blum Shub</a>
   
   
    </h2> 
@@ -1725,8 +849,8 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-03-23T00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-23 00:00:00 &#43;0000 UTC">
-    2024-03-23
+  <time title="創建時間：2024-12-20T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-20 00:00:00 &#43;0000 UTC">
+    2024-12-20
   </time>
 </span>
 
@@ -1748,7 +872,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/41ec7a20-d1c5-4cfe-b27f-8604a0a8e670/">
+  <span id="pageview-count" data-path="/post/cf8e5f13-a6de-4624-9e14-975a34df1b86/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -1769,13 +893,43 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <h3 id="簡介">簡介
 <a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
 </h3><p>
-<a href="https://www.theregister.com/2024/02/16/what_is_unix/" title="Forgetting the history of Unix is coding us into a corner" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    Forgetting the history of Unix is coding us into a corner
+<a href="http://www.ciphersbyritter.com/NEWS2/TESTSBBS.HTM" title="Blum, Blum &amp; Shub" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Blum, Blum &amp; Shub
     
     <i class="fa fa-external-link-alt"></i>
     
-</a></p>
-<p>FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念，蠻詳細的，對每一個時代的 UNIX 都有介紹</p>
+</a>
+一種偽隨機數產生器
+$\displaystyle x_{n+1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ ,  p and q are not factors of $x_{0}$
+第 i 項的疊代公式</p>
+<p>$\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span><span class="line"><span class="cl"><span class="n">q</span> <span class="o">=</span> <span class="mi">23</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
   
 
 
@@ -1785,7 +939,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
  
 
 <div class="post-button">
-  <a class="btn" href="/post/41ec7a20-d1c5-4cfe-b27f-8604a0a8e670/#more" rel="contents">
+  <a class="btn" href="/post/cf8e5f13-a6de-4624-9e14-975a34df1b86/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -1800,7 +954,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/93b3123f-a580-42b0-802d-2a209b3369c2/">
+    <link itemprop="mainEntityOfPage" href="/post/cf66bdbe-d4a9-4bd8-9bb3-d62b9137fab2/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -1810,13 +964,46 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
       <meta itemprop="description" content="保持简单的易用性和强大的功能。">
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Balanced Allocations with the Choice of Noise">
-      <meta itemprop="description" content="
+      <meta itemprop="name" content="Blum Blum Shub">
+      <meta itemprop="description" content="簡介
 
-    Balanced Allocations with the Choice of Noise
+
+
+    Blum, Blum &amp; Shub
     
     
     
+
+一種偽隨機數產生器
+$\displaystyle x_{n&#43;1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ ,  p and q are not factors of $x_{0}$
+第 i 項的疊代公式
+$\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$
+
+
+
+1
+2
+3
+4
+5
+
+
+p = 11
+q = 23
+x = 3
+for i in range(10000):
+    x = (x ** 2) % (p * q)
+
+
+
+
+
+
+1
+
+
+[9, 81, 236, 36, 31, 202, 71, 234, 108, 26, 170, 58, 75, 59, 192, 179, 163, 4, 16, 3]
+
 ">
     </span>
     
@@ -1826,7 +1013,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   
   
   
-  <a href="/post/93b3123f-a580-42b0-802d-2a209b3369c2/" itemprop="url" class="post-title-link">Balanced Allocations with the Choice of Noise</a>
+  <a href="/post/cf66bdbe-d4a9-4bd8-9bb3-d62b9137fab2/" itemprop="url" class="post-title-link">Blum Blum Shub</a>
   
   
    </h2> 
@@ -1843,8 +1030,8 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-03-18T00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-18 00:00:00 &#43;0000 UTC">
-    2024-03-18
+  <time title="創建時間：2024-12-20T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-20 00:00:00 &#43;0000 UTC">
+    2024-12-20
   </time>
 </span>
 
@@ -1866,7 +1053,176 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/93b3123f-a580-42b0-802d-2a209b3369c2/">
+  <span id="pageview-count" data-path="/post/cf66bdbe-d4a9-4bd8-9bb3-d62b9137fab2/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="簡介">簡介
+<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
+</h3><p>
+<a href="http://www.ciphersbyritter.com/NEWS2/TESTSBBS.HTM" title="Blum, Blum &amp; Shub" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Blum, Blum &amp; Shub
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+一種偽隨機數產生器
+$\displaystyle x_{n+1}=x_{n}^{2}{\bmod {M}}$, $M = pq$ ,  p and q are not factors of $x_{0}$
+第 i 項的疊代公式</p>
+<p>$\displaystyle x_{i}=\left(x_{0}^{2^{i}{\bmod {\lambda }}(M)}\right){\bmod {M}}$</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span><span class="line"><span class="cl"><span class="n">q</span> <span class="o">=</span> <span class="mi">23</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/cf66bdbe-d4a9-4bd8-9bb3-d62b9137fab2/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/577f2dc7-5169-4b62-9551-7637bec9f763/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux From Scratch">
+      <meta itemprop="description" content="
+
+    Linux From Scratch
+    
+    
+    
+
+手把手教你如何重頭建置 Linux 發行版，2024年還有更新，有包好可以直接建置的軟體包
+
+
+
+  
+    
+      
+      
+        
+          注意
+        
+      
+    
+    
+      
+
+    2.2. Host System Requirements
+    
+    
+    
+ 必須要確定列表都有裝">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/577f2dc7-5169-4b62-9551-7637bec9f763/" itemprop="url" class="post-title-link">Linux From Scratch</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-16T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-16 00:00:00 &#43;0000 UTC">
+    2024-12-16
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/577f2dc7-5169-4b62-9551-7637bec9f763/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -1885,12 +1241,33 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
 
   
   <p>
-<a href="https://dl.acm.org/doi/10.1145/3625386" title="Balanced Allocations with the Choice of Noise" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    Balanced Allocations with the Choice of Noise
+<a href="https://www.linuxfromscratch.org/lfs/view/systemd" title="Linux From Scratch" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Linux From Scratch
     
     <i class="fa fa-external-link-alt"></i>
     
-</a></p>
+</a>
+手把手教你如何重頭建置 Linux 發行版，2024年還有更新，有包好可以直接建置的軟體包</p>
+
+
+
+  <div class="post-alert-note">
+    <div class="post-alert-title">
+      <i class="fa-solid fa-bell"></i>
+      <span>
+        
+          注意
+        
+      </span>
+    </div>
+    <div class="post-alert-content">
+      <p>
+<a href="https://www.linuxfromscratch.org/lfs/view/systemd/chapter02/hostreqs.html" title="2.2. Host System Requirements" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    2.2. Host System Requirements
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a> 必須要確定列表都有裝</p>
   
 
 
@@ -1900,7 +1277,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
  
 
 <div class="post-button">
-  <a class="btn" href="/post/93b3123f-a580-42b0-802d-2a209b3369c2/#more" rel="contents">
+  <a class="btn" href="/post/577f2dc7-5169-4b62-9551-7637bec9f763/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -1915,7 +1292,7 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/9cef3dac-51e0-41f4-a222-f9640e16589f/">
+    <link itemprop="mainEntityOfPage" href="/post/7fefe2e9-2470-4d7e-ae49-b2f468a38668/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -1925,48 +1302,35 @@ FOSDEM 2024 的演講，從 UNIX 歷史來講解 Everything is a File 的概念�
       <meta itemprop="description" content="保持简单的易用性和强大的功能。">
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Linux Serial">
-      <meta itemprop="description" content="Serial Device
+      <meta itemprop="name" content="Linux From Scratch">
+      <meta itemprop="description" content="
 
+    Linux From Scratch
+    
+    
+    
 
-RS-485
-
-接口洞很多，但只需要兩條線，原則上地線不用接，半雙工
-指令
-
-原則上 Serial Device 會出現在 /dev/ttyS[數字] 路徑上
-
-
-
-1
-
-
-setserial -g /dev/ttyS[0123]
+手把手教你如何重頭建置 Linux 發行版，2024年還有更新，有包好可以直接建置的軟體包
 
 
 
-列出串口晶片名及中斷
+  
+    
+      
+      
+        
+          注意
+        
+      
+    
+    
+      
 
-
-
-1
-
-
-dmesg | grep tty
-
-
-
-
-
-
-1
-
-
-stty -F /dev/ttyS0 -a
-
-
-
-顯示該 Serial Device 的連線設定資料，其他應用程式連接時也可能會更改">
+    2.2. Host System Requirements
+    
+    
+    
+ 必須要確定列表都有裝">
     </span>
     
     <header class="post-header">
@@ -1975,7 +1339,7 @@ stty -F /dev/ttyS0 -a
   
   
   
-  <a href="/post/9cef3dac-51e0-41f4-a222-f9640e16589f/" itemprop="url" class="post-title-link">Linux Serial</a>
+  <a href="/post/7fefe2e9-2470-4d7e-ae49-b2f468a38668/" itemprop="url" class="post-title-link">Linux From Scratch</a>
   
   
    </h2> 
@@ -1992,8 +1356,8 @@ stty -F /dev/ttyS0 -a
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-03-01T00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-01 00:00:00 &#43;0000 UTC">
-    2024-03-01
+  <time title="創建時間：2024-12-16T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-16 00:00:00 &#43;0000 UTC">
+    2024-12-16
   </time>
 </span>
 
@@ -2015,7 +1379,7 @@ stty -F /dev/ttyS0 -a
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/9cef3dac-51e0-41f4-a222-f9640e16589f/">
+  <span id="pageview-count" data-path="/post/7fefe2e9-2470-4d7e-ae49-b2f468a38668/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -2033,47 +1397,34 @@ stty -F /dev/ttyS0 -a
       
 
   
-  <h3 id="serial-device">Serial Device
-<a class="header-anchor" href="#serial-device"></a>
-</h3><p><img src="/imgs/img-lazy-loading.gif" data-src="../9324d4d1-dd20-401a-9918-0da2aceb2b9c.png" alt=""  /></p>
-<h4 id="rs-485">RS-485
-<a class="header-anchor" href="#rs-485"></a>
-</h4><p>接口洞很多，但只需要兩條線，原則上地線不用接，半雙工</p>
-<h3 id="指令">指令
-<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4"></a>
-</h3><p>原則上 Serial Device 會出現在 <code>/dev/ttyS[數字]</code> 路徑上</p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setserial -g /dev/ttyS<span class="o">[</span>0123<span class="o">]</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<p>列出串口晶片名及中斷</p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep tty</span></span></code></pre></td></tr></table>
-</div>
-</div>
+  <p>
+<a href="https://www.linuxfromscratch.org/lfs/view/systemd" title="Linux From Scratch" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Linux From Scratch
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+手把手教你如何重頭建置 Linux 發行版，2024年還有更新，有包好可以直接建置的軟體包</p>
 
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">stty -F /dev/ttyS0 -a</span></span></code></pre></td></tr></table>
-</div>
-</div>
 
-<p>顯示該 Serial Device 的連線設定資料，其他應用程式連接時也可能會更改</p>
+  <div class="post-alert-note">
+    <div class="post-alert-title">
+      <i class="fa-solid fa-bell"></i>
+      <span>
+        
+          注意
+        
+      </span>
+    </div>
+    <div class="post-alert-content">
+      <p>
+<a href="https://www.linuxfromscratch.org/lfs/view/systemd/chapter02/hostreqs.html" title="2.2. Host System Requirements" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    2.2. Host System Requirements
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a> 必須要確定列表都有裝</p>
   
 
 
@@ -2083,7 +1434,7 @@ stty -F /dev/ttyS0 -a
  
 
 <div class="post-button">
-  <a class="btn" href="/post/9cef3dac-51e0-41f4-a222-f9640e16589f/#more" rel="contents">
+  <a class="btn" href="/post/7fefe2e9-2470-4d7e-ae49-b2f468a38668/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -2098,7 +1449,695 @@ stty -F /dev/ttyS0 -a
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/124d0767-57d5-45b9-b08f-7c59b36ad919/">
+    <link itemprop="mainEntityOfPage" href="/post/d325c833-4795-42b1-b46f-e71cde1847f0/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Logic Analyzer">
+      <meta itemprop="description" content="Logic Analyzer
+
+機器上無顯示，需要連接電腦
+
+
+
+    Homepage - DreamSourceLab
+    
+    
+    
+
+6 千台幣 ，掏寶上有便宜的盜版
+
+
+    Analog Discovery 3
+    
+    
+    
+
+1.2 萬台幣， 16 Channels &#43; 125MS/s, Oscilloscope Bandwidth 9 MHz, Waveform Generator
+更偏向學生使用的工程工作室
+
+
+    PicoScope 2000 Series
+    
+    
+    
+
+1 萬台幣，勉強商用
+
+
+    Saleae Logic Analyzers
+    
+    
+    
+
+3 萬台幣 8 Channels &#43; 500MS/s, Oscilloscope Bandwidth 5 MHz
+
+
+    TravelLogic 4000 TL4134B 皇晶科技 - Acute
+    
+    
+    
+
+台廠，7萬塊，商用, 34 Channels &#43; 2GB/s
+
+Chip
+
+
+
+
+    EZ-USB FX2LP FX2G2 USB 2.0 Peripheral Controller - Infineon Technologies
+    
+    
+    
+
+
+
+  
+    英飛凌的EZ-USB FX2LP 和EZ-USB FX2G2 是業界事實上的USB 2.0 週邊控制器，為任何設備添加了USB 高速(480 Mbps)、全速(12 Mbps) 和低速(1.5 Mbps)連接。
+EZ-USB FX2LP 和 FX2G2 的通用可程式介面 (GPIF) 可連接到處理器、影像感測器、FPGA 或 ASIC。使用者可以對 GPIF（通用可編程介面）進行編程，使其表現得像 FIFO、非同步 SRAM、位址/資料復用介面、CompactFlash 或專有介面">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/d325c833-4795-42b1-b46f-e71cde1847f0/" itemprop="url" class="post-title-link">Logic Analyzer</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-09T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-09 00:00:00 &#43;0000 UTC">
+    2024-12-09
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/d325c833-4795-42b1-b46f-e71cde1847f0/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h2 id="logic-analyzer">Logic Analyzer
+<a class="header-anchor" href="#logic-analyzer"></a>
+</h2><p>機器上無顯示，需要連接電腦</p>
+<ul>
+<li>
+<a href="https://www.dreamsourcelab.com/" title="Homepage - DreamSourceLab" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Homepage - DreamSourceLab
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+6 千台幣 ，掏寶上有便宜的盜版</li>
+<li>
+<a href="https://digilent.com/reference/test-and-measurement/analog-discovery-3/start" title="Analog Discovery 3" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Analog Discovery 3
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+1.2 萬台幣， 16 Channels + 125MS/s, Oscilloscope Bandwidth 9 MHz, Waveform Generator
+更偏向學生使用的工程工作室</li>
+<li>
+<a href="https://www.picotech.com/oscilloscope/2000/picoscope-2000-overview" title="PicoScope 2000 Series" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    PicoScope 2000 Series
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+1 萬台幣，勉強商用</li>
+<li>
+<a href="https://www.saleae.com/" title="Saleae Logic Analyzers" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Saleae Logic Analyzers
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+3 萬台幣 8 Channels + 500MS/s, Oscilloscope Bandwidth 5 MHz</li>
+<li>
+<a href="https://www.acute.com.tw/product/detail11" title="TravelLogic 4000 TL4134B 皇晶科技 - Acute" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    TravelLogic 4000 TL4134B 皇晶科技 - Acute
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a>
+台廠，7萬塊，商用, 34 Channels + 2GB/s</li>
+</ul>
+<h2 id="chip">Chip
+<a class="header-anchor" href="#chip"></a>
+</h2><ul>
+<li>
+<a href="https://www.infineon.com/cms/en/product/universal-serial-bus/usb-2.0-peripheral-controllers/ez-usb-fx2lp-fx2g2-usb-2.0-peripheral-controller/" title="EZ-USB FX2LP FX2G2 USB 2.0 Peripheral Controller - Infineon Technologies" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    EZ-USB FX2LP FX2G2 USB 2.0 Peripheral Controller - Infineon Technologies
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a></li>
+</ul>
+
+  <blockquote>
+    <p>英飛凌的EZ-USB FX2LP 和EZ-USB FX2G2 是業界事實上的USB 2.0 週邊控制器，為任何設備添加了USB 高速(480 Mbps)、全速(12 Mbps) 和低速(1.5 Mbps)連接。
+EZ-USB FX2LP 和 FX2G2 的通用可程式介面 (GPIF) 可連接到處理器、影像感測器、FPGA 或 ASIC。使用者可以對 GPIF（通用可編程介面）進行編程，使其表現得像 FIFO、非同步 SRAM、位址/資料復用介面、CompactFlash 或專有介面</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/d325c833-4795-42b1-b46f-e71cde1847f0/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/18be0903-ac92-45ce-8fcf-64028969acc8/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Path">
+      <meta itemprop="description" content="
+
+    Naming Files, Paths, and Namespaces
+    
+    
+    
+
+DOS Path
+
+C:\File
+路徑不得有以下保留字元：
+
+&lt; (less than)
+&amp;gt; (greater than)
+: (colon)
+&amp;quot; (double quote)
+/ (forward slash)
+\ (backslash)
+| (vertical bar or pipe)
+? (question mark)
+* (asterisk)
+ASCII NULL
+
+檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/18be0903-ac92-45ce-8fcf-64028969acc8/" itemprop="url" class="post-title-link">Path</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-07T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-07 00:00:00 &#43;0000 UTC">
+    2024-12-07
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/18be0903-ac92-45ce-8fcf-64028969acc8/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <p>
+<a href="https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file" title="Naming Files, Paths, and Namespaces" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Naming Files, Paths, and Namespaces
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a></p>
+<h2 id="dos-path">DOS Path
+<a class="header-anchor" href="#dos-path"></a>
+</h2><p><code>C:\File</code>
+路徑不得有以下保留字元：</p>
+<ul>
+<li>&lt; (less than)</li>
+<li><code>&amp;gt;</code> (greater than)</li>
+<li><code>:</code> (colon)</li>
+<li><code>&amp;quot;</code> (double quote)</li>
+<li><code>/</code> (forward slash)</li>
+<li><code>\</code> (backslash)</li>
+<li>| (vertical bar or pipe)</li>
+<li>? (question mark)</li>
+<li><code>*</code> (asterisk)</li>
+<li>ASCII NULL</li>
+</ul>
+<p>檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/18be0903-ac92-45ce-8fcf-64028969acc8/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/999643d0-efed-48f7-bcbf-8e952b9e4fb7/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Path">
+      <meta itemprop="description" content="
+
+    Naming Files, Paths, and Namespaces
+    
+    
+    
+
+DOS Path
+
+C:\File
+路徑不得有以下保留字元：
+
+&lt; (less than)
+&amp;gt; (greater than)
+: (colon)
+&amp;quot; (double quote)
+/ (forward slash)
+\ (backslash)
+| (vertical bar or pipe)
+? (question mark)
+* (asterisk)
+ASCII NULL
+
+檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/999643d0-efed-48f7-bcbf-8e952b9e4fb7/" itemprop="url" class="post-title-link">Path</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-07T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-07 00:00:00 &#43;0000 UTC">
+    2024-12-07
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/999643d0-efed-48f7-bcbf-8e952b9e4fb7/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <p>
+<a href="https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file" title="Naming Files, Paths, and Namespaces" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Naming Files, Paths, and Namespaces
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a></p>
+<h2 id="dos-path">DOS Path
+<a class="header-anchor" href="#dos-path"></a>
+</h2><p><code>C:\File</code>
+路徑不得有以下保留字元：</p>
+<ul>
+<li>&lt; (less than)</li>
+<li><code>&amp;gt;</code> (greater than)</li>
+<li><code>:</code> (colon)</li>
+<li><code>&amp;quot;</code> (double quote)</li>
+<li><code>/</code> (forward slash)</li>
+<li><code>\</code> (backslash)</li>
+<li>| (vertical bar or pipe)</li>
+<li>? (question mark)</li>
+<li><code>*</code> (asterisk)</li>
+<li>ASCII NULL</li>
+</ul>
+<p>檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/999643d0-efed-48f7-bcbf-8e952b9e4fb7/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/fb4a3895-4d9e-4bf9-9aa3-793c4edba7eb/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Path">
+      <meta itemprop="description" content="
+
+    Naming Files, Paths, and Namespaces
+    
+    
+    
+
+DOS Path
+
+C:\File
+路徑不得有以下保留字元：
+
+&lt; (less than)
+&gt; (greater than)
+: (colon)
+&quot; (double quote)
+/ (forward slash)
+\ (backslash)
+| (vertical bar or pipe)
+? (question mark)
+* (asterisk)
+ASCII NULL
+
+檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/fb4a3895-4d9e-4bf9-9aa3-793c4edba7eb/" itemprop="url" class="post-title-link">Path</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-07T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-07 00:00:00 &#43;0000 UTC">
+    2024-12-07
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/fb4a3895-4d9e-4bf9-9aa3-793c4edba7eb/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <p>
+<a href="https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file" title="Naming Files, Paths, and Namespaces" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+    Naming Files, Paths, and Namespaces
+    
+    <i class="fa fa-external-link-alt"></i>
+    
+</a></p>
+<h2 id="dos-path">DOS Path
+<a class="header-anchor" href="#dos-path"></a>
+</h2><p><code>C:\File</code>
+路徑不得有以下保留字元：</p>
+<ul>
+<li>&lt; (less than)</li>
+<li><code>&gt;</code> (greater than)</li>
+<li><code>:</code> (colon)</li>
+<li><code>&quot;</code> (double quote)</li>
+<li><code>/</code> (forward slash)</li>
+<li><code>\</code> (backslash)</li>
+<li>| (vertical bar or pipe)</li>
+<li>? (question mark)</li>
+<li><code>*</code> (asterisk)</li>
+<li>ASCII NULL</li>
+</ul>
+<p>檔案名稱或目錄名稱請勿以空格或句點結尾。儘管底層檔案系統可能支援此類名稱，但 Windows shell 和使用者介面不支援。但是，可以將句點指定為名稱的第一個字元
+shell 和檔案系統有不同的要求。可以使用 Windows API 建立 shell 使用者介面無法正確解釋的路徑
+Do not use the following reserved names for the name of a file:
+CON, PRN, AUX, NUL, COM0, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT0, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/fb4a3895-4d9e-4bf9-9aa3-793c4edba7eb/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/1e365a3b-44aa-4f00-8e6b-133087b49721/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -2109,23 +2148,676 @@ stty -F /dev/ttyS0 -a
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="">
-      <meta itemprop="description" content="
+      <meta itemprop="description" content="Frequencies
 
 
-    MQTT Explorer
+Standard mode: 100 kilobits per second.
+Fast mode: 400 kilobits per second.
+
+時序
+
+在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+
+
+tr
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns
+tLOW
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs
+tHIGH
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs
+tHD;DAT
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範
+tSU;DAT
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns
+
+Data Transfer
+
+
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化">
+    </span>
     
-    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/1e365a3b-44aa-4f00-8e6b-133087b49721/" itemprop="url" class="post-title-link"></a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
     
 
-好用的 MQTT 多平台 GUI 客戶端，有可攜版本
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-02T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-02 00:00:00 &#43;0000 UTC">
+    2024-12-02
+  </time>
+</span>
+
+    
 
 
-    MqttX
-    
-    
     
 
-EMQX cloud 寫的，畫面良好，mqtt 有的設定都有
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/1e365a3b-44aa-4f00-8e6b-133087b49721/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="frequencies">Frequencies
+<a class="header-anchor" href="#frequencies"></a>
+</h3><ul>
+<li>Standard mode: 100 kilobits per second.</li>
+<li>Fast mode: 400 kilobits per second.</li>
+</ul>
+<h2 id="時序">時序
+<a class="header-anchor" href="#%e6%99%82%e5%ba%8f"></a>
+</h2><p>在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+<img src="/imgs/img-lazy-loading.gif" data-src="CS/ComputerSystemOrganization/I2C/2024_12_17_154719.png" alt=""  /></p>
+<ul>
+<li>t<sup>r</sup>
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns</li>
+<li>t<sup>LOW</sup>
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs</li>
+<li>t<sup>HIGH</sup>
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs</li>
+<li>t<sup>HD;DAT</sup>
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範</li>
+<li>t<sup>SU;DAT</sup>
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns</li>
+</ul>
+<h2 id="data-transfer">Data Transfer
+<a class="header-anchor" href="#data-transfer"></a>
+</h2><p><img src="/imgs/img-lazy-loading.gif" data-src="CS/ComputerSystemOrganization/I2C/2024_12_06_170600.png" alt=""  />
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/1e365a3b-44aa-4f00-8e6b-133087b49721/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="Frequencies
+
+
+Standard mode: 100 kilobits per second.
+Fast mode: 400 kilobits per second.
+
+時序
+
+在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+
+
+tr
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns
+tLOW
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs
+tHIGH
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs
+tHD;DAT
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範
+tSU;DAT
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns
+
+Data Transfer
+
+
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/" itemprop="url" class="post-title-link"></a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-02T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-02 00:00:00 &#43;0000 UTC">
+    2024-12-02
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="frequencies">Frequencies
+<a class="header-anchor" href="#frequencies"></a>
+</h3><ul>
+<li>Standard mode: 100 kilobits per second.</li>
+<li>Fast mode: 400 kilobits per second.</li>
+</ul>
+<h2 id="時序">時序
+<a class="header-anchor" href="#%e6%99%82%e5%ba%8f"></a>
+</h2><p>在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+<img src="/imgs/img-lazy-loading.gif" data-src="CS/ComputerSystemOrganization/I2C/2024_12_17_154719.png" alt=""  /></p>
+<ul>
+<li>t<sup>r</sup>
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns</li>
+<li>t<sup>LOW</sup>
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs</li>
+<li>t<sup>HIGH</sup>
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs</li>
+<li>t<sup>HD;DAT</sup>
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範</li>
+<li>t<sup>SU;DAT</sup>
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns</li>
+</ul>
+<h2 id="data-transfer">Data Transfer
+<a class="header-anchor" href="#data-transfer"></a>
+</h2><p><img src="/imgs/img-lazy-loading.gif" data-src="CS/ComputerSystemOrganization/I2C/2024_12_06_170600.png" alt=""  />
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/2cf2e1fd-1529-4609-921e-7466d23e4b66/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/eb1707ef-96ef-464c-9d29-986539a917d8/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="I2C.md">
+      <meta itemprop="description" content="Frequencies
+
+
+Standard mode: 100 kilobits per second.
+Fast mode: 400 kilobits per second.
+
+時序
+
+在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+
+
+tr
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns
+tLOW
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs
+tHIGH
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs
+tHD;DAT
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範
+tSU;DAT
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns
+
+Data Transfer
+
+
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/eb1707ef-96ef-464c-9d29-986539a917d8/" itemprop="url" class="post-title-link">I2C.md</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-02T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-02 00:00:00 &#43;0000 UTC">
+    2024-12-02
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/eb1707ef-96ef-464c-9d29-986539a917d8/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="frequencies">Frequencies
+<a class="header-anchor" href="#frequencies"></a>
+</h3><ul>
+<li>Standard mode: 100 kilobits per second.</li>
+<li>Fast mode: 400 kilobits per second.</li>
+</ul>
+<h2 id="時序">時序
+<a class="header-anchor" href="#%e6%99%82%e5%ba%8f"></a>
+</h2><p>在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+<img src="/imgs/img-lazy-loading.gif" data-src="../52efcd4d-b8de-4817-a160-85a7b57fc13f.png" alt=""  /></p>
+<ul>
+<li>t<sup>r</sup>
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns</li>
+<li>t<sup>LOW</sup>
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs</li>
+<li>t<sup>HIGH</sup>
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs</li>
+<li>t<sup>HD;DAT</sup>
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範</li>
+<li>t<sup>SU;DAT</sup>
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns</li>
+</ul>
+<h2 id="data-transfer">Data Transfer
+<a class="header-anchor" href="#data-transfer"></a>
+</h2><p><img src="/imgs/img-lazy-loading.gif" data-src="../e2f9530b-a6b4-44e7-a787-7991a05231d3.png" alt=""  />
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/eb1707ef-96ef-464c-9d29-986539a917d8/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/851489a9-e517-41c3-9a56-0352775c299c/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="I2C.md">
+      <meta itemprop="description" content="Frequencies
+
+
+Standard mode: 100 kilobits per second.
+Fast mode: 400 kilobits per second.
+
+時序
+
+在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+
+
+tr
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns
+tLOW
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs
+tHIGH
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs
+tHD;DAT
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範
+tSU;DAT
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns
+
+Data Transfer
+
+
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化">
+    </span>
+    
+    <header class="post-header">
+      
+ <h2  class="post-title" itemprop="name headline">
+  
+  
+  
+  <a href="/post/851489a9-e517-41c3-9a56-0352775c299c/" itemprop="url" class="post-title-link">I2C.md</a>
+  
+  
+   </h2> 
+
+<div class="post-meta-container">
+  <div class="post-meta-items">
+    
+
+
+<span class="post-meta-item">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text" title="發表於">
+    發表於：
+  </span>
+  <time title="創建時間：2024-12-02T00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-02 00:00:00 &#43;0000 UTC">
+    2024-12-02
+  </time>
+</span>
+
+    
+
+
+    
+
+
+    
+      
+        
+
+
+<span class="post-meta-item" title="瀏覽">
+  <span class="post-meta-item-icon">
+    <i class="fas fa-solid fa-eye"></i>
+  </span>
+  <span class="post-meta-item-text">
+  瀏覽：
+  </span>
+  <span id="pageview-count" data-path="/post/851489a9-e517-41c3-9a56-0352775c299c/">
+    <i class="fa fa-sync fa-spin"></i>
+  </span>
+</span>
+
+      
+      
+        
+  </div>
+  
+</div>
+
+    </header>
+    
+    <div class="post-body  autonumber " itemprop="articleBody">
+      
+
+  
+  <h3 id="frequencies">Frequencies
+<a class="header-anchor" href="#frequencies"></a>
+</h3><ul>
+<li>Standard mode: 100 kilobits per second.</li>
+<li>Fast mode: 400 kilobits per second.</li>
+</ul>
+<h2 id="時序">時序
+<a class="header-anchor" href="#%e6%99%82%e5%ba%8f"></a>
+</h2><p>在 UM10204 6 Electrical specifications and timing for I/O stages and bus lines，需要時請直接查閱
+<img src="/imgs/img-lazy-loading.gif" data-src="../f6780ca9-386e-474d-9369-92322ba64a93.png" alt=""  /></p>
+<ul>
+<li>t<sup>r</sup>
+SCL, SDA 上升或下降從 70% 到 30% 的時間
+Max Standard 300 ns, Fast 300 ns</li>
+<li>t<sup>LOW</sup>
+SCL 維持低電平
+Min Standard 4.7 μs, Fast1.2 μs</li>
+<li>t<sup>HIGH</sup>
+SCL 維持高電平
+Min Standard 4.0 μs, Fast0.6 μs</li>
+<li>t<sup>HD;DAT</sup>
+SCL 下降到SDA 狀態改變完成的時間
+沒有最小時間規範</li>
+<li>t<sup>SU;DAT</sup>
+SDA 狀態改變完成到 SCL 重新拉高的時間
+Min Standard 250 ns, Fast 100 ns</li>
+</ul>
+<h2 id="data-transfer">Data Transfer
+<a class="header-anchor" href="#data-transfer"></a>
+</h2><p><img src="/imgs/img-lazy-loading.gif" data-src="../ada8f680-060f-4f92-b529-13e21081c7f9.png" alt=""  />
+所有位元組均以 MSB 位元先移位的方式傳送
+除了啟動和停止訊號外，SDA 線僅在時脈為低電平時變化</p>
+  
+
+
+    </div>
+    <footer class="post-footer">
+      
+ 
+
+<div class="post-button">
+  <a class="btn" href="/post/851489a9-e517-41c3-9a56-0352775c299c/#more" rel="contents">
+    閱讀全文 &raquo;
+  </a>
+</div>
+
+<div class="post-eof"></div>
+
+
+    </footer>
+  </article>
+</div>
+
+  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    
+    <link itemprop="mainEntityOfPage" href="/post/98c8f422-b43f-4e42-88cd-acb013d24909/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
+      <meta itemprop="name" content="EricChen">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EricChen">
+      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
+    </span>
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="NTP">
+      <meta itemprop="description" content="RFC 1305
+台灣 T1
+
+
+tock.stdtime.gov.tw
+watch.stdtime.gov.tw
+time.stdtime.gov.tw
+clock.stdtime.gov.tw
+tick.stdtime.gov.tw
+台灣的 NTP 由中華電信研究所時間與頻率國家標準實驗室維護
 ">
     </span>
     
@@ -2135,7 +2827,7 @@ EMQX cloud 寫的，畫面良好，mqtt 有的設定都有
   
   
   
-  <a href="/post/124d0767-57d5-45b9-b08f-7c59b36ad919/" itemprop="url" class="post-title-link"></a>
+  <a href="/post/98c8f422-b43f-4e42-88cd-acb013d24909/" itemprop="url" class="post-title-link">NTP</a>
   
   
    </h2> 
@@ -2152,8 +2844,8 @@ EMQX cloud 寫的，畫面良好，mqtt 有的設定都有
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-02-23T00:00:00" itemprop="dateCreated datePublished" datetime="2024-02-23 00:00:00 &#43;0000 UTC">
-    2024-02-23
+  <time title="創建時間：2024-11-22T00:00:00" itemprop="dateCreated datePublished" datetime="2024-11-22 00:00:00 &#43;0000 UTC">
+    2024-11-22
   </time>
 </span>
 
@@ -2175,7 +2867,7 @@ EMQX cloud 寫的，畫面良好，mqtt 有的設定都有
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/124d0767-57d5-45b9-b08f-7c59b36ad919/">
+  <span id="pageview-count" data-path="/post/98c8f422-b43f-4e42-88cd-acb013d24909/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -2193,205 +2885,17 @@ EMQX cloud 寫的，畫面良好，mqtt 有的設定都有
       
 
   
-  <ul>
-<li>
-<a href="https://mqtt-explorer.com/" title="MQTT Explorer" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    MQTT Explorer
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>
-好用的 MQTT 多平台 GUI 客戶端，有可攜版本</li>
-<li>
-<a href="https://mqttx.app/" title="MqttX" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    MqttX
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>
-EMQX cloud 寫的，畫面良好，mqtt 有的設定都有</li>
-</ul>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/124d0767-57d5-45b9-b08f-7c59b36ad919/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/48b1c318-2a55-4d16-957e-6f1d3f7540dd/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="MQTT.md">
-      <meta itemprop="description" content="簡介
-
-用於 IOT 裝置的消息傳送協議，可在不穩定的網路下運作
-Publish Subscribe
-
-Publisher 向一個 topic 發布消息， Subscriber 從訂閱的 topic 中接收消息，在同一個 topic 中 Publisher 和 Subscriber 都可以有多個客戶端同時使用
-Topic
-
-
-UTF-8 string
-如Germany/Bavaria/car/2382340923453/latitude 用 / 表示層級
-訂閱時可以使用通配符，&#43; 選取同一層級，# 選取同一層級及往下所有層級，如# 表示機器上所有的 topic, Topic 區分大小寫
-客戶端在發布或訂閱主題之前不需要建立所需的主題。代理接受每個有效主題，無需任何事先初始化。
-前綴 $SYS/ 表示 broker 內部狀態，不會被 # 選取
-雖然可以，但不建議斜線開頭
-
-QOS
-
-
-0 只傳送一次，射後不理
-1 自少傳送一次，訊息可能會重複
-2 一定只傳送一次
-QOS 會引響 broker 與客戶端的封包發送量
-QOS,封包數
-0,1
-1,2
-2,4
-Publisher 和 Subscriber 可以使用不同的 QOS
-
-持久化
-
-
-broker 會記住 Subscriber 的訂閱，當同一個 ClientId 重新連線時
-當 QOS 為 1 和 2 時維持尚未確認消息
-ClientId 應特定於每個客戶和經紀商。如果代理不需要維護任何狀態，則 MQTT 3.1.1 允許使用空 ClientId。但是，此連線必須將 clean_session 標誌設為 true，否則代理將拒絕該連線。
-clean_session 為 True 時表示不需要持久化
-
-Retain
-
-原則上，broker 不會保留 Publish 的訊息，訊息要不被傳送給 Subscriber 要不被拋棄，Publish 的 Retain 選項會讓 broker 保留最後一則訊息">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/48b1c318-2a55-4d16-957e-6f1d3f7540dd/" itemprop="url" class="post-title-link">MQTT.md</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-02-22T00:00:00" itemprop="dateCreated datePublished" datetime="2024-02-22 00:00:00 &#43;0000 UTC">
-    2024-02-22
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/48b1c318-2a55-4d16-957e-6f1d3f7540dd/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h3 id="簡介">簡介
-<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
-</h3><p>用於 IOT 裝置的消息傳送協議，可在不穩定的網路下運作</p>
-<h3 id="publish-subscribe">Publish Subscribe
-<a class="header-anchor" href="#publish-subscribe"></a>
-</h3><p>Publisher 向一個 topic 發布消息， Subscriber 從訂閱的 topic 中接收消息，在同一個 topic 中 Publisher 和 Subscriber 都可以有多個客戶端同時使用</p>
-<h3 id="topic">Topic
-<a class="header-anchor" href="#topic"></a>
+  <p>RFC 1305</p>
+<h3 id="台灣-t1">台灣 T1
+<a class="header-anchor" href="#%e5%8f%b0%e7%81%a3-t1"></a>
 </h3><ul>
-<li>UTF-8 string</li>
-<li>如<code>Germany/Bavaria/car/2382340923453/latitude</code> 用 <code>/</code> 表示層級</li>
-<li>訂閱時可以使用通配符，<code>+</code> 選取同一層級，<code>#</code> 選取同一層級及往下所有層級，如<code>#</code> 表示機器上所有的 topic, Topic 區分大小寫</li>
-<li>客戶端在發布或訂閱主題之前不需要建立所需的主題。代理接受每個有效主題，無需任何事先初始化。</li>
-<li>前綴 <code>$SYS/</code> 表示 broker 內部狀態，不會被 <code>#</code> 選取</li>
-<li>雖然可以，但不建議斜線開頭</li>
+<li>tock.stdtime.gov.tw</li>
+<li>watch.stdtime.gov.tw</li>
+<li>time.stdtime.gov.tw</li>
+<li>clock.stdtime.gov.tw</li>
+<li>tick.stdtime.gov.tw
+台灣的 NTP 由中華電信研究所時間與頻率國家標準實驗室維護</li>
 </ul>
-<h3 id="qos">QOS
-<a class="header-anchor" href="#qos"></a>
-</h3><ul>
-<li>0 只傳送一次，射後不理</li>
-<li>1 自少傳送一次，訊息可能會重複</li>
-<li>2 一定只傳送一次
-QOS 會引響 broker 與客戶端的封包發送量
-QOS,封包數
-0,1
-1,2
-2,4
-Publisher 和 Subscriber 可以使用不同的 QOS</li>
-</ul>
-<h3 id="持久化">持久化
-<a class="header-anchor" href="#%e6%8c%81%e4%b9%85%e5%8c%96"></a>
-</h3><ul>
-<li>broker 會記住 Subscriber 的訂閱，當同一個 ClientId 重新連線時</li>
-<li>當 QOS 為 1 和 2 時維持尚未確認消息</li>
-<li>ClientId 應特定於每個客戶和經紀商。如果代理不需要維護任何狀態，則 MQTT 3.1.1 允許使用空 ClientId。但是，此連線必須將 clean_session 標誌設為 true，否則代理將拒絕該連線。</li>
-<li>clean_session 為 True 時表示不需要持久化</li>
-</ul>
-<h3 id="retain">Retain
-<a class="header-anchor" href="#retain"></a>
-</h3><p>原則上，broker 不會保留 Publish 的訊息，訊息要不被傳送給 Subscriber 要不被拋棄，Publish 的 Retain 選項會讓 broker 保留最後一則訊息</p>
   
 
 
@@ -2401,7 +2905,7 @@ Publisher 和 Subscriber 可以使用不同的 QOS</li>
  
 
 <div class="post-button">
-  <a class="btn" href="/post/48b1c318-2a55-4d16-957e-6f1d3f7540dd/#more" rel="contents">
+  <a class="btn" href="/post/98c8f422-b43f-4e42-88cd-acb013d24909/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -2416,7 +2920,7 @@ Publisher 和 Subscriber 可以使用不同的 QOS</li>
   <div class="post-block">
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     
-    <link itemprop="mainEntityOfPage" href="/post/c95f885a-47bc-4716-825c-1b362b0f1c72/">
+    <link itemprop="mainEntityOfPage" href="/post/eb5aaa26-2558-4988-97d9-ffc3a9841c54/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
       <meta itemprop="name" content="EricChen">
@@ -2426,316 +2930,17 @@ Publisher 和 Subscriber 可以使用不同的 QOS</li>
       <meta itemprop="description" content="保持简单的易用性和强大的功能。">
     </span>
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Cherrypy Cookie">
-      <meta itemprop="description" content="cherrypy cookie
-
-概述
-
-他是用python的simple cookie，所以Morsel屬性該有的多有(屬性要小寫)，但她不能刪除只能設程過期
-Cookie 設定
-
-
-
-
-1
-2
-
-
-cherrypy.response.cookie[key] = value #設質  
-cherrypy.response.cookie[key][&#34;max-age&#34;] = 60*60*8 #有效期8小時
-
-
-
-Cookie 讀取
-
-
-
-
-1
-2
-
-
-cie = cherrypy.request.cookie.keys() #取得所有cookie  
-uid = cherrypy.request.cookie[&#34;uid&#34;].value
-
-
-
-設定跟讀取在不同物件上
-在cherrypy 18.5 上測試">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/c95f885a-47bc-4716-825c-1b362b0f1c72/" itemprop="url" class="post-title-link">Cherrypy Cookie</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-02-18T00:00:00" itemprop="dateCreated datePublished" datetime="2024-02-18 00:00:00 &#43;0000 UTC">
-    2024-02-18
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/c95f885a-47bc-4716-825c-1b362b0f1c72/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h1 id="cherrypy-cookie">cherrypy cookie
-<a class="header-anchor" href="#cherrypy-cookie"></a>
-</h1><h3 id="概述">概述
-<a class="header-anchor" href="#%e6%a6%82%e8%bf%b0"></a>
-</h3><p>他是用python的simple cookie，所以Morsel屬性該有的多有(屬性要小寫)，但她不能刪除只能設程過期</p>
-<h3 id="cookie-設定">Cookie 設定
-<a class="header-anchor" href="#cookie-%e8%a8%ad%e5%ae%9a"></a>
-</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
-</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cherrypy</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">cookie</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> <span class="c1">#設質  </span>
-</span></span><span class="line"><span class="cl"><span class="n">cherrypy</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">cookie</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s2">&#34;max-age&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">8</span> <span class="c1">#有效期8小時</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<h3 id="cookie-讀取">Cookie 讀取
-<a class="header-anchor" href="#cookie-%e8%ae%80%e5%8f%96"></a>
-</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
-</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cie</span> <span class="o">=</span> <span class="n">cherrypy</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">cookie</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="c1">#取得所有cookie  </span>
-</span></span><span class="line"><span class="cl"><span class="n">uid</span> <span class="o">=</span> <span class="n">cherrypy</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">cookie</span><span class="p">[</span><span class="s2">&#34;uid&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<p>設定跟讀取在不同物件上<br>
-在cherrypy 18.5 上測試</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/c95f885a-47bc-4716-825c-1b362b0f1c72/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/00d21e87-dfff-4644-b457-3c61f7139cb6/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="OpenSsh.md">
-      <meta itemprop="description" content="交換openssh登入金鑰
-
-
-必須先做一把RSA出來(我只用puttygen讀出來的格式試過)
-公鑰放到遠端主機要登入使用者的家目錄 ~/.ssh/authorized_keys
-~/.ssh/authorized_keys 必須是 600
-~/.ssh 必須是 700
-使用者級組別必須與登入名稱一致
-
-以上在cent os7 及 6上試過">
-    </span>
-    
-    <header class="post-header">
-      
- <h2  class="post-title" itemprop="name headline">
-  
-  
-  
-  <a href="/post/00d21e87-dfff-4644-b457-3c61f7139cb6/" itemprop="url" class="post-title-link">OpenSsh.md</a>
-  
-  
-   </h2> 
-
-<div class="post-meta-container">
-  <div class="post-meta-items">
-    
-
-
-<span class="post-meta-item">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-calendar"></i>
-  </span>
-  <span class="post-meta-item-text" title="發表於">
-    發表於：
-  </span>
-  <time title="創建時間：2024-02-18T00:00:00" itemprop="dateCreated datePublished" datetime="2024-02-18 00:00:00 &#43;0000 UTC">
-    2024-02-18
-  </time>
-</span>
-
-    
-
-
-    
-
-
-    
-      
-        
-
-
-<span class="post-meta-item" title="瀏覽">
-  <span class="post-meta-item-icon">
-    <i class="fas fa-solid fa-eye"></i>
-  </span>
-  <span class="post-meta-item-text">
-  瀏覽：
-  </span>
-  <span id="pageview-count" data-path="/post/00d21e87-dfff-4644-b457-3c61f7139cb6/">
-    <i class="fa fa-sync fa-spin"></i>
-  </span>
-</span>
-
-      
-      
-        
-  </div>
-  
-</div>
-
-    </header>
-    
-    <div class="post-body  autonumber " itemprop="articleBody">
-      
-
-  
-  <h2 id="交換openssh登入金鑰">交換openssh登入金鑰
-<a class="header-anchor" href="#%e4%ba%a4%e6%8f%9bopenssh%e7%99%bb%e5%85%a5%e9%87%91%e9%91%b0"></a>
-</h2><ul>
-<li>必須先做一把RSA出來(我只用puttygen讀出來的格式試過)</li>
-<li>公鑰放到遠端主機要登入使用者的家目錄 ~/.ssh/authorized_keys</li>
-<li>~/.ssh/authorized_keys 必須是 600</li>
-<li>~/.ssh 必須是 700</li>
-<li>使用者級組別必須與登入名稱一致</li>
-</ul>
-<p>以上在cent os7 及 6上試過</p>
-  
-
-
-    </div>
-    <footer class="post-footer">
-      
- 
-
-<div class="post-button">
-  <a class="btn" href="/post/00d21e87-dfff-4644-b457-3c61f7139cb6/#more" rel="contents">
-    閱讀全文 &raquo;
-  </a>
-</div>
-
-<div class="post-eof"></div>
-
-
-    </footer>
-  </article>
-</div>
-
-  <div class="post-block">
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    
-    <link itemprop="mainEntityOfPage" href="/post/514b717a-7463-493b-85c8-338291f4b3b1/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/imgs/hugo_next_avatar.png">
-      <meta itemprop="name" content="EricChen">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EricChen">
-      <meta itemprop="description" content="保持简单的易用性和强大的功能。">
-    </span>
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="vCard.md">
-      <meta itemprop="description" content="簡介
-
-
-
-    vCard
-    
-    
-    
- 由 MIME 定義的電子名片格式
-在 H4 聚會時發現某社群朋友的 QrCode 名片在 iphone 上會亂碼，無聊當起 RFC 警察來研究是哪一方不照標準實作
-經朋友確認，讓我發它的個資上 blog 歡迎去他的
-
-    個人網站
-    
-    
-    
-看看
+      <meta itemprop="name" content="NTP">
+      <meta itemprop="description" content="RFC 1305
+台灣 T1
+
+
+tock.stdtime.gov.tw
+watch.stdtime.gov.tw
+time.stdtime.gov.tw
+clock.stdtime.gov.tw
+tick.stdtime.gov.tw
+台灣的 NTP 由中華電信研究所時間與頻率國家標準實驗室維護
 ">
     </span>
     
@@ -2745,7 +2950,7 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
   
   
   
-  <a href="/post/514b717a-7463-493b-85c8-338291f4b3b1/" itemprop="url" class="post-title-link">vCard.md</a>
+  <a href="/post/eb5aaa26-2558-4988-97d9-ffc3a9841c54/" itemprop="url" class="post-title-link">NTP</a>
   
   
    </h2> 
@@ -2762,8 +2967,8 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
   <span class="post-meta-item-text" title="發表於">
     發表於：
   </span>
-  <time title="創建時間：2024-02-17T00:00:00" itemprop="dateCreated datePublished" datetime="2024-02-17 00:00:00 &#43;0000 UTC">
-    2024-02-17
+  <time title="創建時間：2024-11-22T00:00:00" itemprop="dateCreated datePublished" datetime="2024-11-22 00:00:00 &#43;0000 UTC">
+    2024-11-22
   </time>
 </span>
 
@@ -2785,7 +2990,7 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
   <span class="post-meta-item-text">
   瀏覽：
   </span>
-  <span id="pageview-count" data-path="/post/514b717a-7463-493b-85c8-338291f4b3b1/">
+  <span id="pageview-count" data-path="/post/eb5aaa26-2558-4988-97d9-ffc3a9841c54/">
     <i class="fa fa-sync fa-spin"></i>
   </span>
 </span>
@@ -2803,24 +3008,17 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
       
 
   
-  <h3 id="簡介">簡介
-<a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"></a>
-</h3><p>
-<a href="https://en.wikipedia.org/wiki/VCard" title="vCard" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    vCard
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a> 由 MIME 定義的電子名片格式</p>
-<p>在 H4 聚會時發現某社群朋友的 QrCode 名片在 iphone 上會亂碼，無聊當起 RFC 警察來研究是哪一方不照標準實作
-經朋友確認，讓我發它的個資上 blog 歡迎去他的
-<a href="https://www.brlin.me/" title="個人網站" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
-    個人網站
-    
-    <i class="fa fa-external-link-alt"></i>
-    
-</a>看看
-<img src="/imgs/img-lazy-loading.gif" data-src="../f01fcc31-946e-4c23-b26c-64a09dbc668f.jpg" alt=""  /></p>
+  <p>RFC 1305</p>
+<h3 id="台灣-t1">台灣 T1
+<a class="header-anchor" href="#%e5%8f%b0%e7%81%a3-t1"></a>
+</h3><ul>
+<li>tock.stdtime.gov.tw</li>
+<li>watch.stdtime.gov.tw</li>
+<li>time.stdtime.gov.tw</li>
+<li>clock.stdtime.gov.tw</li>
+<li>tick.stdtime.gov.tw
+台灣的 NTP 由中華電信研究所時間與頻率國家標準實驗室維護</li>
+</ul>
   
 
 
@@ -2830,7 +3028,7 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
  
 
 <div class="post-button">
-  <a class="btn" href="/post/514b717a-7463-493b-85c8-338291f4b3b1/#more" rel="contents">
+  <a class="btn" href="/post/eb5aaa26-2558-4988-97d9-ffc3a9841c54/#more" rel="contents">
     閱讀全文 &raquo;
   </a>
 </div>
@@ -2856,9 +3054,6 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
 
 
 
-
-  
-  
 
 
 <nav class="pagination">
@@ -2902,6 +3097,26 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
       
         <a class="page-number" href="/page/6/">6</a>
       
+      
+  
+      
+      
+        <a class="page-number" href="/page/7/">7</a>
+      
+      
+  
+      
+      
+        <a class="page-number" href="/page/8/">8</a>
+      
+      
+  
+      
+  
+      
+  
+      
+  
       
   
   
@@ -3093,7 +3308,7 @@ uid = cherrypy.request.cookie[&#34;uid&#34;].value
 
 
 
-<script type="text/javascript" src="/js/main.min.js?=1741874841" defer></script>
+<script type="text/javascript" src="/js/main.min.js?=1742222802" defer></script>
 
 
 </body>
